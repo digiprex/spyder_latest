@@ -1,0 +1,175 @@
+<app-navbar></app-navbar>
+<main>
+
+    <section class="banner">
+        <div class="outer-content">
+            <div class="content">
+                <svg viewBox="0 0 332 370" fill="#000" class="absolute left-0 top-0 h-1/2 w-auto">
+                    <path
+                        d="M237.824 71.8a.36.36 0 0 1 .19-.22.353.353 0 0 1 .291-.001.383.383 0 0 1 .126.075.382.382 0 0 1 .12.261.395.395 0 0 1-.024.144.409.409 0 0 1-.499.222.368.368 0 0 1-.204-.48Zm-22.773-2.569a.514.514 0 0 1 .444-.555.517.517 0 0 1 .554.444.479.479 0 0 1-.016.196.494.494 0 0 1-.793.247.516.516 0 0 1-.189-.332Z">
+                    </path>
+                </svg>
+                <h1>We are Spider</h1>
+                <p>The first online back-office platform designed <br> for Businesses-of-One.</p>
+            </div>
+        </div>
+
+        <div class="img-container">
+            <img [src]="currentImage" alt="Community Image" />
+        </div>
+    </section>
+
+    <section class="logo-container">
+        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e3b2b792-b186-46e9-b73c-9ff6c9288bfa_bloomberg_gray.jpg"
+            alt="Bloomberg">
+        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/cce66964-a4bd-41ac-97b4-12f2973c8fb5_forbes_gray.jpg"
+            alt="Forbes">
+        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2bf0988b-a938-4b49-ba8b-f836e24ecaef_yahoo_gray.jpg"
+            alt="Yahoo">
+        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/df902b34-7757-40bf-ab80-72a309563110_real_simple_gray.jpg"
+            alt="Real Simple">
+        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/f4ea2230-d276-49f4-a164-b662d49eca9b_business_insider_gray.jpg"
+            alt="Business Insider">
+        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/07105ed0-32f9-4c76-a653-1326139e366d_tech_crunch_gray.jpg"
+            alt="TechCrunch">
+    </section>
+
+    <section class="s-corp-section">
+        <div class="s-corp-container">
+            <div class="image-container">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/80046a47-6746-4e0c-9c4b-6d7914c46609_collective-member-jason-polevoi-desktop.jpg"
+                    alt="Person smiling with a mug" class="s-corp-image" />
+            </div>
+            <div class="text-container">
+                <h2 class="s-corp-title">We give our members the freedom to focus on what they do best: being their own
+                    boss</h2>
+                <a href="#" class="s-corp-link">Read Our Mission &rsaquo;</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="testimonial-section">
+        <div class="header">
+            <h2>Our values</h2>
+            <div class="arrows">
+                <button class="arrow left-arrow" (click)="scrollTestimonialLeft()">&lt;</button>
+                <button class="arrow right-arrow" (click)="scrollTestimonialRight()">&gt;</button>
+            </div>
+        </div>
+        <div class="testimonial-slider" #testimonialSlider>
+            <div class="testimonial-item" *ngFor="let testimonial of testimonials"
+                [style.background-color]="testimonial.backgroundColor">
+                <div class="testimonial-info">
+                    <img [src]="testimonial.image" [alt]="testimonial.name" />
+                    <p class="description">{{ testimonial.description }}</p>
+                    <p class="profession">{{ testimonial.profession }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="leadership-section">
+        <h1>Our leadership</h1>
+        <p>Spider is completely remote, giving us all the freedom to work and play as we see fit.</p>
+        <div class="leadership-grid">
+            <div class="leader">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c73d0d9a-e606-4653-9edb-6983e6635302_hooman-radfar.webp"
+                    alt="Hooman Radfar">
+                <h3>Hooman Radfar</h3>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="leader">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39afeee6-7676-4b19-8ac3-4035ea7269e8_ugur-kaner.webp"
+                    alt="Ugur Kaner">
+                <h3>Ugur Kaner</h3>
+                <p>Founder & Board Director</p>
+            </div>
+            <div class="leader">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8565e3aa-3e9c-4c5f-aa49-68221a9f66ce_bugra-akcay.webp"
+                    alt="Bugra Akcay">
+                <h3>Bugra Akcay</h3>
+                <p>Founder & Board Director</p>
+            </div>
+            <div class="leader">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39afeee6-7676-4b19-8ac3-4035ea7269e8_ugur-kaner.webp"
+                    alt="Disha Patel">
+                <h3>Disha Patel</h3>
+                <p>VP of Product</p>
+            </div>
+            <div class="leader">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8565e3aa-3e9c-4c5f-aa49-68221a9f66ce_bugra-akcay.webp"
+                    alt="Chintan Shah">
+                <h3>Chintan Shah</h3>
+                <p>VP of Engineering</p>
+            </div>
+            <div class="leader">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39afeee6-7676-4b19-8ac3-4035ea7269e8_ugur-kaner.webp"
+                    alt="Jeff Marshall">
+                <h3>Jeff Marshall</h3>
+                <p>VP of Operations</p>
+            </div>
+            <div class="leader">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c73d0d9a-e606-4653-9edb-6983e6635302_hooman-radfar.webp"
+                    alt="Carol Ho">
+                <h3>Carol Ho</h3>
+                <p>General Counsel</p>
+            </div>
+            <div class="leader">
+                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8565e3aa-3e9c-4c5f-aa49-68221a9f66ce_bugra-akcay.webp"
+                    alt="Jeff Barlam">
+                <h3>Jeff Barlam</h3>
+                <p>VP of Finance</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback-section">
+        <div class="feedback-header">
+            <h2 class="feedback-title">In the news</h2>
+            <div class="navigation-buttons">
+                <button class="nav-button left-nav" (click)="scrollFeaturesLeft()">&lt;</button>
+                <button class="nav-button right-nav" (click)="scrollFeaturesRight()">&gt;</button>
+            </div>
+        </div>
+        <div class="feedback-slider" #featuresSlider>
+            <div class="feedback-card" *ngFor="let features of pressFeatures"
+                [style.background-color]="features.backgroundColor">
+                <div class="feedback-image">
+                    <img [src]="features.image" />
+                </div>
+                <div class="feedback-content">
+                    <h2 class="features-description">{{ features.description }}</h2>
+                    <p class="features-profession">{{ features.profession }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lets-talk-section">
+        <div class="content">
+            <h1>Let's talk</h1>
+            <div class="details">
+                <div class="join-team">
+                    <h2>Join the team</h2>
+                    <p>
+                        We are experts in the unique needs and challenges of self-employed people and know that our
+                        confidence gives others confidence, too. Reach out to say hello and join our team.
+                    </p>
+                    <button class="open-roles-button">View open roles</button>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h2>Questions</h2>
+                        <a href="mailto:contact@spider.com">contact@spider.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h2>Media Inquires</h2>
+                        <a href="mailto:press@spider.com">press@spider.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+<app-footer></app-footer>

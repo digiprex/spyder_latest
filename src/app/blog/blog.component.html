@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<main>
+    <section class="blog-section">
+        <h1>Spider Blog</h1>
+        <p>Inspiration and advice on leveling up your Business-of-One.</p>
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="carousel-item" *ngFor="let item of carouselItems; let i = index"
+                    [ngClass]="{ active: i === currentIndex }">
+                    <div class="images-div">
+                        <img [src]="item.imageUrl" [alt]="item.title" />
+                    </div>
+                    <div class="content">
+                        <h2>{{ item.title }}</h2>
+                        <p>{{ item.description }}</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-button left" (click)="prev()">&#60;</button>
+            <button class="carousel-button right" (click)="next()">&#62;</button>
+        </div>
+    </section>
+
+    <div class="tax-tips-container">
+        <h2>Tax Tips</h2>
+        <div class="tax-tips-carousel">
+          <div
+            *ngFor="let tip of taxTips"
+            class="tax-tip-card" [routerLink]="tip.route"
+          >
+            <img [src]="tip.image" alt="{{ tip.title }}" />
+            <div class="card-content">
+              <h3>{{ tip.title }}</h3>
+              <p>{{ tip.author }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+</main>
+<app-footer></app-footer>

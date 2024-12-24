@@ -1,0 +1,116 @@
+main {
+    display: grid;
+    background-color: #fff;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Libre Baskerville", serif;
+        font-weight: 400 !important;
+    }
+
+    p {
+        font-family: "Poppins", serif;
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 5rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        border: 1px solid #ddd;
+
+        .logo {
+            width: 32%;
+            display: grid;
+            gap: 20px;
+
+            img {
+                width: 20rem;
+            }
+
+            p {
+                color: #000;
+                font-size: 16px;
+            }
+        }
+
+        .quicklinks {
+            width: 32%;
+            display: grid;
+            gap: 20px;
+            justify-content: center;
+
+            h3 {
+                color: #000;
+                font-size: 20px;
+            }
+
+            div {
+                display: grid;
+                gap: 10px;
+                font-size: 16px;
+
+                a {
+                    color: #000;
+                    text-decoration: none;
+                    font-family: "Poppins", serif;
+                }
+            }
+        }
+
+        .contact {
+            width: 32%;
+            justify-content: end;
+            display: grid;
+            gap: 20px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                text-decoration: none;
+                color: #000;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+@media only screen and (max-device-width: 480px) {
+    main {
+
+        .expert {
+            display: grid;
+            margin: -5rem 2rem 5rem;
+            padding: 2rem;
+        }
+
+        .footer {
+            padding: 2rem;
+            display: grid;
+
+            .logo {
+                width: 100%;
+            }
+
+            .quicklinks {
+                width: 100%;
+                justify-content: start;
+            }
+
+            .contact {
+                width: 100%;
+                justify-content: start;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+<main>
+
+    <section class="footer">
+        <section class="logo">
+            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/f5d2eb00-dc52-43ef-a0e7-bf31205572f9_Spyder%20logo.png" />
+            <p>We offer expert bookkeeping, tax, CFO services, and R&D tax credits for startups, retail, manufacturing,
+                and professional services. Let us handle your financial needs so you can focus on your business. </p>
+        </section>
+
+        <section class="quicklinks">
+            <div>
+                <a [routerLink]="link.link" *ngFor="let link of links">
+                    {{link.text}}
+                </a>
+            </div>
+        </section>
+
+        <section class="contact">
+            <a href="{{social.map}}">
+                <span class="material-symbols-outlined">
+                    location_on
+                </span>
+                <p>{{social.address}}</p>
+            </a>
+    
+            <a href="{{social.hrefPhone}}">
+                <span class="material-symbols-outlined">
+                    call
+                </span>
+                <p>{{social.phone}}</p>
+            </a>
+    
+            <a href="{{social.hrefEmail}}">
+                <span class="material-symbols-outlined">
+                    mail
+                </span>
+                <p>{{social.email}}</p>
+            </a>
+        </section>
+    </section>
+</main>

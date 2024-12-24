@@ -1,0 +1,31 @@
+<main>
+    <section class="right">
+        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/60b60961-40f5-4d30-97b5-dff1cc2f0bc2_Right.jpg"
+            alt="">
+    </section>
+    <section class="left">
+        <div class="title">
+            <h3>Talk to us!</h3>
+            <p>Please enter your details.</p>
+        </div>
+
+        <form [formGroup]="formDetails">
+            <div>
+                <label for="fname">First Name<small>*</small></label>
+                <input name="fname" type="text" required placeholder="Enter your first name"
+                    formControlName="firstName">
+            </div>
+            <div>
+                <label for="lname">Last Name</label>
+                <input name="lname" type="text" placeholder="Enter your last name" formControlName="lastName">
+            </div>
+            <div>
+                <label for="">Email<small>*</small></label>
+                <input name="email" type="email" placeholder="Enter your email" required formControlName="email">
+            </div>
+
+            <button *ngIf="!success" (click)="submitForm()" [disabled]="!formDetails.valid">Let's Connect</button>
+            <button *ngIf="success" class="success" disabled>We will connect to you shortly!</button>
+        </form>
+    </section>
+</main>

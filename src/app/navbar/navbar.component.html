@@ -1,0 +1,48 @@
+<main>
+    <div class="heading">
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="top-bar desktop">
+                <img routerLink="/" src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/f5d2eb00-dc52-43ef-a0e7-bf31205572f9_Spyder%20logo.png" />
+            </div>
+            <div class="navbar-header">
+                <button *ngIf="!close" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" (click)="change(!close)">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <button *ngIf="close" type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" (click)="change(!close)">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+            </div>
+
+            <div [ngStyle]="{'display': close ? 'block' : 'none'}" class="collapse navbar-collapse"
+                id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li *ngFor="let link of links">
+
+                        <a *ngIf="link.type === 'internal' && !link.options.length" class="nav-link"
+                            queryParamsHandling="merge" [routerLink]="link.link"
+                            routerLinkActive="active">{{link.text}}</a>
+
+                        <a *ngIf="link.type === 'internal' && link.options.length" class="nav-link"
+                            (click)="show()">{{link.text}}</a>
+
+                        <!-- <div *ngIf="link.type === 'internal' && link.options.length && showDropdown" class="
+                        dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-values" *ngFor="let option of link.options">
+                                <a [href]="option.link" class="dropdown-item">{{option.name}}</a>
+                            </div>
+                        </div> -->
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</main>

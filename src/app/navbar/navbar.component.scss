@@ -1,0 +1,154 @@
+main {
+    background-color: #fff;
+    margin-top: 90px;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Libre Baskerville", serif;
+        font-weight: 400 !important;
+    }
+
+    a,
+    p {
+        font-family: "Poppins", serif;
+    }
+
+    .heading {
+        width: 100%;
+        position: fixed;
+        padding: 1rem 5rem;
+        top: 0;
+        background-color: #fff;
+        border-bottom: 1px solid lightgray;
+        z-index: 9999999;
+        justify-content: space-between;
+
+        .top-bar {
+            justify-content: left;
+            display: flex;
+
+            img {
+                width: 20rem;
+                object-fit: contain;
+            }
+        }
+
+        .mobile {
+            display: none !important;
+        }
+
+        .navbar-inverse {
+            background-color: #ffffff;
+            border: none;
+            margin: 0px;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .navbar-nav {
+                display: flex;
+                justify-content: center;
+                align-items: baseline;
+                gap: 20px;
+                float: none;
+            }
+
+            .navbar-nav>li>a {
+                color: #000;
+                font-size: 16px;
+                text-align: center;
+                cursor: pointer;
+            }
+
+            .navbar-nav>li>a:hover {
+                font-weight: 500;
+            }
+
+            .active {
+                font-weight: 600;
+            }
+
+            .navbar-nav>li>.dropdown-menu {
+                left: -40px;
+                padding: 20px;
+                text-align: center;
+                border-radius: 8px;
+                display: grid;
+                background-color: #000;
+                cursor: pointer;
+
+                div {
+                    a {
+                        color: #fff;
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        font-weight: 400;
+                        font-size: 12px;
+                        padding: 5px;
+                        display: grid;
+                    }
+
+                    a:hover {
+                        color: #1245A8;
+                    }
+                }
+            }
+        }
+    }
+
+    // Mobile
+    @media only screen and (max-device-width: 480px) {
+        .heading {
+            padding: 10px;
+
+            .top-bar {
+                width: 100%;
+                justify-content: left;
+            }
+
+            .mobile {
+                display: grid !important;
+            }
+
+            .navbar-inverse {
+                width: 100%;
+                background: transparent;
+                display: grid;
+                justify-content: center;
+                gap: 30px;
+
+                .navbar-collapse {
+                    width: 100%;
+                }
+
+                .navbar-header {
+                    margin: auto;
+
+                    .navbar-toggle {
+                        background: transparent;
+                        border: none;
+                        margin: 0px;
+                        padding: 0px;
+
+                        .icon-bar {
+                            background-color: #ff8132;
+                        }
+
+                        .material-icons-outlined {
+                            color: #ff8132;
+                        }
+                    }
+                }
+
+                .navbar-nav {
+                    display: grid;
+                }
+            }
+        }
+    }
+}

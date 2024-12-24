@@ -1,0 +1,118 @@
+main {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    background-color: #fff;
+
+    .right {
+        width: 50%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .left {
+        width: 50%;
+        padding: 10rem;
+        display: grid;
+        gap: 20px;
+
+
+        .title {
+            display: grid;
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+
+            h3 {
+                font-size: 48px;
+                color: #0C0C0F;
+                font-weight: 600;
+                margin: 0;
+            }
+
+            p {
+                font-size: 16px;
+                color: gray;
+            }
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+
+            div {
+                display: grid;
+                gap: 10px;
+
+                label {
+                    margin: 0;
+
+                    small {
+                        color: red;
+                    }
+                }
+
+                input {
+                    background-color: #F5F5FA;
+                    padding: 10px;
+                    border: 1px solid #D0D5DD;
+                    border-radius: 8px;
+                    width: 100%;
+                }
+            }
+
+            button {
+                color: #F5F5FA;
+                background-color: #1245A8;
+                padding: 10px 20px;
+                border-radius: 8px;
+                border: 1px solid #1245A8;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+                &:enabled:hover {
+                    background-color: #F5F5FA;
+                    color: #1245A8;
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                }
+
+                &:disabled {
+                    background-color: #1245a899;
+                }
+            }
+
+            .success {
+                background-color: #56ae57 !important;
+                border: 1px solid #56ae57 !important;
+            }
+        }
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    main {
+        margin-top: 180px;
+        flex-direction: column;
+
+        .right {
+            width: 100%;
+        }
+
+        .left {
+            width: 100%;
+            padding: 2rem;
+
+            .title {
+
+                h3 {
+                    font-size: 38px;
+                    color: #0C0C0F;
+                    font-weight: 600;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

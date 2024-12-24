@@ -1,0 +1,33 @@
+<app-navbar></app-navbar>
+<main>
+    <section class="left">
+        <div class="title">
+            <h3>Start Your Membership Today</h3>
+        </div>
+
+        <form [formGroup]="formDetails">
+            <div>
+                <input name="fname" type="text" required placeholder="Your Name" formControlName="firstName">
+            </div>
+            <div>
+                <input name="email" type="email" placeholder="Your Email" required formControlName="email">
+            </div>
+            <div>
+                <select name="plan" formControlName="plan" required>
+                    <option value="" disabled selected>Select Plan</option>
+                    <option value="monthly">Monthly Plan</option>
+                    <option value="annual">Annual Plan</option>
+                </select>
+            </div>
+            <div>
+                <textarea id="message" formControlName="message" placeholder="Your Message"
+                    class="form-control"></textarea>
+            </div>
+
+            <button *ngIf="!success" (click)="submitForm()" [disabled]="!formDetails.valid">Send</button>
+            <button *ngIf="success" class="success" disabled>We will connect to you shortly!</button>
+        </form>
+    </section>
+
+</main>
+<app-footer></app-footer>

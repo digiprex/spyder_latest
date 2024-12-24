@@ -1,0 +1,122 @@
+<app-navbar></app-navbar>
+<main>
+    <section class="left">
+        <div class="title">
+            <h3>Contact Us</h3>
+        </div>
+
+        <form [formGroup]="formDetails">
+            <div>
+                <input name="fname" type="text" required placeholder="Your Name" formControlName="firstName">
+            </div>
+            <div>
+                <input name="email" type="email" placeholder="Your Email" required formControlName="email">
+            </div>
+            <div>
+                <textarea id="message" formControlName="message" placeholder="Your Message"
+                    class="form-control"></textarea>
+            </div>
+
+            <button *ngIf="!success" (click)="submitForm()" [disabled]="!formDetails.valid">Send</button>
+            <button *ngIf="success" class="success" disabled>We will connect to you shortly!</button>
+        </form>
+    </section>
+
+    <section class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-section">
+            <div class="faq-item">
+                <h2>How much does Spider cost?</h2>
+                <p>
+                    We make Spider affordable with bite-sized monthly payments. You get everything you need to start
+                    and run your
+                    self-employed business and take advantage of potential tax savings for just $349/month or $296/month
+                    when paid annually.
+                    Since our members saved an average of $10,000* in taxes in 2021, Spider pays for itself in just
+                    a few months. Plus,
+                    it's 100% tax-deductible – how great is that?
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h2>What's included in the price?</h2>
+                <p>
+                    The price includes filing a single-member LLC and S Corp tax election, getting your EIN number,
+                    monthly bookkeeping
+                    services and financial reporting. You also get your very own accounting and tax advisor, who will
+                    file your business
+                    taxes and give you year-round tax support. All Spider plans include monthly bookkeeping and
+                    payroll.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h2>What's not included in the price?</h2>
+                <p>
+                    The price doesn't include third-party fees imposed by your city, state, or the federal government,
+                    as well as business
+                    license filing fees and other city-specific charges. Individual tax return preparation can be
+                    purchased for an additional
+                    one-time fee, and will be prepared by our integrated partner, TaxFyle.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Does Spider have a setup fee?</h2>
+                <p>
+                    Yes, there is a one-time Onboarding fee of $199. This fee goes toward ensuring that your business is
+                    set up correctly,
+                    registered with the appropriate agencies, and in compliance with payroll requirements. This fee also
+                    covers catching up
+                    and cleaning up your year-to-date bookkeeping, regardless of the number of transactions.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h2>What's Spider?</h2>
+                <p>
+                    Spider is the first back-office system designed for self-employed business owners that lets them
+                    focus on their
+                    passion, not their paperwork.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h2>What services does Spider offer?</h2>
+                <p>
+                    Your Spider membership includes entity formation (if applicable), S Corp tax election, monthly
+                    bookkeeping and
+                    financial statements, payroll support and tax filing, as well as federal and state business tax
+                    returns and quarterly
+                    tax support. You can also purchase individual tax return preparation from our integrated partner,
+                    TaxFyle, for an
+                    additional, one-time fee.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h2>How does Spider help with tax savings?</h2>
+                <p>
+                    Your team of advisors is here to help you get the most out of your S Corp. We ensure that your
+                    bookkeeping is up to date
+                    and that your personalized tax advice is based on real, accurate numbers.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h2>Why doesn't Spider support all businesses?</h2>
+                <p>
+                    Even though we'd love to help everyone, our goal is to assist those who'd benefit the most from our
+                    services.
+                    Full-time solopreneurs, like marketing consultants, coaches, designers, software developers, and
+                    creatives who make over
+                    $60,000/year, find the most value in Spider. Many of our members come from referrals, so if you
+                    know someone we
+                    should talk to, let us know.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</main>
+<app-footer></app-footer>
