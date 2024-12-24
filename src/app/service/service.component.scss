@@ -1,6 +1,6 @@
 .post-main-section {
     background-color: #fff;
-    margin-top: 110px;
+    margin-top: 90px;
 
     h1,
     h2,
@@ -21,6 +21,7 @@
     .post-inner-section {
         max-width: 800px;
         margin: 0 auto;
+        padding: 10px;
 
         .post-heading {
             text-align: center;
@@ -65,7 +66,7 @@
 
 @media only screen and (max-device-width: 480px) {
     .post-main-section {
-        margin-top: 180px;
+        margin-top: 0px;
 
         .post-inner-section {
             max-width: 800px;

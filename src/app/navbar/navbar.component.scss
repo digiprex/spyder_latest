@@ -20,7 +20,7 @@ main {
     .heading {
         width: 100%;
         position: fixed;
-        padding: 1rem 5rem;
+        padding: 10px;
         top: 0;
         background-color: #fff;
         border-bottom: 1px solid lightgray;
@@ -32,7 +32,7 @@ main {
             display: flex;
 
             img {
-                width: 20rem;
+                width: 15rem;
                 object-fit: contain;
             }
         }
@@ -104,11 +104,15 @@ main {
     // Mobile
     @media only screen and (max-device-width: 480px) {
         .heading {
-            padding: 10px;
+            padding: 20px 10px;
 
             .top-bar {
                 width: 100%;
                 justify-content: left;
+
+                img {
+                    width: 15rem;
+                }
             }
 
             .mobile {
@@ -117,10 +121,11 @@ main {
 
             .navbar-inverse {
                 width: 100%;
+                padding: 0px;
                 background: transparent;
-                display: grid;
-                justify-content: center;
-                gap: 30px;
+                display: flex;
+                justify-content: space-between;
+                gap: 5px;
 
                 .navbar-collapse {
                     width: 100%;
