@@ -1,6 +1,6 @@
 main {
     background-color: #fff;
-    margin-top: 90px;
+    margin-top: 60px;
 
     h1,
     h2,
@@ -41,6 +41,10 @@ main {
                 svg {
                     fill: #008866;
                 }
+
+                .start-button {
+                    background-color: #008866 !important;
+                }
             }
 
             .content {
@@ -50,17 +54,16 @@ main {
 
                 svg {
                     position: absolute;
-                    top: 10rem;
-                    width: 20%;
-                    z-index: 0;
-                    transition: color 0.3s ease;
+                    top: 65px;
+                    left: 0px;
+                    width: 30%;
                 }
 
                 h5 {
                     margin: 0px;
                     font-family: "Poppins", serif;
-                    font-size: 20px;
-                    font-weight: 600;
+                    font-size: 21px;
+                    font-weight: 600 !important;
                     line-height: 32px;
                     transition: color 0.3s ease;
                     z-index: 999;
@@ -69,11 +72,37 @@ main {
                 h1 {
                     width: 500px;
                     margin: 0px auto;
-                    font-size: 60px;
-                    font-weight: 700;
-                    line-height: 72px;
+                    font-size: 50px;
+                    font-weight: 700 !important;
+                    line-height: 65px;
                     letter-spacing: -0.5px;
                     transition: color 0.3s ease;
+                }
+
+                p {
+                    font-size: 18px;
+
+                    span {
+                        font-weight: 700 !important;
+                    }
+                }
+
+                .start-button {
+                    width: 40%;
+                    margin: auto;
+                    font-weight: 600;
+                    background-color: #ff995b;
+                    color: #fff;
+                    border: none;
+                    padding: 15px 30px;
+                    font-size: 18px;
+                    border-radius: 30px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: #008866;
+                    }
                 }
             }
         }
@@ -84,10 +113,18 @@ main {
 
             img {
                 width: 100%;
+                height: 85vh;
                 animation: fade 1s ease-in-out;
                 object-fit: cover;
                 transition: opacity 1s ease-in-out;
                 animation: fade 1s ease-in-out;
+            }
+
+            svg {
+                position: absolute;
+                top: 65px;
+                right: 0px;
+                width: 30%;
             }
 
             img.active {
@@ -132,60 +169,53 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 5rem;
 
             h2 {
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: 400;
                 line-height: 56.02px;
                 margin: 0px;
             }
 
-            .arrows {
-                button {
-                    background: none;
-                    border: none;
-                    font-size: 1.5rem;
+            .arrow-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .arrow {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid #d2c7bd;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    font-size: 1.2rem;
+                    color: #7d7d7d;
                     cursor: pointer;
-                    margin-left: 1rem;
-                    transition: border-color 0.3s, color 0.3s;
+                    transition: all 0.3s ease;
 
                     &:hover {
+                        background-color: #f4f4f4;
                         color: #000;
-                        background-color: #fdfdfd;
-                        border: 2px solid #7d7d7d;
+                    }
+
+                    span {
+                        display: inline-block;
+                        font-family: Arial, sans-serif;
+                        font-weight: 500;
+                        font-size: 25px;
                     }
 
                     &.left-arrow {
-                        transform: translateX(-5px);
-                        transform: translateX(-5px);
-                        border-radius: 50%;
-                        border: 1px solid #7d7d7d;
-                        padding: 10px;
-                        width: 35px;
-                        height: 41px;
-
-                        &:hover {
-                            color: #000;
-                            background-color: #fdfdfd;
-                            border: 2px solid #7d7d7d;
-                        }
+                        transform: translateX(0);
                     }
 
                     &.right-arrow {
-                        transform: translateX(5px);
-                        transform: translateX(-5px);
-                        border-radius: 50%;
-                        border: 1px solid #7d7d7d;
-                        padding: 10px;
-                        width: 35px;
-                        height: 41px;
-
-                        &:hover {
-                            color: #000;
-                            background-color: #fdfdfd;
-                            border: 2px solid #7d7d7d;
-                        }
+                        transform: translateX(0);
                     }
                 }
             }
@@ -209,10 +239,9 @@ main {
                 flex: 0 0 auto;
                 margin-right: 1rem;
                 background: #fff;
-                border: 1px solid #ddd;
                 border-radius: 5px;
                 text-align: center;
-                width: 33%;
+                width: 28%;
                 padding: 20px;
 
                 .testimonial-info {
@@ -239,15 +268,16 @@ main {
 
     .reviews-section {
         text-align: center;
-        padding: 0rem 5rem 5rem 5rem;
+        padding: 5rem;
         font-family: 'Poppins', sans-serif;
         text-align: left;
 
         .section-title {
-            font-size: 48px;
+            font-size: 40px;
             font-weight: 400;
             line-height: 56.02px;
             margin: 0px;
+            margin-bottom: 5rem;
 
             .trustpilot-logo {
                 color: #00b67a;
@@ -260,10 +290,12 @@ main {
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             gap: 2rem;
             justify-content: center;
-            padding: 0 1rem;
         }
 
         .review-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
             background-color: #ffffff;
             border: 1px solid #eaeaea;
             border-radius: 8px;
@@ -297,7 +329,7 @@ main {
             }
 
             .review-title {
-                font-size: 30px;
+                font-size: 26px;
                 font-family: "Poppins", serif;
                 font-weight: 400;
                 margin: 0 0 1rem;
@@ -332,40 +364,50 @@ main {
             margin-bottom: 1.5rem;
 
             .feedback-title {
-                font-size: 48px;
+                font-size: 40px;
                 font-weight: 400;
                 line-height: 56.02px;
                 margin: 0;
             }
 
-            .navigation-buttons {
-                .nav-button {
-                    background: none;
-                    border: none;
-                    font-size: 1.5rem;
+            .arrow-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+
+                .arrow {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid #d2c7bd;
+                    border-radius: 50%;
+                    background-color: transparent;
+                    font-size: 1.2rem;
+                    color: #7d7d7d;
                     cursor: pointer;
-                    margin-left: 1rem;
-                    transition: border-color 0.3s, color 0.3s;
+                    transition: all 0.3s ease;
 
                     &:hover {
+                        background-color: #f4f4f4;
                         color: #000;
-                        background-color: #fdfdfd;
-                        border: 2px solid #7d7d7d;
                     }
 
-                    &.left-nav,
-                    &.right-nav {
-                        border-radius: 50%;
-                        border: 1px solid #7d7d7d;
-                        padding: 10px;
-                        width: 35px;
-                        height: 41px;
+                    span {
+                        display: inline-block;
+                        font-family: Arial, sans-serif;
+                        font-weight: 500;
+                        font-size: 25px;
+                    }
 
-                        &:hover {
-                            color: #000;
-                            background-color: #fdfdfd;
-                            border: 2px solid #7d7d7d;
-                        }
+                    &.left-arrow {
+                        transform: translateX(0);
+                    }
+
+                    &.right-arrow {
+                        transform: translateX(0);
                     }
                 }
             }
@@ -395,21 +437,22 @@ main {
                 width: 60%;
 
                 .feedback-image {
-                    width: 60%;
+                    width: 55%;
 
                     img {
                         width: 100%;
-                        height: 75vh;
+                        height: 55vh;
                         object-fit: cover;
                     }
                 }
 
                 .feedback-content {
-                    width: 40%;
-                    padding: 2rem;
+                    width: 45%;
+                    padding: 10px;
 
-                    .quote-icon {
-                        margin-bottom: 1rem;
+                    svg {
+                        width: 30px;
+                        height: 30px;
                     }
 
                     .feedback-description {
@@ -423,9 +466,10 @@ main {
                         color: #333;
                         margin-bottom: 0.5rem;
                         font-size: 25px;
-                        font-weight: 200;
+                        font-weight: 400;
                         text-align: start;
                         font-family: "Poppins", serif;
+                        line-height: 40px;
                     }
 
                     .features-profession {
@@ -445,7 +489,7 @@ main {
 
     .member-review-section {
         width: 100%;
-        padding: 5rem 5rem 5rem 5rem;
+        padding: 5rem 15rem 5rem 15rem;
         background-color: #d9ede8;
         margin: auto;
         text-align: center;
@@ -477,7 +521,7 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 0px;
+        margin-top: 90px;
 
         .banner {
             flex-direction: column;

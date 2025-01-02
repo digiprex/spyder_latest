@@ -1,6 +1,5 @@
 main {
     background-color: #fff;
-    margin-top: 90px;
 
     h1,
     h2,
@@ -20,7 +19,7 @@ main {
     .heading {
         width: 100%;
         position: fixed;
-        padding: 10px;
+        padding: 5px;
         top: 0;
         background-color: #fff;
         border-bottom: 1px solid lightgray;
@@ -45,7 +44,6 @@ main {
             background-color: #ffffff;
             border: none;
             margin: 0px;
-            padding: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;

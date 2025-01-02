@@ -236,9 +236,8 @@ public success = false;
 
 
   images: string[] = [
-    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/80046a47-6746-4e0c-9c4b-6d7914c46609_collective-member-jason-polevoi-desktop.jpg',
-    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/b7075e7b-8eed-4dac-8773-e9d3351d70ac_alice-yang-collective-member.jpg',
-    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg'
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/57ec2090-557b-478f-bd18-d4aaca5ee5cf_WhatsAppVideo2025-01-02at6.gif',
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/fbd44177-a1dd-44b9-a638-5875d2130ac8_WhatsAppVideo2025-01-02at6.gif'
   ];
 
   
