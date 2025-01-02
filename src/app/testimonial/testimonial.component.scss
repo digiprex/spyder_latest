@@ -489,7 +489,7 @@ main {
 
     .member-review-section {
         width: 100%;
-        padding: 5rem 5rem 5rem 5rem;
+        padding: 5rem 15rem 5rem 15rem;
         background-color: #d9ede8;
         margin: auto;
         text-align: center;
@@ -521,7 +521,7 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 0px;
+        margin-top: 90px;
 
         .banner {
             flex-direction: column;
