@@ -1,6 +1,6 @@
 main {
     background-color: #fff;
-    margin-top: 90px;
+    margin-top: 60px;
 
     h1,
     h2,
@@ -16,10 +16,11 @@ main {
         font-family: "Poppins", serif;
     }
 
+
     .banner {
         display: flex;
         justify-content: center;
-        background-color: #00886638;
+        background-color: #00886654;
 
         .outer-content {
             width: 50%;
@@ -39,7 +40,7 @@ main {
                 }
 
                 svg {
-                    fill: #ff995b;
+                    fill: #ff995b !important;
                 }
             }
 
@@ -50,28 +51,18 @@ main {
 
                 svg {
                     position: absolute;
-                    top: 10rem;
+                    top: 65px;
+                    left: 0px;
                     width: 20%;
-                    z-index: 0;
-                    transition: color 0.3s ease;
-                }
-
-                h5 {
-                    margin: 0px;
-                    font-family: "Poppins", serif;
-                    font-size: 20px;
-                    font-weight: 600;
-                    line-height: 32px;
-                    transition: color 0.3s ease;
-                    z-index: 999;
+                    fill: #008866;
                 }
 
                 h1 {
                     width: 500px;
                     margin: 0px auto;
-                    font-size: 60px;
-                    font-weight: 700;
-                    line-height: 72px;
+                    font-size: 50px;
+                    font-weight: 700 !important;
+                    line-height: 65px;
                     letter-spacing: -0.5px;
                     transition: color 0.3s ease;
                 }
@@ -84,42 +75,12 @@ main {
 
             img {
                 width: 100%;
+                height: 55vh;
                 animation: fade 1s ease-in-out;
                 object-fit: cover;
+                object-position: top;
                 transition: opacity 1s ease-in-out;
-                animation: fade 1s ease-in-out;
             }
-
-            img.active {
-                opacity: 1;
-                z-index: 1;
-            }
-
-            img.inactive {
-                opacity: 0;
-                z-index: 0;
-            }
-
-            @keyframes fade {
-                from {
-                    opacity: 0;
-                }
-
-                to {
-                    opacity: 1;
-                }
-            }
-        }
-    }
-
-    // Keyframes for fade-in and fade-out animation
-    @keyframes fade {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
         }
     }
 
@@ -147,16 +108,23 @@ main {
             justify-content: center;
             gap: 1rem;
             font-family: "Poppins", serif;
+            width: 80%;
+            margin: auto;
 
             .plan {
                 display: grid;
-                gap: 40px;
-                background-color: #f9f9f9;
+                gap: 20px;
+                background-color: #faf9f6;
                 border: 1px solid #c4c4c499;
                 border-radius: 8px;
-                padding: 1.5rem;
-                width: 45%;
+                padding: 5rem;
+                width: 50%;
                 text-align: left;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
 
                 h3 {
                     margin: 0;
@@ -173,7 +141,7 @@ main {
                         font-size: 14px;
                         font-weight: 500;
                         padding: 10px;
-                        border-radius: 25px;
+                        border-radius: 10px;
                     }
                 }
 
@@ -196,9 +164,9 @@ main {
                 }
 
                 .get-started {
-                    width: 35%;
+                    width: fit-content;
                     background-color: #ffffff;
-                    border: 2px solid #008866;
+                    border: 1px solid #008866;
                     color: #008866;
                     padding: 15px 30px;
                     font-size: 16px;
@@ -215,6 +183,7 @@ main {
 
             .annual-plan {
                 font-family: "Poppins", serif;
+                background-color: #fff;
 
                 .get-started {
                     background-color: #008866;
@@ -336,107 +305,11 @@ main {
             }
         }
     }
-
-    .lets-talk-section {
-        background-image: url('https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2d01b268-a269-4f5a-90a0-94eca45e8d08_1%20%281%29.png');
-        background-color: #d9ede8;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 10rem 5rem;
-        position: relative;
-        overflow: hidden;
-
-        .content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: left;
-
-            h1 {
-                font-size: 48px;
-                font-weight: 400;
-                line-height: 56.02px;
-                margin: 0;
-                color: #1a5632;
-                margin-bottom: 20px;
-            }
-
-            .details {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 40px;
-
-                .join-team {
-                    flex: 2;
-
-                    h2 {
-                        font-family: "Poppins", serif;
-                        font-size: 22px;
-                        font-weight: 500;
-                        color: #1a5632;
-                        margin-bottom: 15px;
-                    }
-
-                    p {
-                        font-size: 16px;
-                        color: #1a5632;
-                        margin-bottom: 25px;
-                    }
-
-                    .open-roles-button {
-                        background-color: #fff;
-                        border: none;
-                        padding: 10px 20px;
-                        font-size: 16px;
-                        color: #1a5632;
-                        border-radius: 25px;
-                        cursor: pointer;
-                        transition: all 0.3s ease;
-                        font-weight: 600;
-
-                        &:hover {
-                            background-color: #c8e3d3;
-                        }
-                    }
-                }
-
-                .contact-info {
-                    flex: 1;
-                    display: flex;
-                    gap: 20px;
-
-                    .contact-item {
-                        h2 {
-                            font-size: 22px;
-                            font-weight: 500;
-                            color: #1a5632;
-                            margin-bottom: 5px;
-                            font-family: "Poppins", serif;
-                        }
-
-                        a {
-                            font-size: 16px;
-                            font-weight: bold;
-                            color: #1a5632;
-                            text-decoration: underline;
-                            transition: color 0.3s ease;
-                            font-family: "Poppins", serif;
-
-                            &:hover {
-                                color: #0e3921;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
 }
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 0px;
+        margin-top: 90px;
 
         .banner {
             flex-direction: column;
@@ -590,76 +463,6 @@ main {
 
                 .text-container {
                     padding: 10px;
-                }
-            }
-        }
-
-        .lets-talk-section {
-            padding: 10px;
-
-            .content {
-                max-width: 1200px;
-                margin: 0 auto;
-                text-align: left;
-
-                h1 {
-                    font-size: 40px;
-                }
-
-                .details {
-                    flex-direction: column;
-
-                    .join-team {
-                        flex: 1;
-
-                        h2 {}
-
-                        p {}
-
-                        .open-roles-button {
-                            background-color: #fff;
-                            border: none;
-                            padding: 10px 20px;
-                            font-size: 16px;
-                            color: #1a5632;
-                            border-radius: 25px;
-                            cursor: pointer;
-                            transition: all 0.3s ease;
-                            font-weight: 600;
-
-                            &:hover {
-                                background-color: #c8e3d3;
-                            }
-                        }
-                    }
-
-                    .contact-info {
-                        flex: 1;
-                        display: flex;
-                        gap: 20px;
-
-                        .contact-item {
-                            h2 {
-                                font-size: 22px;
-                                font-weight: 500;
-                                color: #1a5632;
-                                margin-bottom: 5px;
-                                font-family: "Poppins", serif;
-                            }
-
-                            a {
-                                font-size: 16px;
-                                color: #1a5632;
-                                text-decoration: underline;
-                                transition: color 0.3s ease;
-                                font-family: "Poppins", serif;
-
-                                &:hover {
-                                    color: #0e3921;
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }

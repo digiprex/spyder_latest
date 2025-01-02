@@ -1,6 +1,6 @@
 main {
     background-color: #fff;
-    margin-top: 90px;
+    margin-top: 60px;
 
     h1,
     h2,
@@ -150,48 +150,55 @@ main {
     .s-corp-section {
         background-color: #d9ede8;
         display: flex;
+        width: 100%;
+        gap: 2rem;
         justify-content: center;
         align-items: center;
 
-        .s-corp-container {
+
+        .image-container {
+            width: 50%;
+
+            img.s-corp-image {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text-container {
+            width: 35%;
             display: flex;
-            width: 100%;
-            gap: 2rem;
+            flex-direction: column;
+            gap: 40px;
+            justify-content: center;
+            margin: auto;
 
-            .image-container {
-                flex: 1;
+            .s-corp-title {
+                font-size: 40px;
+                font-weight: 600;
+                margin-bottom: 1rem;
+                color: #000;
+            }
 
-                img.s-corp-image {
-                    width: 100%;
-                    object-fit: cover;
-                    height: 100vh;
+            .s-corp-description {
+                font-size: 16px;
+                line-height: 1.6;
+                color: #000;
+                margin-bottom: 1.5rem;
+
+                strong {
+                    font-weight: 700;
                 }
             }
 
-            .text-container {
-                flex: 1;
-                display: flex;
-                gap: 50px;
-                flex-direction: column;
-                justify-content: center;
-                padding: 0rem 10rem;
+            .s-corp-link {
+                font-size: 17px;
+                color: #000;
+                font-weight: 600;
+                text-decoration: none;
 
-                .s-corp-title {
-                    font-size: 48px;
-                    font-weight: 400;
-                    margin-bottom: 1rem;
-                    color: #000;
-                }
-
-                .s-corp-link {
-                    font-size: 17px;
-                    color: #000;
-                    font-weight: 600;
-                    text-decoration: none;
-
-                    &:hover {
-                        opacity: 0.5;
-                    }
+                &:hover {
+                    text-decoration: underline;
                 }
             }
         }
