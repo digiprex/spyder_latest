@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/assets/fonts/Recoleta-RegularDEMO.otf') format('opentype');
+}
+
+
+
 main {
     background-color: #fff;
     margin-top: 60px;
@@ -8,12 +15,13 @@ main {
     h4,
     h5,
     h6 {
-        font-family: "Libre Baskerville", serif;
+        font-family: 'Recoleta', sans-serif;
         font-weight: 400 !important;
     }
 
+    a,
     p {
-        font-family: "Poppins", serif;
+        font-family: "Montserrat", serif !important;
     }
 
     .banner {
@@ -201,10 +209,7 @@ main {
                 max-width: 23%;
                 flex: 0 0 23%;
                 text-align: start;
-                display: flex;
-                flex-direction: column;
                 gap: 15px;
-
 
                 .icon {
                     width: 60px;
@@ -220,21 +225,22 @@ main {
                     }
                 }
 
-                h3 {
-                    font-size: 26px;
-                    font-weight: 500 !important;
-                    margin-bottom: 10px;
-                    text-transform: capitalize;
-                    color: #383531;
-                    font-family: "Poppins", serif;
-                }
+                div {
+                    h3 {
+                        font-size: 26px;
+                        margin-bottom: 10px;
+                        text-transform: capitalize;
+                        color: #383531;
+                        font-family: "Poppins", serif;
+                    }
 
-                p {
-                    font-size: 16px;
-                    color: #383531;
+                    p {
+                        font-size: 16px;
+                        color: #383531;
 
-                    strong {
-                        font-weight: 600;
+                        strong {
+                            font-weight: 600;
+                        }
                     }
                 }
             }
@@ -298,31 +304,33 @@ main {
                         }
                     }
 
-                    h3 {
-                        font-size: 20px;
-                        margin-bottom: 10px;
-                        color: #333;
-                        font-family: "Poppins", serif;
-                    }
+                    div {
 
-                    p {
-                        font-size: 14px;
-                        color: #666;
-
-                        strong {
-                            font-weight: 600;
+                        h3 {
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                            color: #333;
                         }
-                    }
 
-                    button {
-                        background-color: transparent;
-                        color: #666;
-                        font-weight: 500 !important;
-                        border: none;
-                        padding: 0px;
+                        p {
+                            font-size: 14px;
+                            color: #666;
 
-                        &:hover {
-                            font-weight: 700 !important;
+                            strong {
+                                font-weight: 600;
+                            }
+                        }
+
+                        button {
+                            background-color: transparent;
+                            color: #666;
+                            font-weight: 500 !important;
+                            border: none;
+                            padding: 0px;
+
+                            &:hover {
+                                font-weight: 700 !important;
+                            }
                         }
                     }
                 }
@@ -357,10 +365,10 @@ main {
                             border-radius: 20px;
                             font-size: 14px;
                             font-weight: 600;
-                            color: #fa5a60;
+                            color: #ff8132;
 
                             .name {
-                                color: #fa5a60;
+                                color: #ff8132;
                                 font-weight: bold;
                             }
                         }
@@ -447,7 +455,7 @@ main {
             width: 35%;
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 20px;
             justify-content: center;
             margin: auto;
 
@@ -495,23 +503,24 @@ main {
         .membership-content {
             display: flex;
             justify-content: space-between;
+            align-items: center;
 
             .membership-heading-content {
                 text-align: start;
                 display: flex;
-                gap: 30px;
+                gap: 20px;
                 flex-direction: column;
                 justify-content: start;
 
                 h2 {
                     font-size: 40px;
+                    margin: 0px;
                     color: #000;
                 }
 
                 p {
                     color: #555;
                     font-size: 16px;
-                    margin-bottom: 4rem;
                 }
             }
 
@@ -543,29 +552,25 @@ main {
         .plans {
             display: flex;
             justify-content: center;
-            gap: 25px;
             font-family: "Poppins", serif;
             width: 80%;
             margin: auto;
 
             .plan {
                 display: grid;
-                gap: 20px;
+                gap: 10px;
                 background-color: #faf9f6;
-                border: 1px solid #c4c4c499;
-                border-radius: 8px;
+                border: 1px solid #e5e0d2;
+                border-radius: 10px 0px 0px 10px;
+                border-right: none;
                 padding: 5rem;
                 width: 50%;
                 text-align: left;
                 transition: transform 0.3s ease;
 
-                &:hover {
-                    transform: translateY(-5px);
-                }
-
                 h3 {
                     margin: 0;
-                    font-size: 28px;
+                    font-size: 24px;
                     font-weight: 500;
                     display: flex;
                     font-family: "Poppins", serif;
@@ -583,7 +588,7 @@ main {
                 }
 
                 .price {
-                    font-size: 40px;
+                    font-size: 35px;
                     font-weight: 400;
                     margin: 1rem 0;
                     color: #000;
@@ -619,6 +624,7 @@ main {
             }
 
             .annual-plan {
+                border-radius: 0px 10px 10px 0px;
                 font-family: "Poppins", serif;
                 background-color: #fff;
 
@@ -636,21 +642,21 @@ main {
 
         .add-ons {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; // Changed from center to flex-start
             flex-direction: column;
             gap: 25px;
 
             .add-on {
                 background: #fff;
-                border: 1px solid #e0e0e0;
+                border: 1px solid #e5e0d2;
                 border-radius: 10px;
                 padding: 2rem;
                 flex: 1;
                 width: 80%;
                 margin: auto;
                 display: flex;
-                justify-content: space-between;
-                align-items: center;
+                justify-content: flex-start; // Changed from space-between to flex-start
+                align-items: flex-start; // Align items to start
                 gap: 50px;
 
                 .btn-secondary {
@@ -673,7 +679,7 @@ main {
                     flex: 1;
                     margin-left: 1rem;
                     text-align: left;
-                    font-size: 20px;
+                    font-size: 18px;
                     font-weight: 500;
                     color: #333;
 
@@ -695,7 +701,6 @@ main {
                 }
             }
         }
-
     }
 
     .scroll-section {
@@ -728,7 +733,7 @@ main {
                 padding: 15px;
                 border: 1px solid transparent;
                 transition: border-color 0.3s ease-in-out;
-                height: 45vh;
+                height: 85vh;
 
                 .step-number {
                     font-size: 120px;
@@ -749,6 +754,9 @@ main {
                 }
 
                 .inner-content-section {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
 
                     h3 {
                         font-family: "Poppins", serif;
@@ -767,7 +775,8 @@ main {
                     }
 
                     button {
-                        font-size: 17px;
+                        width: 35%;
+                        font-size: 16px;
                         line-height: 32px;
                         letter-spacing: .4px;
                         background-color: transparent;
@@ -838,9 +847,9 @@ main {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 50px;
-                    height: 50px;
-                    border: 2px solid #d2c7bd;
+                    width: 45px;
+                    height: 45px;
+                    border: 1px solid #d2c7bd;
                     border-radius: 50%;
                     background-color: transparent;
                     font-size: 1.2rem;
@@ -931,6 +940,17 @@ main {
     main {
         margin-top: 90px;
 
+        h2 {
+            font-size: 25px !important;
+            line-height: 35px !important;
+        }
+
+        p {
+            font-weight: 300 !important;
+            font-size: 16px !important;
+            color: #383531 !important;
+        }
+
         .banner {
             flex-direction: column;
 
@@ -938,9 +958,15 @@ main {
                 width: 100%;
 
                 .content {
-                    padding: 10px;
+                    padding: 2rem;
+                    gap: 40px;
 
-                    svg {}
+                    svg {
+                        position: absolute;
+                        top: 95px;
+                        left: 0px;
+                        width: 70%;
+                    }
 
                     h5 {}
 
@@ -981,12 +1007,12 @@ main {
         }
 
         .membership-benefits {
-            padding: 10px;
-            background-color: #fff;
+            padding: 2rem;
+            gap: 10px;
 
             h2 {
-                font-size: 40px;
-                text-align: center;
+                font-size: 30px;
+                line-height: 50px;
             }
 
             .benefits-container {
@@ -995,24 +1021,30 @@ main {
                 .benefit {
                     max-width: 100%;
                     text-align: start;
+                    display: flex;
+                    flex: 0;
+                    align-items: center;
 
-                    .icon {}
+                    .icon {
+                        width: 150px;
+                        height: 60px;
+                    }
 
-                    h3 {}
+                    div {
+                        h3 {
+                            font-size: 22px;
+                        }
 
-                    p {}
+                        p {}
+                    }
                 }
             }
         }
 
         .platform-business {
             padding: 10px;
+            gap: 10px;
             background-color: #fff;
-
-            h2 {
-                font-size: 40px;
-                text-align: center;
-            }
 
             .platform-business-content {
                 flex-direction: column;
@@ -1020,25 +1052,32 @@ main {
                 .platform-benefits-container {
                     display: flex;
                     flex-wrap: wrap;
-                    gap: 20px;
+                    gap: 10px;
+                    height: auto;
                     width: 100%;
 
                     .platform-benefit {
                         flex: 0 0 100%;
                         max-width: 100%;
-                        text-align: start;
-                        cursor: pointer;
+                        display: flex;
+                        padding: 5px;
+                        gap: 20px;
+                        align-items: center;
 
-                        .icon {}
-
-                        h3 {
-                            font-size: 20px;
-                            margin-bottom: 10px;
-                            color: #333;
-                            font-family: "Poppins", serif;
+                        .icon {
+                            width: 120px;
                         }
 
-                        p {}
+                        div {
+                            h3 {
+                                font-size: 20px;
+                                margin-bottom: 10px;
+                                color: #333;
+                                font-family: "Poppins", serif;
+                            }
+
+                            p {}
+                        }
                     }
                 }
 
@@ -1064,7 +1103,7 @@ main {
 
             .text-container {
                 width: 100%;
-                padding: 20px 10px;
+                padding: 2rem;
             }
         }
 
@@ -1079,23 +1118,29 @@ main {
 
                     h2 {}
 
-                    p {}
+                    p {
+                        margin-bottom: 3rem;
+                    }
                 }
 
                 .membership-button {
+                    gap: 10px;
                     width: 100%;
+                    justify-content: center;
 
-                    button {}
+                    button {
+                        padding: 15px 10px;
+                        width: auto;
+                    }
                 }
             }
 
             .plans {
                 width: 100%;
-                flex-direction: column;
+                flex-direction: column-reverse;
 
                 .plan {
                     display: grid;
-                    gap: 40px;
                     background-color: #f9f9f9;
                     border: 1px solid #c4c4c499;
                     border-radius: 8px;
@@ -1131,41 +1176,55 @@ main {
 
             .add-ons {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 flex-direction: column;
                 gap: 1rem;
 
                 .add-on {
                     width: 100%;
+                    gap: 15px;
                     flex-direction: column;
-
-
+                    text-align: start;
+                    align-items: flex-start;
 
                     .add-on-title {
-                        text-align: center;
+                        text-align: start;
+                        margin-left: 0px;
                     }
 
-                    .add-on-price {}
+                    .add-on-price {
+                        text-align: start;
+                    }
                 }
             }
 
         }
 
         .scroll-section {
-            flex-direction: column;
+            flex-direction: column-reverse;
 
             .left-content {
                 flex: 1;
                 padding: 10px;
 
                 h1 {
-                    font-size: 40px;
-                    margin: 0px;
+                    font-size: 30px !important;
+                    line-height: 50px;
                 }
 
                 .step {
-                    flex-direction: column;
-                    height: 60vh;
+                    height: auto;
+                    gap: 20px;
+
+                    .step-number {
+                        font-size: 120px !important;
+                    }
+
+                    .inner-content-section {
+                        button {
+                            width: 70%;
+                        }
+                    }
                 }
             }
 
@@ -1173,13 +1232,12 @@ main {
         }
 
         .testimonial-section {
-            padding: 10px;
+            padding: 2rem;
 
             .header {
-                flex-direction: column;
 
                 h2 {
-                    text-align: center;
+                    text-align: start;
                 }
             }
 

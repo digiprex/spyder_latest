@@ -9,7 +9,7 @@ import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-public success = false;
+  public success = false;
   members: any;
   slider: any;
   bgColor: any;
@@ -29,13 +29,13 @@ public success = false;
     })
   }
 
-  
+
   testimonialFeedback = [
     {
       description: 'Spider helps me optimize my workload without sacrificing quality',
       name: 'Olivia Nunn',
       backgroundColor: '#ffe6e6',
-      profession: 'PR Agency',
+      profession: 'Read More',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg'
     },
     {
@@ -55,7 +55,7 @@ public success = false;
   ];
 
   @ViewChild('feedbackSlider', { static: false }) feedbackSlider!: ElementRef<any>;
-  
+
   scrollTestimonialLeft(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
@@ -240,41 +240,46 @@ public success = false;
     'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/fbd44177-a1dd-44b9-a638-5875d2130ac8_WhatsAppVideo2025-01-02at6.gif'
   ];
 
-  
+
   pressFeatures = [
     {
+      contentHeading: 'TechCrunch',
       description: 'Spider Debuts AI-Powered Accounting Tool for Solopreneurs',
       backgroundColor: '#ffe6e6',
-      profession: 'PR Agency',
+      profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/86095aae-fba0-4f78-befb-8cf8e2741106_accounting-b2b-payments.jpg'
     },
     {
+      contentHeading: 'PUNMTS',
       description: 'Is The $1 Billion, One-Person Business Around The Corner? This Freelance Platform, Which Just Raised $50 Million, Is Betting On A Bold Future For Solopreneurs',
       backgroundColor: '#e6d8ff',
-      profession: 'Graphic Designer',
+      profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8bdf09a9-3790-44b6-8ccd-57c7fbb4d75a_press.jpg'
     },
     {
+      contentHeading: 'Forbes',
       description: 'This Ashton-Kutcher Backed Startup Is Helping The Self-Employed Get Organized',
       backgroundColor: '#d8f0e6',
-      profession: 'Content Creator',
+      profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
     },
     {
+      contentHeading: 'TechCrunch',
       description: 'Thanks to Spider, I can focus 100% on my work',
       backgroundColor: '#e6d8ff',
-      profession: 'Graphic Designer',
+      profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8bdf09a9-3790-44b6-8ccd-57c7fbb4d75a_press.jpg'
     },
     {
+      contentHeading: 'PUNMTS',
       description: 'Is The $1 Billion, One-Person Business Around The Corner? This Freelance Platform, Which Just Raised $50 Million, Is Betting On A Bold Future For Solopreneurs',
       backgroundColor: '#d8f0e6',
-      profession: 'Content Creator',
+      profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
     }
   ];
 
-  
+
   scrollFeaturesLeft(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;

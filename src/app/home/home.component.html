@@ -55,9 +55,11 @@
                         </defs>
                     </svg>
                 </div>
-                <h3>Save money</h3>
-                <p>Members save on average <strong>$10,000*</strong> a year <strong> structuring their business as
-                        an S Corp.</strong></p>
+                <div>
+                    <h3>Save money</h3>
+                    <p>Members save on average <strong>$10,000*</strong> a year <strong> structuring their business as
+                            an S Corp.</strong></p>
+                </div>
             </div>
 
             <div class="benefit">
@@ -75,9 +77,11 @@
                         </defs>
                     </svg>
                 </div>
-                <h3>Save time</h3>
-                <p>Unlock <strong>more billable hours</strong> - we handle the numbers so you can focus on your
-                    business.</p>
+                <div>
+                    <h3>Save time</h3>
+                    <p>Unlock <strong>more billable hours</strong> - we handle the numbers so you can focus on your
+                        business.</p>
+                </div>
             </div>
 
             <div class="benefit">
@@ -88,9 +92,11 @@
                             stroke="#D9EDE8" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                 </div>
-                <h3>Your finance team</h3>
-                <p>Take the solo out of solopreneur—your very own <strong> finance team of seasoned
-                        professionals.</strong></p>
+                <div>
+                    <h3>Your finance team</h3>
+                    <p>Take the solo out of solopreneur—your very own <strong> finance team of seasoned
+                            professionals.</strong></p>
+                </div>
             </div>
 
             <div class="benefit">
@@ -104,10 +110,12 @@
                         </path>
                     </svg>
                 </div>
-                <h3>All-in-one solution</h3>
-                <p>The tools, <strong>technology, and team</strong> you need to power your business, <strong>all
-                        under
-                        one login.</strong></p>
+                <div>
+                    <h3>All-in-one solution</h3>
+                    <p>The tools, <strong>technology, and team</strong> you need to power your business, <strong>all
+                            under
+                            one login.</strong></p>
+                </div>
             </div>
         </div>
     </section>
@@ -122,9 +130,11 @@
                     <div class="icon" [style.background-color]="benefit.bgColor">
                         <img [src]="benefit.img" [alt]="benefit.name" class="profile-image" />
                     </div>
-                    <h3>{{ benefit.title }}</h3>
-                    <p>{{ benefit.description }}</p>
-                    <button [routerLink]="benefit.urlBtn">{{benefit.btnText}}</button>
+                    <div>
+                        <h3>{{ benefit.title }}</h3>
+                        <p>{{ benefit.description }}</p>
+                        <button [routerLink]="benefit.urlBtn">{{benefit.btnText}}</button>
+                    </div>
                 </div>
             </div>
 

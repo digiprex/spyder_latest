@@ -41,17 +41,13 @@
     <section class="s-corp-section">
 
         <div class="image-container">
-            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/80046a47-6746-4e0c-9c4b-6d7914c46609_collective-member-jason-polevoi-desktop.jpg"
+            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c030d362-01f5-4d28-97a7-63e654175b14_collective-founders-hooman-radfar-ugur-kaner-bugra-akcay-desktop.webp"
                 alt="Person smiling with a mug" class="s-corp-image" />
         </div>
         <div class="text-container">
-            <h2 class="s-corp-title">Save thousands in <br> taxes with an S Corp</h2>
-            <p class="s-corp-description">
-                An S Corp is a tax election that changes the way your LLC is taxed – which can pave the way for
-                thousands in tax savings every year. S Corps get a bad rap for being more work, but with Spider,
-                we take care of the complex stuff. You keep all the savings, we handle the headaches. Spider
-                members save an average of <strong>$10,000*</strong> year switching to an S Corp.
-            </p>
+            <h2 class="s-corp-title">We give our members the freedom to focus on what they do best: being their own boss
+            </h2>
+         
         </div>
     </section>
 
@@ -138,7 +134,7 @@
     <section class="feedback-section">
         <div class="feedback-header">
             <h2 class="feedback-title">In the news</h2>
-            
+
             <div class="arrow-container">
                 <button class="arrow left-arrow" (click)="scrollFeaturesLeft()">
                     <span>&lt;</span>
@@ -155,6 +151,7 @@
                     <img [src]="features.image" />
                 </div>
                 <div class="feedback-content">
+                    <h1 class="features-heading">{{ features.contentHeading }}</h1>
                     <h2 class="features-description">{{ features.description }}</h2>
                     <p class="features-profession">{{ features.profession }}</p>
                 </div>
