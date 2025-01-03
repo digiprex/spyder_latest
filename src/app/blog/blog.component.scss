@@ -1,6 +1,11 @@
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/assets/fonts/Recoleta-RegularDEMO.otf') format('opentype');
+}
+
 main {
     background-color: #fff;
-    margin-top: 90px;
+    margin-top: 60px;
 
     h1,
     h2,
@@ -8,12 +13,13 @@ main {
     h4,
     h5,
     h6 {
-        font-family: "Libre Baskerville", serif;
+        font-family: 'Recoleta', sans-serif;
         font-weight: 400 !important;
     }
 
+    a,
     p {
-        font-family: "Poppins", serif;
+        font-family: "Montserrat", serif !important;
     }
 
     .blog-section {
@@ -106,7 +112,7 @@ main {
                 z-index: 3;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
                 border-radius: 50%;
-                color: #fa5a60;
+                color: #ff8132;
                 font-weight: 700;
                 transition: transform 0.5s ease-in-out;
 
@@ -145,7 +151,7 @@ main {
                 flex: 0 0 auto;
                 width: 280px;
                 margin: 10px;
-                border: 1px solid #ddd;
+                border: 1px solid #e5e0d2;
                 border-radius: 8px;
                 overflow: hidden;
                 cursor: pointer;
@@ -174,6 +180,15 @@ main {
                     p {
                         font-size: 14px;
                         color: #666;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+
+                        .authorImage {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
@@ -188,7 +203,18 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 0px;
+        margin-top: 90px;
+
+        h2 {
+            font-size: 25px !important;
+            line-height: 35px !important;
+        }
+
+        p {
+            font-weight: 300 !important;
+            font-size: 16px !important;
+            color: #383531 !important;
+        }
 
         .blog-section {
             padding: 10px;

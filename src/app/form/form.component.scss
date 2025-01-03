@@ -1,6 +1,6 @@
 main {
     background-color: #fff;
-    margin-top: 90px;
+    margin-top: 60px;
 
     h1,
     h2,
@@ -85,7 +85,7 @@ main {
                 width: 50%;
                 margin: auto;
                 color: #F5F5FA;
-                background-color: #fa5a60;
+                background-color: rgba(255, 129, 50, 0.7058823529);
                 padding: 10px 20px;
                 border-radius: 8px;
                 border: none;
@@ -93,8 +93,8 @@ main {
 
                 &:enabled:hover {
                     background-color: #F5F5FA;
-                    color: #fa5a60;
-                    border: 1px solid #fa5a60;
+                    color: #fff;
+                    border: 1px solid rgb(255, 129, 50);
                     transform: translateY(-5px);
                     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
                 }

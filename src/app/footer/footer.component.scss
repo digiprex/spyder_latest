@@ -1,6 +1,8 @@
 main {
     display: grid;
-    background-color: #fff;
+    gap: 50px;
+    padding: 5rem;
+    background-color: #faf9f6;
 
     h1,
     h2,
@@ -15,29 +17,52 @@ main {
     p {
         font-family: "Poppins", serif;
         font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        gap: 20px;
+
+        .logo-img {
+            width: 50%;
+            display: flex;
+            justify-content: start;
+
+            img {
+                width: 30%;
+                object-fit: contain;
+            }
+        }
+
+        .button-div {
+            width: 50%;
+            display: flex;
+            justify-content: end;
+
+            button {
+                background-color: #ff8132b4;
+                border: none;
+                color: #fff;
+                padding: 15px 30px;
+                font-size: 16px;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #ff8132;
+                    color: #ffffff;
+                }
+            }
+        }
     }
 
     .footer {
-        padding: 5rem;
         display: flex;
         justify-content: space-between;
         gap: 20px;
-        border: 1px solid #ddd;
-
-        .logo {
-            width: 32%;
-            display: grid;
-            gap: 20px;
-
-            img {
-                width: 15rem;
-            }
-
-            p {
-                color: #000;
-                font-size: 16px;
-            }
-        }
 
         .quicklinks {
             width: 32%;
@@ -78,24 +103,103 @@ main {
 
                 p {
                     margin: 0;
+                    color: #000;
                 }
             }
         }
     }
+
+    .bottom-container {
+        text-align: center;
+        display: flex;
+
+        .footer-container {
+            width: 50%;
+            text-align: start;
+
+            .footer-description {
+                margin: 10px 0;
+                line-height: 1.6;
+            }
+
+            .footer-disclaimer {
+                margin: 10px 0;
+                line-height: 1.6;
+            }
+
+            .footer-copyright {
+                margin-top: 20px;
+                font-size: 12px;
+            }
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: end;
+            gap: 30px;
+            width: 50%;
+
+
+            .social-link {
+                border-radius: 50%;
+                text-decoration: none;
+
+                svg {
+                    width: 35px;
+                    height: 35px;
+                    padding: 5px;
+                    background-color: #fff;
+                    border-radius: 5px;
+
+                    &:hover {
+                        background-color: #000;
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 // Mobile
 @media only screen and (max-device-width: 480px) {
     main {
+        padding: 2rem;
 
-        .expert {
-            display: grid;
-            margin: -5rem 2rem 5rem;
-            padding: 2rem;
+        p,
+        a {
+            font-weight: 300 !important;
+            font-size: 16px !important;
+            color: #383531 !important;
+        }
+
+        .logo {
+            flex-direction: column;
+            justify-content: center;
+
+            .logo-img {
+                width: 100%;
+                justify-content: center;
+
+                img {
+                    width: 60%;
+                    object-fit: contain;
+                }
+            }
+
+            .button-div {
+                width: 100%;
+
+                button {
+                    margin: auto;
+                    width: 60%;
+                }
+            }
         }
 
         .footer {
-            padding: 2rem;
             display: grid;
 
             .logo {
@@ -110,6 +214,22 @@ main {
             .contact {
                 width: 100%;
                 justify-content: start;
+            }
+        }
+
+        .bottom-container {
+            flex-direction: column;
+
+            .footer-container {
+                width: 100%;
+            }
+
+            .social-links {
+                width: 100%;
+
+                .social-link {
+                    margin: auto;
+                }
             }
         }
     }

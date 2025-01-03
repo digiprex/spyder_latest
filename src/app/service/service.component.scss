@@ -1,6 +1,6 @@
 .post-main-section {
     background-color: #fff;
-    margin-top: 90px;
+    margin-top: 60px;
 
     h1,
     h2,
@@ -66,7 +66,18 @@
 
 @media only screen and (max-device-width: 480px) {
     .post-main-section {
-        margin-top: 0px;
+        margin-top: 90px;
+
+        h2 {
+            font-size: 25px !important;
+            line-height: 35px !important;
+        }
+
+        p {
+            font-weight: 300 !important;
+            font-size: 16px !important;
+            color: #383531 !important;
+        }
 
         .post-inner-section {
             max-width: 800px;

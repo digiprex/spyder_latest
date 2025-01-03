@@ -1,6 +1,12 @@
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/assets/fonts/Recoleta-RegularDEMO.otf') format('opentype');
+}
+
+
 main {
     background-color: #fff;
-    margin-top: 90px;
+    margin-top: 60px;
 
     h1,
     h2,
@@ -8,12 +14,13 @@ main {
     h4,
     h5,
     h6 {
-        font-family: "Libre Baskerville", serif;
+        font-family: 'Recoleta', sans-serif;
         font-weight: 400 !important;
     }
 
+    a,
     p {
-        font-family: "Poppins", serif;
+        font-family: "Montserrat", serif !important;
     }
 
     .left {
@@ -61,7 +68,7 @@ main {
 
                 input,
                 textarea {
-                    background-color: #F5F5FA;
+                    background-color: transparent;
                     padding: 10px;
                     border: none;
                     border-bottom: 1px solid #D0D5DD;
@@ -78,22 +85,21 @@ main {
                 width: 50%;
                 margin: auto;
                 color: #F5F5FA;
-                background-color: #fa5a60;
+                background-color: #ff8132 !important;
                 padding: 10px 20px;
                 border-radius: 8px;
                 border: none;
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
                 &:enabled:hover {
-                    background-color: #F5F5FA;
-                    color: #fa5a60;
-                    border: 1px solid #fa5a60;
+                    background-color: #ff813286 !important;
+                    border: 1px solid #ff813286 !important;
                     transform: translateY(-5px);
                     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
                 }
 
                 &:disabled {
-                    background-color: #fa5a5f94;
+                    background-color: #ff813286 !important;
                 }
             }
 
@@ -111,7 +117,7 @@ main {
 
         h1 {
             font-size: 40px;
-            font-weight: 600;
+            font-weight: 600 !important;
             line-height: 1.167;
             text-align: center;
             margin-bottom: 30px;
@@ -127,8 +133,8 @@ main {
                 box-sizing: border-box;
 
                 h2 {
-                    font-size: 18px;
-                    font-weight: bold;
+                    font-size: 20px;
+                    font-weight: bold !important;
                     margin-bottom: 10px;
                 }
 
@@ -155,7 +161,18 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 0px;
+        margin-top: 90px;
+
+        h2 {
+            font-size: 25px !important;
+            line-height: 35px !important;
+        }
+
+        p {
+            font-weight: 300 !important;
+            font-size: 16px !important;
+            color: #383531 !important;
+        }
 
         .right {
             width: 100%;
