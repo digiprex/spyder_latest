@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/fonts/Recoleta-RegularDEMO.otf') format('opentype');
+    src: url('/assets/fonts/Recoleta Font Family.otf') format('opentype');
 }
 
 
@@ -19,7 +19,8 @@ main {
         font-weight: 400 !important;
     }
 
-    a,
+    button,
+a,
     p {
         font-family: "Montserrat", serif !important;
     }
@@ -58,7 +59,7 @@ main {
 
             .content {
                 display: grid;
-                gap: 10px;
+                gap: 30px;
                 margin: auto;
 
                 svg {
@@ -70,7 +71,7 @@ main {
 
                 h5 {
                     margin: 0px;
-                    font-family: "Poppins", serif;
+                    font-family: "Montserrat", serif !important;
                     font-size: 21px;
                     font-weight: 600 !important;
                     line-height: 32px;
@@ -81,7 +82,7 @@ main {
                 h1 {
                     width: 500px;
                     margin: 0px auto;
-                    font-size: 50px;
+                    font-size: 60px;
                     font-weight: 700 !important;
                     line-height: 65px;
                     letter-spacing: -0.5px;
@@ -191,7 +192,7 @@ main {
         padding: 3rem 5rem;
         background-color: #fff;
         display: grid;
-        gap: 40px;
+        gap: 50px;
 
         h2 {
             font-size: 40px;
@@ -209,7 +210,10 @@ main {
                 max-width: 23%;
                 flex: 0 0 23%;
                 text-align: start;
-                gap: 15px;
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+
 
                 .icon {
                     width: 60px;
@@ -228,10 +232,10 @@ main {
                 div {
                     h3 {
                         font-size: 26px;
-                        margin-bottom: 10px;
-                        text-transform: capitalize;
+                        margin-bottom: 2rem;
+                        text-transform: none;
                         color: #383531;
-                        font-family: "Poppins", serif;
+                        font-family: "Montserrat", serif !important;
                     }
 
                     p {
@@ -268,7 +272,7 @@ main {
             .platform-benefits-container {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 20px;
+                gap: 25px;
                 width: 70%;
                 height: 75vh;
                 overflow-x: scroll;
@@ -491,7 +495,7 @@ main {
     }
 
     .membership {
-        padding: 3rem 5rem;
+        padding: 10rem 5rem;
         text-align: center;
         display: grid;
         gap: 25px;
@@ -504,6 +508,7 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 5rem;
 
             .membership-heading-content {
                 text-align: start;
@@ -552,13 +557,13 @@ main {
         .plans {
             display: flex;
             justify-content: center;
-            font-family: "Poppins", serif;
+            font-family: "Montserrat", serif !important;
             width: 80%;
             margin: auto;
 
             .plan {
                 display: grid;
-                gap: 10px;
+                gap: 20px;
                 background-color: #faf9f6;
                 border: 1px solid #e5e0d2;
                 border-radius: 10px 0px 0px 10px;
@@ -571,9 +576,9 @@ main {
                 h3 {
                     margin: 0;
                     font-size: 24px;
-                    font-weight: 500;
+                    font-weight: 500 !important;
                     display: flex;
-                    font-family: "Poppins", serif;
+                    font-family: "Montserrat", serif !important;
                     justify-content: space-between;
                     align-items: center;
 
@@ -589,13 +594,14 @@ main {
 
                 .price {
                     font-size: 35px;
-                    font-weight: 400;
+                    font-weight: 500 !important;
                     margin: 1rem 0;
                     color: #000;
 
                     span {
                         font-size: 14px;
                         color: #555;
+                        font-weight: 600 !important;
                     }
                 }
 
@@ -625,8 +631,9 @@ main {
 
             .annual-plan {
                 border-radius: 0px 10px 10px 0px;
-                font-family: "Poppins", serif;
+                font-family: "Montserrat", serif !important;
                 background-color: #fff;
+                border-right: 1px solid #e5e0d2;
 
                 .get-started {
                     background-color: #008866;
@@ -642,28 +649,28 @@ main {
 
         .add-ons {
             display: flex;
-            justify-content: flex-start; // Changed from center to flex-start
+            justify-content: flex-start;
             flex-direction: column;
             gap: 25px;
 
             .add-on {
                 background: #fff;
                 border: 1px solid #e5e0d2;
-                border-radius: 10px;
+                border-radius: 5px;
                 padding: 2rem;
                 flex: 1;
                 width: 80%;
                 margin: auto;
                 display: flex;
-                justify-content: flex-start; // Changed from space-between to flex-start
-                align-items: flex-start; // Align items to start
-                gap: 50px;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 25px;
 
                 .btn-secondary {
                     background: #fff;
                     color: #008866;
                     border: 1px solid #008866;
-                    border-radius: 25px;
+                    border-radius: 10px;
                     padding: 0.5rem 1rem;
                     font-size: 14px;
                     cursor: pointer;
@@ -679,8 +686,8 @@ main {
                     flex: 1;
                     margin-left: 1rem;
                     text-align: left;
-                    font-size: 18px;
-                    font-weight: 500;
+                    font-size: 20px;
+                    font-weight: 600;
                     color: #333;
 
                     span {
@@ -696,7 +703,8 @@ main {
                     color: #555;
 
                     strong {
-                        font-weight: 600;
+                        font-weight: 500;
+                        font-size: 25px;
                     }
                 }
             }
@@ -731,9 +739,13 @@ main {
                 align-items: center;
                 cursor: pointer;
                 padding: 15px;
-                border: 1px solid transparent;
-                transition: border-color 0.3s ease-in-out;
-                height: 85vh;
+                transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                height: 65vh;
+
+                &:hover {
+                    border-color: #008866;
+                    transform: translateX(10px);
+                }
 
                 .step-number {
                     font-size: 120px;
@@ -745,8 +757,8 @@ main {
                     transition: color 0.3s ease, text-shadow 0.3s ease;
                 }
 
-                .step-number:hover {
-                    color: #fff;
+                &:hover .step-number {
+                    color: white;
                     text-shadow: rgb(0, 136, 102) -2px -2px 0px,
                         rgb(0, 136, 102) 2px -2px 0px,
                         rgb(0, 136, 102) -2px 2px 0px,
@@ -756,39 +768,34 @@ main {
                 .inner-content-section {
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
+                    gap: 10px;
 
                     h3 {
-                        font-family: "Poppins", serif;
+                        font-family: "Montserrat", serif !important;
                         font-size: 22px;
                         color: #383531;
-                        font-weight: 400;
-                        margin: 10px 0;
                         font-weight: bold;
                     }
 
                     p {
                         font-size: 16px;
-                        font-weight: 400;
-                        margin-bottom: 10px;
                         color: #555;
                     }
 
                     button {
-                        width: 35%;
+                        width: fit-content;
                         font-size: 16px;
-                        line-height: 32px;
-                        letter-spacing: .4px;
-                        background-color: transparent;
-                        color: #008866;
                         padding: 15px 30px;
                         border-radius: 30px;
+                        border: 1px solid #008866;
+                        background-color: transparent;
+                        color: #008866;
                         cursor: pointer;
                         transition: background-color 0.3s ease;
-                        border: 1px solid #008866;
 
                         &:hover {
-                            opacity: 0.5;
+                            background-color: #008866;
+                            color: #fff;
                         }
                     }
                 }
@@ -801,12 +808,24 @@ main {
             justify-content: center;
             align-items: center;
             z-index: 9;
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
 
             img {
                 max-width: 100%;
                 height: 100vh;
                 object-fit: cover;
-                transition: opacity 0.3s ease-in-out;
+                position: absolute;
+                opacity: 0;
+                transform: scale(1.1);
+                transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+            }
+
+            img.active {
+                opacity: 1;
+                transform: scale(1);
+                z-index: 1;
             }
         }
     }
@@ -908,7 +927,8 @@ main {
 
                     img {
                         width: 100%;
-                        height: auto;
+                        height: 65vh;
+                        object-fit: cover;
                     }
                 }
 
@@ -1073,7 +1093,7 @@ main {
                                 font-size: 20px;
                                 margin-bottom: 10px;
                                 color: #333;
-                                font-family: "Poppins", serif;
+                                font-family: "Montserrat", serif !important;
                             }
 
                             p {}
@@ -1228,7 +1248,22 @@ main {
                 }
             }
 
-            .right-image {}
+            .right-image {
+                height: 50vh;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                    position: relative;
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
         }
 
         .testimonial-section {

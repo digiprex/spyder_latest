@@ -9,6 +9,7 @@ import { FaqComponent } from './faq/faq.component';
 import { BlogComponent } from './blog/blog.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FormComponent } from './form/form.component';
+import { PressComponent } from './press/press.component';
 
 const routes: Routes = [{
   path: '',
@@ -38,6 +39,10 @@ const routes: Routes = [{
 {
   path: `pricing`,
   component: PricingComponent
+},
+{
+  path: `press`,
+  component: PressComponent
 },
 {
   path: `form`,

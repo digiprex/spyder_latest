@@ -15,7 +15,7 @@ main {
     }
 
     p {
-        font-family: "Poppins", serif;
+        font-family: "Montserrat", serif !important;
         font-size: 16px;
         line-height: 1.6;
     }
@@ -42,6 +42,7 @@ main {
             justify-content: end;
 
             button {
+                font-family: "Montserrat", serif !important;
                 background-color: #ff8132b4;
                 border: none;
                 color: #fff;
@@ -83,7 +84,7 @@ main {
                 a {
                     color: #000;
                     text-decoration: none;
-                    font-family: "Poppins", serif;
+                    font-family: "Montserrat", serif !important;
                 }
             }
         }
@@ -114,7 +115,7 @@ main {
         display: flex;
 
         .footer-container {
-            width: 50%;
+            width: 100%;
             text-align: start;
 
             .footer-description {
@@ -133,32 +134,32 @@ main {
             }
         }
 
-        .social-links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: end;
-            gap: 30px;
-            width: 50%;
+        // .social-links {
+        //     margin-top: 20px;
+        //     display: flex;
+        //     justify-content: end;
+        //     gap: 30px;
+        //     width: 50%;
 
 
-            .social-link {
-                border-radius: 50%;
-                text-decoration: none;
+        //     .social-link {
+        //         border-radius: 50%;
+        //         text-decoration: none;
 
-                svg {
-                    width: 35px;
-                    height: 35px;
-                    padding: 5px;
-                    background-color: #fff;
-                    border-radius: 5px;
+        //         svg {
+        //             width: 35px;
+        //             height: 35px;
+        //             padding: 5px;
+        //             background-color: #fff;
+        //             border-radius: 5px;
 
-                    &:hover {
-                        background-color: #000;
-                        fill: #fff;
-                    }
-                }
-            }
-        }
+        //             &:hover {
+        //                 background-color: #000;
+        //                 fill: #fff;
+        //             }
+        //         }
+        //     }
+        // }
     }
 
 }

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceComponent implements OnInit {
   currentPost: any;
+  articles: any;
   host: string | undefined;
 
   constructor() { }

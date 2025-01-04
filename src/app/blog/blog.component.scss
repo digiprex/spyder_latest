@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/fonts/Recoleta-RegularDEMO.otf') format('opentype');
+    src: url('/assets/fonts/Recoleta Font Family.otf') format('opentype');
 }
 
 main {
@@ -17,6 +17,7 @@ main {
         font-weight: 400 !important;
     }
 
+    button,
     a,
     p {
         font-family: "Montserrat", serif !important;
@@ -78,7 +79,8 @@ main {
 
                     .content {
                         width: 30%;
-                        background-color: #fff;
+                        background-color: #faf8fb;
+                        border-radius: 10px;
                         padding: 20px;
                         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
                         margin-top: -50px;
@@ -102,7 +104,7 @@ main {
 
             .carousel-button {
                 position: absolute;
-                top: 5%;
+                top: 10%;
                 transform: translateY(-50%);
                 background-color: rgba(255, 255, 255, 0.8);
                 border: none;
@@ -116,12 +118,12 @@ main {
                 font-weight: 700;
                 transition: transform 0.5s ease-in-out;
 
-                &.left {
-                    right: 80px;
+                &.slick-prev {
+                    right: 110px;
                 }
 
-                &.right {
-                    right: 20px;
+                &.slick-next {
+                    right: 50px;
                 }
 
                 &:hover {
@@ -174,7 +176,7 @@ main {
                     h3 {
                         font-size: 18px;
                         margin: 10px 0;
-                        font-family: "Poppins", serif;
+                        font-family: "Montserrat", serif !important;
                     }
 
                     p {

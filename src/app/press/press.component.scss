@@ -27,12 +27,12 @@ main {
     .banner {
         display: flex;
         justify-content: center;
-        background-color: #ff9a5b48;
+        background-color: #E7DCE7;
 
         .outer-content {
             width: 50%;
             text-align: center;
-            color: #ff995b;
+            color: #5c1761;
             display: grid;
             gap: 10px;
 
@@ -65,17 +65,7 @@ main {
                     position: absolute;
                     top: 65px;
                     left: 0px;
-                    width: 30%;
-                }
-
-                h5 {
-                    margin: 0px;
-                    font-family: "Montserrat", serif !important;
-                    font-size: 21px;
-                    font-weight: 600 !important;
-                    line-height: 32px;
-                    transition: color 0.3s ease;
-                    z-index: 999;
+                    width: 25%;
                 }
 
                 h1 {
@@ -95,24 +85,6 @@ main {
                         font-weight: 700 !important;
                     }
                 }
-
-                .start-button {
-                    width: 40%;
-                    margin: auto;
-                    font-weight: 600;
-                    background-color: #ff995b;
-                    color: #fff;
-                    border: none;
-                    padding: 15px 30px;
-                    font-size: 18px;
-                    border-radius: 30px;
-                    cursor: pointer;
-                    transition: all 0.3s;
-
-                    &:hover {
-                        background-color: #008866;
-                    }
-                }
             }
         }
 
@@ -122,18 +94,10 @@ main {
 
             img {
                 width: 100%;
-                height: 100vh;
+                height: 66vh;
                 animation: fade 1s ease-in-out;
                 object-fit: cover;
                 transition: opacity 1s ease-in-out;
-                animation: fade 1s ease-in-out;
-            }
-
-            svg {
-                position: absolute;
-                top: 65px;
-                right: 0px;
-                width: 30%;
             }
 
             img.active {
@@ -166,6 +130,80 @@ main {
 
         to {
             opacity: 1;
+        }
+    }
+
+    .tax-tips-container {
+        text-align: center;
+        padding: 3rem 5rem;
+
+        h2 {
+            line-height: 56.02px;
+            letter-spacing: 0;
+            font-size: 40px;
+            text-align: start;
+            color: #0C0C0F;
+            margin-bottom: 4rem;
+        }
+
+        .tax-tips-carousel {
+            display: flex;
+            gap: 20px;
+            padding: 35px;
+            justify-content: space-between;
+            overflow-x: auto;
+            background: #fff;
+
+
+            &:hover {
+                background: #faf9f6;
+            }
+
+            .tax-tip-card {
+                flex: 0 0 auto;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                width: 80%;
+                border: 1px solid #e5e0d2;
+                border-radius: 8px;
+                overflow: hidden;
+                cursor: pointer;
+
+                img {
+                    width: 50%;
+                    height: 40vh;
+                    border-radius: 5px;
+                    object-fit: cover;
+                }
+
+                .card-content {
+                    padding: 2rem 5rem;
+                    width: 50%;
+                    margin: auto;
+                    text-align: start;
+
+                    h3 {
+                        font-size: 30px;
+                        line-height: 1.25;
+                        margin: 10px 0;
+                        font-family: "Montserrat", serif !important;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #666;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
         }
     }
 
@@ -250,15 +288,31 @@ main {
                 background: #fff;
                 border-radius: 5px;
                 text-align: center;
-                width: 28%;
+                width: 45%;
                 padding: 20px;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+                }
 
                 .testimonial-info {
                     width: 100%;
                     text-align: start;
                     display: grid;
-                    gap: 20px;
+                    gap: 50px;
                     height: 100%;
+
+                    .heading {
+                        font-size: 26px;
+                        font-family: "Montserrat", serif !important;
+                        text-align: start;
+                        text-transform: uppercase;
+                        color: #000;
+                        font-weight: bold !important;
+                    }
 
                     .description {
                         font-size: 18px;
@@ -276,95 +330,13 @@ main {
         }
     }
 
-    .reviews-section {
-        text-align: center;
-        padding: 5rem;
-        font-family: 'Poppins', sans-serif;
-        text-align: left;
-
-        .section-title {
-            font-size: 40px;
-            font-weight: 400;
-            line-height: 56.02px;
-            margin: 0px;
-            margin-bottom: 5rem;
-
-            .trustpilot-logo {
-                color: #00b67a;
-                font-weight: 800;
-            }
-        }
-
-        .reviews-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        .review-card {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 1.5rem;
-            text-align: left;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-                cursor: pointer;
-            }
-
-            .review-header {
-                display: flex;
-                align-items: center;
-                margin-bottom: 1rem;
-                text-align: left;
-
-                .review-stars {
-                    width: 100px;
-                    height: auto;
-                    margin-right: 0.5rem;
-                }
-
-                .review-tag {
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: #00b67a;
-                }
-            }
-
-            .review-title {
-                font-size: 26px;
-                font-family: "Montserrat", serif !important;
-                font-weight: 400;
-                margin: 0 0 1rem;
-                color: #333;
-            }
-
-            .review-text {
-                font-size: 16px;
-                font-weight: 300;
-                color: #333;
-                line-height: 1.5;
-                margin-bottom: 1rem;
-            }
-
-            .review-date {
-                font-size: 14px;
-                color: #000;
-                font-weight: 600;
-            }
-        }
-    }
-
     .feedback-section {
         width: 100%;
         padding: 5rem;
-        background-color: #f9f9f9;
+        background-color: #fff;
+        display: grid;
+        gap: 40px;
+
 
         .feedback-header {
             display: flex;
@@ -373,7 +345,7 @@ main {
             margin-bottom: 1.5rem;
 
             .feedback-title {
-                font-size: 40px;
+                font-size: 48px;
                 font-weight: 400;
                 line-height: 56.02px;
                 margin: 0;
@@ -384,19 +356,6 @@ main {
                 justify-content: center;
                 align-items: center;
                 gap: 1rem;
-
-                .view-articles {
-                    width: fit-content;
-                    background-color: transparent;
-                    border: 1px solid #c3b8ae;
-                    color: #000;
-                    padding: 10px 20px;
-                    font-family: "Montserrat", serif !important;
-                    font-size: 16px;
-                    border-radius: 9999px;
-                    cursor: pointer;
-                    transition: all 0.3s;
-                }
 
                 .arrow {
                     display: flex;
@@ -453,28 +412,45 @@ main {
                 flex: 0 0 auto;
                 margin-right: 1rem;
                 background: #fff;
-                border: 1px solid #ddd;
+                border: 1px solid #e5e0d2;
                 border-radius: 5px;
                 text-align: center;
                 width: 60%;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                    cursor: pointer;
+                }
 
                 .feedback-image {
-                    width: 55%;
+                    width: 60%;
 
                     img {
                         width: 100%;
-                        height: 65vh;
+                        height: 70vh;
                         object-fit: cover;
                     }
                 }
 
                 .feedback-content {
-                    width: 45%;
-                    padding: 10px;
+                    width: 40%;
+                    padding: 2rem;
+                    display: grid;
+                    gap: 30px;
 
-                    svg {
-                        width: 30px;
-                        height: 30px;
+
+                    .quote-icon {
+                        margin-bottom: 1rem;
+                    }
+
+                    .features-heading {
+                        text-align: start;
+                        font-size: 14px;
+                        color: #777;
+                        font-weight: 600 !important;
+                        font-family: "Montserrat", serif !important;
                     }
 
                     .feedback-description {
@@ -488,10 +464,10 @@ main {
                         color: #333;
                         margin-bottom: 0.5rem;
                         font-size: 25px;
-                        font-weight: 400;
+                        font-weight: 200;
                         text-align: start;
+                        text-transform: capitalize;
                         font-family: "Montserrat", serif !important;
-                        line-height: 40px;
                     }
 
                     .features-profession {
@@ -509,46 +485,103 @@ main {
         }
     }
 
-    .member-review-section {
-        width: 100%;
-        padding: 5rem 15rem 5rem 15rem;
+    .lets-talk-section {
+        background-image: url('https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2d01b268-a269-4f5a-90a0-94eca45e8d08_1%20%281%29.png');
         background-color: #d9ede8;
-        margin: auto;
-        text-align: center;
-        color: #008866;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 10rem 5rem;
+        position: relative;
+        overflow: hidden;
 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: auto;
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
 
-        span {
-            font-size: 22px;
-            line-height: 34px;
-        }
+            h1 {
+                font-size: 48px;
+                font-weight: 600 !important;
+                line-height: 56.02px;
+                margin: 0;
+                color: #008866;
+                margin-bottom: 20px;
+            }
 
-        .quote-icon {
-            margin-bottom: 1rem;
-            margin: 10px auto;
-        }
+            .details {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 40px;
 
-        .member-review-description {
-            font-size: 40px;
-            font-weight: 600 !important;
-            margin-bottom: 2rem;
-        }
+                .join-team {
+                    flex: 2;
 
-        .member-review-name {
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 2rem;
-        }
+                    h2 {
+                        font-family: "Montserrat", serif !important;
+                        font-size: 20px;
+                        font-weight: 500 !important;
+                        color: #008866;
+                        margin-bottom: 15px;
+                    }
 
-        .member-review-profession {
-            font-size: 18px;
+                    p {
+                        font-size: 22px;
+                        width: 500px;
+                        font-weight: 400;
+                        color: #008866;
+                        margin-bottom: 25px;
+                    }
+
+                    .open-roles-button {
+                        background-color: #fff;
+                        border: none;
+                        padding: 20px 30px;
+                        font-size: 16px;
+                        color: #000;
+                        border-radius: 35px;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        font-weight: 600;
+                        font-family: "Montserrat", serif !important;
+
+                        &:hover {
+                            background-color: #c8e3d3;
+                        }
+                    }
+                }
+
+                .contact-info {
+                    flex: 1;
+                    display: flex;
+                    gap: 20px;
+
+                    .contact-item {
+                        h2 {
+                            font-size: 22px;
+                            font-weight: 500;
+                            color: #008866;
+                            margin-bottom: 5px;
+                            font-family: "Montserrat", serif !important;
+                        }
+
+                        a {
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: #008866;
+                            text-decoration: underline;
+                            transition: color 0.3s ease;
+                            font-family: "Montserrat", serif !important;
+
+                            &:hover {
+                                color: #0e3921;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
-
 }
 
 @media only screen and (max-device-width: 480px) {
@@ -562,27 +595,29 @@ main {
 
         p {
             font-weight: 300 !important;
-            font-size: 16px !important;
+            font-size: 18px !important;
             color: #383531 !important;
         }
 
         .banner {
-            flex-direction: column;
+            flex-direction: column-reverse;
+
 
             .outer-content {
                 width: 100%;
 
                 .content {
-                    padding: 10px;
+                    width: 100% !important;
+                    padding: 8rem 2rem;
 
                     svg {}
 
                     h5 {}
 
                     h1 {
-                        width: 100%;
-                        font-size: 35px;
-                        line-height: 45px;
+                        width: 100% !important;
+                        font-size: 35px !important;
+                        line-height: 45px !important;
                     }
                 }
             }
@@ -595,11 +630,48 @@ main {
             }
         }
 
+        .tax-tips-container {
+            padding: 2rem;
+
+            .tax-tips-carousel {
+                flex-direction: column;
+                padding: 0;
+                gap: 10px;
+
+                .tax-tip-card {
+                    flex-direction: column;
+                    width: 100%;
+                    border-radius: 10px;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 10px 10px 0 0;
+                    }
+
+                    .card-content {
+                        width: 100%;
+                        padding: 1.5rem;
+                        text-align: center;
+
+                        h3 {
+                            font-size: 22px;
+                        }
+
+                        p {
+                            font-size: 12px;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+
         .testimonial-section {
             padding: 10px;
 
             .header {
-                margin-top: 5rem;
+                margin-top: 4rem;
 
                 h2 {}
             }
@@ -633,28 +705,15 @@ main {
             }
         }
 
-        .reviews-section {
-            padding: 10px;
-
-            .reviews-container {
-                grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            }
-        }
-
         .feedback-section {
             width: 100%;
             padding: 10px;
             background-color: #f9f9f9;
 
             .feedback-header {
+                margin-top: 4rem;
 
                 .feedback-title {}
-
-                .arrow-container {
-                    .view-articles {
-                        display: none;
-                    }
-                }
             }
 
             .feedback-slider {
@@ -685,8 +744,72 @@ main {
             }
         }
 
-        .member-review-section {
+        .lets-talk-section {
             padding: 10px;
+
+            .content {
+                max-width: 1200px;
+                margin: 0 auto;
+                text-align: left;
+
+                h1 {
+                    font-size: 40px;
+                }
+
+                .details {
+                    flex-direction: column;
+
+                    .join-team {
+                        flex: 1;
+
+                        h2 {}
+
+                        p {
+                            width: 100%;
+                        }
+
+                        .open-roles-button {
+                            background-color: #fff;
+                            border: none;
+                            padding: 10px 20px;
+                            font-size: 16px;
+                            color: #1a5632;
+                            border-radius: 25px;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                            font-weight: 600;
+
+                            &:hover {
+                                background-color: #c8e3d3;
+                            }
+                        }
+                    }
+
+                    .contact-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+
+                        .contact-item {
+                            h2 {
+                                font-size: 22px;
+                                font-weight: 500;
+                                color: #1a5632;
+                                margin-bottom: 5px;
+                                font-family: "Montserrat", serif !important;
+                            }
+
+                            a {
+                                color: #1a5632;
+
+                                &:hover {
+                                    color: #0e3921;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

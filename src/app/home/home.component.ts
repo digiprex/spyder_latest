@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { AppService } from '../app.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
@@ -13,6 +13,7 @@ export class HomeComponent {
   members: any;
   slider: any;
   bgColor: any;
+  activeImageIndex: number = 0;
 
   constructor(private appService: AppService) { }
 
@@ -27,6 +28,23 @@ export class HomeComponent {
     this.appService.newsletterSubmission(body).subscribe(result => {
       this.success = true;
     })
+  }
+
+  setActiveImage(index: number) {
+    this.activeImageIndex = index;
+  }
+
+  peaceOfMind = [
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/a51da540-7753-48bd-83ce-d9b038825b4c_videoframe2.png',
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg',
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/80046a47-6746-4e0c-9c4b-6d7914c46609_collective-member-jason-polevoi-desktop.jpg'
+  ];
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    const scrollPosition = window.scrollY;
+    const sectionHeight = window.innerHeight;
+    this.activeImageIndex = Math.floor(scrollPosition / sectionHeight) % this.peaceOfMind.length;
   }
 
   benefits = [

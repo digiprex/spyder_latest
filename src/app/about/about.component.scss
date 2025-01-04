@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Recoleta';
-    src: url('/assets/fonts/Recoleta-RegularDEMO.otf') format('opentype');
+    src: url('/assets/fonts/Recoleta Font Family.otf') format('opentype');
 }
 
 
@@ -300,7 +300,6 @@ main {
                 display: flex;
                 align-items: center;
                 flex: 0 0 auto;
-                background: #fff !important;
                 border-radius: 5px;
                 text-align: center;
                 width: 26%;
@@ -311,25 +310,21 @@ main {
                     display: grid;
                     gap: 20px;
                     height: 100%;
+                    border-radius: 10px;
                     background-color: #fff;
 
                     img {
                         width: 100%;
                         height: 50vh;
                         object-fit: cover;
+                        border-radius: 10px 10px 0px 0px;
+
                     }
 
                     .description {
-                        font-size: 16px;
-                        font-weight: 300;
-                        color: #333;
-                        padding: 0px 10px;
-                    }
-
-                    .profession {
-                        font-size: 16px;
-                        font-weight: 400;
-                        padding: 0px 10px;
+                        background-color: #fff;
+                        padding: 30px 20px;
+                        border-radius: 10px;
                     }
                 }
             }
@@ -354,14 +349,16 @@ main {
         }
 
         .leadership-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            display: flex;
             gap: 20px;
-            max-width: 1200px;
+            justify-content: start;
             margin: 30px auto;
+            flex-wrap: wrap;
 
             .leader {
-                text-align: center;
+                flex: 0 0 23%;
+                max-width: 30%;
+                text-align: start;
                 border-bottom: 1px solid #dbdad7;
                 border-radius: 10px;
                 padding: 20px;
@@ -385,7 +382,8 @@ main {
                 h3 {
                     font-size: 22px;
                     margin: 10px 0 5px;
-                    font-family: "Poppins", serif;
+                    font-family: "Montserrat", serif !important;
+                    font-weight: 500 !important;
                 }
 
                 p {
@@ -423,6 +421,19 @@ main {
                 justify-content: center;
                 align-items: center;
                 gap: 1rem;
+
+                .view-articles {
+                    width: fit-content;
+                    background-color: transparent;
+                    border: 1px solid #c3b8ae;
+                    color: #000;
+                    padding: 10px 20px;
+                    font-family: "Montserrat", serif !important;
+                    font-size: 16px;
+                    border-radius: 9999px;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                }
 
                 .arrow {
                     display: flex;
@@ -522,7 +533,7 @@ main {
                         font-size: 25px;
                         font-weight: 200;
                         text-align: start;
-                        font-family: "Poppins", serif;
+                        font-family: "Montserrat", serif !important;
                     }
 
                     .features-profession {
@@ -557,10 +568,10 @@ main {
 
             h1 {
                 font-size: 48px;
-                font-weight: 400;
+                font-weight: 600 !important;
                 line-height: 56.02px;
                 margin: 0;
-                color: #1a5632;
+                color: #008866;
                 margin-bottom: 20px;
             }
 
@@ -573,29 +584,32 @@ main {
                     flex: 2;
 
                     h2 {
-                        font-family: "Poppins", serif;
-                        font-size: 22px;
-                        font-weight: 500;
-                        color: #1a5632;
+                        font-family: "Montserrat", serif !important;
+                        font-size: 20px;
+                        font-weight: 500 !important;
+                        color: #008866;
                         margin-bottom: 15px;
                     }
 
                     p {
-                        font-size: 16px;
-                        color: #1a5632;
+                        font-size: 22px;
+                        width: 500px;
+                        font-weight: 400;
+                        color: #008866;
                         margin-bottom: 25px;
                     }
 
                     .open-roles-button {
                         background-color: #fff;
                         border: none;
-                        padding: 10px 20px;
+                        padding: 20px 30px;
                         font-size: 16px;
-                        color: #1a5632;
-                        border-radius: 25px;
+                        color: #000;
+                        border-radius: 35px;
                         cursor: pointer;
                         transition: all 0.3s ease;
                         font-weight: 600;
+                        font-family: "Montserrat", serif !important;
 
                         &:hover {
                             background-color: #c8e3d3;
@@ -612,18 +626,18 @@ main {
                         h2 {
                             font-size: 22px;
                             font-weight: 500;
-                            color: #1a5632;
+                            color: #008866;
                             margin-bottom: 5px;
-                            font-family: "Poppins", serif;
+                            font-family: "Montserrat", serif !important;
                         }
 
                         a {
                             font-size: 16px;
                             font-weight: bold;
-                            color: #1a5632;
+                            color: #008866;
                             text-decoration: underline;
                             transition: color 0.3s ease;
-                            font-family: "Poppins", serif;
+                            font-family: "Montserrat", serif !important;
 
                             &:hover {
                                 color: #0e3921;
@@ -718,7 +732,7 @@ main {
         }
 
         .testimonial-section {
-            padding: 10px;
+            padding: 0px !important;
 
             .header {
                 margin-top: 4rem;
@@ -727,6 +741,7 @@ main {
             }
 
             .testimonial-slider {
+                padding: 20px !important;
 
                 &::-webkit-scrollbar {
                     display: none;
@@ -745,7 +760,8 @@ main {
 
                     .testimonial-info {
                         width: 100%;
-                        padding: 10px;
+                        padding: 20px !important;
+                        background: transparent;
 
                         .name {}
 
@@ -765,7 +781,13 @@ main {
 
             p {}
 
-            .leadership-grid {}
+            .leadership-grid {
+
+                .leader {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            }
         }
 
         .feedback-section {
@@ -777,6 +799,12 @@ main {
                 margin-top: 4rem;
 
                 .feedback-title {}
+
+                .arrow-container {
+                    .view-articles {
+                        display: none;
+                    }
+                }
             }
 
             .feedback-slider {
@@ -857,7 +885,7 @@ main {
                                 font-weight: 500;
                                 color: #1a5632;
                                 margin-bottom: 5px;
-                                font-family: "Poppins", serif;
+                                font-family: "Montserrat", serif !important;
                             }
 
                             a {

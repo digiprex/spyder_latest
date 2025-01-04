@@ -15,6 +15,7 @@ import { FaqComponent } from './faq/faq.component';
 import { BlogComponent } from './blog/blog.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { FormComponent } from './form/form.component';
+import { PressComponent } from './press/press.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FormComponent } from './form/form.component';
     FaqComponent,
     BlogComponent,
     PricingComponent,
-    FormComponent
+    FormComponent,
+    PressComponent
   ],
   imports: [
     BrowserModule,
