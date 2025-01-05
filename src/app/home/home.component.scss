@@ -20,7 +20,7 @@ main {
     }
 
     button,
-a,
+    a,
     p {
         font-family: "Montserrat", serif !important;
     }
@@ -741,6 +741,8 @@ a,
                 padding: 15px;
                 transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
                 height: 65vh;
+                width: 500px;
+                margin: auto;
 
                 &:hover {
                     border-color: #008866;
@@ -1234,7 +1236,7 @@ a,
 
                 .step {
                     height: auto;
-                    gap: 20px;
+                    gap: 20px;    width: 100%;
 
                     .step-number {
                         font-size: 120px !important;

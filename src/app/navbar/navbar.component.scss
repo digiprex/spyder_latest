@@ -35,6 +35,10 @@ main {
             img {
                 width: 15rem;
                 object-fit: contain;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 

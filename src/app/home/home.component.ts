@@ -58,7 +58,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2d28f92c-aee6-4054-8cac-65a60401c119_house_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your accounts are perfectly balanced!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Bookkeeping',
@@ -70,7 +70,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c2b956c9-bf2b-4c19-b480-c412e13fa43f_developer_guide_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your bookkeeping is in perfect order!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Taxes',
@@ -82,7 +82,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/52d30ef4-372c-4508-810c-9e92ca51e3f1_heap_snapshot_large_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your taxes have been successfully filed!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Formation',
@@ -94,7 +94,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/a86cc18e-263e-4dac-bf8c-047a9a8fe14e_real_estate_agent_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your LLC formation is complete!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Payroll',
@@ -106,7 +106,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/256d0691-c291-42ab-b144-271aecd76c29_savings_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your payroll system is up and running!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Invoicing*',
@@ -118,7 +118,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c0f0b4a4-cd8a-4fc3-8f39-0e0971d76cfa_contract_edit_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your invoicing is seamless and efficient!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Compliance*',
@@ -130,7 +130,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8e223b59-93de-4059-80cb-7a3a577df4db_verified_user_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your compliance requirements are all set!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Support*',
@@ -154,7 +154,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/43b33f6b-a2d1-40e9-ba7a-9f8298d5a576_diversity_3_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Welcome to our solopreneur community!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     }
   ];
 
