@@ -20,7 +20,7 @@
                     </path>
                 </svg>
                 <h5>Love from our community</h5>
-                <h1>What our self-employed community is saying about us</h1>
+                <h1>What our self-employed<br> community is <br>saying about us</h1>
             </div>
         </div>
     </section>
@@ -29,11 +29,23 @@
         <div class="header">
             <h2>Members love our...</h2>
             <div class="arrow-container">
-                <button class="arrow left-arrow" (click)="scrollTestimonialLeft()">
-                    <span>&lt;</span>
+                <button class="arrow left-arrow" (click)="scrollTestimonialLeft()"
+                    aria-label="carousel-previous-button">
+                    <svg viewBox="0 0 24 24" width="1.5rem" height="1.5rem" class="arrow-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L9.41421 12L15.7071 18.2929C16.0976 18.6834 16.0976 19.3166 15.7071 19.7071C15.3166 20.0976 14.6834 20.0976 14.2929 19.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289Z"
+                            fill="#323232">
+                        </path>
+                    </svg>
                 </button>
-                <button class="arrow right-arrow" (click)="scrollTestimonialRight()">
-                    <span>&gt;</span>
+
+                <button class="arrow right-arrow" (click)="scrollTestimonialRight()" aria-label="carousel-next-button">
+                    <svg viewBox="0 0 24 24" width="1.5rem" height="1.5rem" class="arrow-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071Z"
+                            fill="#323232">
+                        </path>
+                    </svg>
                 </button>
             </div>
         </div>
@@ -61,9 +73,9 @@
                 </div>
                 <h3 class="review-title">Love this service</h3>
                 <p class="review-text">
-                    "I've used Spider for over 2 years now to set-up and assist with my S-Corp, and it has been a
+                    "I've used spyder for over 2 years now to set-up and assist with my S-Corp, and it has been a
                     life saver. I had no idea what I was doing before using them, and random tax and regulatory things
-                    will pop up that I would not have known/paid/understood if Spider had not flagged them for me
+                    will pop up that I would not have known/paid/understood if spyder had not flagged them for me
                     and been there to answer my questions."
                 </p>
                 <span class="review-date">February 2024</span>
@@ -77,7 +89,7 @@
                 </div>
                 <h3 class="review-title">An absolute must!!</h3>
                 <p class="review-text">
-                    "ABSOLUTELY love everything Spider has done (and continues to do!) for my business. My only
+                    "ABSOLUTELY love everything spyder has done (and continues to do!) for my business. My only
                     regret is not working with them sooner—I can't tell you how much stress they've relieved!"
                 </p>
                 <span class="review-date">February 2024</span>
@@ -92,7 +104,7 @@
                 <h3 class="review-title">Confidence through knowledge</h3>
                 <p class="review-text">
                     "I would not have been able to make this transition without their help, and would definitely have
-                    felt less confident that I'd done it right without them. Spider's diligence has allowed me to
+                    felt less confident that I'd done it right without them. spyder's diligence has allowed me to
                     stay focused on increasing revenue and building the business, which is a great place to be."
                 </p>
                 <span class="review-date">November 2023</span>
@@ -106,9 +118,9 @@
                 </div>
                 <h3 class="review-title">It doesn't get easier than this!</h3>
                 <p class="review-text">
-                    "Spider is a lifesaver for my small business. If you've ever found yourself confused or
+                    "spyder is a lifesaver for my small business. If you've ever found yourself confused or
                     intimidated by taxes, payroll or your decision to go full-monty on the LLC/S-Corp designation,
-                    Spider is the partner you're looking for. They'll hold your hand from start to finish."
+                    spyder is the partner you're looking for. They'll hold your hand from start to finish."
                 </p>
                 <span class="review-date">September 2023</span>
             </div>
@@ -122,7 +134,8 @@
                 d="M3.25183 0.0801287C1.05134 1.53168 0 3.31429 0 5.30062C0 7.0323 1.07579 8 2.24939 8C3.56968 8 4.40098 7.0323 4.40098 5.63168C4.40098 4.40932 3.69193 3.54348 2.81174 3.54348C2.54279 3.54348 2.49389 3.33975 2.54279 3.05963C2.64059 2.29566 3.03178 1.78634 3.93643 0.844104C4.32763 0.411185 3.74083 -0.22546 3.25183 0.0801287ZM8.87531 0.0801287C6.67482 1.53168 5.62347 3.31429 5.62347 5.30062C5.62347 7.0323 6.67482 8 7.87286 8C9.1687 8 10 7.0323 10 5.63168C10 4.40932 9.3154 3.54348 8.43521 3.54348C8.16626 3.54348 8.11736 3.33975 8.16626 3.05963C8.23961 2.29566 8.63081 1.78634 9.53545 0.844104C9.9511 0.411185 9.3643 -0.22546 8.87531 0.0801287Z">
             </path>
         </svg>
-        <h2 class="member-review-description">Spider helps me optimize my workload without sacrificing quality </h2>
+        <h2 class="member-review-description">Spyder helps me optimize my workload <br> without sacrificing quality
+        </h2>
         <p class="member-review-name">Olivia Nunn,</p>
         <p class="member-review-profession"> PR Agency</p>
     </div>
@@ -130,17 +143,23 @@
     <div class="feedback-section">
         <div class="feedback-header">
             <h2 class="feedback-title">Members of our community</h2>
-            <!-- <div class="navigation-buttons">
-                <button class="nav-button left-nav" (click)="scrollFeedbackLeft()">&lt;</button>
-                <button class="nav-button right-nav" (click)="scrollFeedbackRight()">&gt;</button>
-            </div> -->
-
             <div class="arrow-container">
-                <button class="arrow left-arrow" (click)="scrollFeedbackLeft()">
-                    <span>&lt;</span>
+                <button class="arrow left-arrow" (click)="scrollFeedbackLeft()" aria-label="carousel-previous-button">
+                    <svg viewBox="0 0 24 24" width="1.5rem" height="1.5rem" class="arrow-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L9.41421 12L15.7071 18.2929C16.0976 18.6834 16.0976 19.3166 15.7071 19.7071C15.3166 20.0976 14.6834 20.0976 14.2929 19.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289Z"
+                            fill="#323232">
+                        </path>
+                    </svg>
                 </button>
-                <button class="arrow right-arrow" (click)="scrollFeedbackRight()">
-                    <span>&gt;</span>
+
+                <button class="arrow right-arrow" (click)="scrollFeedbackRight()" aria-label="carousel-next-button">
+                    <svg viewBox="0 0 24 24" width="1.5rem" height="1.5rem" class="arrow-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071Z"
+                            fill="#323232">
+                        </path>
+                    </svg>
                 </button>
             </div>
         </div>
@@ -165,22 +184,29 @@
         </div>
     </div>
 
-    <div class="feedback-section">
+    <div class="feedback-section" style="background-color: #fff;">
         <div class="feedback-header">
             <h2 class="feedback-title">Press features</h2>
-            <!-- <div class="navigation-buttons">
-                <button class="nav-button left-nav" (click)="scrollFeaturesLeft()">&lt;</button>
-                <button class="nav-button right-nav" (click)="scrollFeaturesRight()">&gt;</button>
-            </div> -->
             <div class="arrow-container">
-                <button class="arrow left-arrow" (click)="scrollFeaturesLeft()">
-                    <span>&lt;</span>
+                <button class="view-articles" routerLink="/press">View all articles</button>
+                <button class="arrow left-arrow" (click)="scrollFeaturesLeft()" aria-label="carousel-previous-button">
+                    <svg viewBox="0 0 24 24" width="1.5rem" height="1.5rem" class="arrow-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L9.41421 12L15.7071 18.2929C16.0976 18.6834 16.0976 19.3166 15.7071 19.7071C15.3166 20.0976 14.6834 20.0976 14.2929 19.7071L7.29289 12.7071C6.90237 12.3166 6.90237 11.6834 7.29289 11.2929L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289Z"
+                            fill="#323232">
+                        </path>
+                    </svg>
                 </button>
-                <button class="arrow right-arrow" (click)="scrollFeaturesRight()">
-                    <span>&gt;</span>
+
+                <button class="arrow right-arrow" (click)="scrollFeaturesRight()" aria-label="carousel-next-button">
+                    <svg viewBox="0 0 24 24" width="1.5rem" height="1.5rem" class="arrow-icon">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M8.29289 19.7071C7.90237 19.3166 7.90237 18.6834 8.29289 18.2929L14.5858 12L8.29289 5.70711C7.90237 5.31658 7.90237 4.68342 8.29289 4.29289C8.68342 3.90237 9.31658 3.90237 9.70711 4.29289L16.7071 11.2929C17.0976 11.6834 17.0976 12.3166 16.7071 12.7071L9.70711 19.7071C9.31658 20.0976 8.68342 20.0976 8.29289 19.7071Z"
+                            fill="#323232">
+                        </path>
+                    </svg>
                 </button>
             </div>
-
         </div>
         <div class="feedback-slider" #featuresSlider>
             <div class="feedback-card" *ngFor="let features of pressFeatures"

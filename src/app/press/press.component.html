@@ -10,9 +10,7 @@
                     </path>
                 </svg>
 
-                <h1>We are Collective</h1>
-
-                <p>The first online back-office platform designed <br> for Businesses-of-One.</p>
+                <h1>In The News</h1>
             </div>
         </div>
 
@@ -21,39 +19,32 @@
         </div>
     </section>
 
-    <section class="logo-container">
-        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e3b2b792-b186-46e9-b73c-9ff6c9288bfa_bloomberg_gray.jpg"
-            alt="Bloomberg">
-        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/cce66964-a4bd-41ac-97b4-12f2973c8fb5_forbes_gray.jpg"
-            alt="Forbes">
-        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2bf0988b-a938-4b49-ba8b-f836e24ecaef_yahoo_gray.jpg"
-            alt="Yahoo">
-        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/df902b34-7757-40bf-ab80-72a309563110_real_simple_gray.jpg"
-            alt="Real Simple">
-        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/f4ea2230-d276-49f4-a164-b662d49eca9b_business_insider_gray.jpg"
-            alt="Business Insider">
-        <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/07105ed0-32f9-4c76-a653-1326139e366d_tech_crunch_gray.jpg"
-            alt="TechCrunch">
-    </section>
-
-
-    <section class="s-corp-section">
-
-        <div class="image-container">
-            <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c030d362-01f5-4d28-97a7-63e654175b14_collective-founders-hooman-radfar-ugur-kaner-bugra-akcay-desktop.webp"
-                alt="Person smiling with a mug" class="s-corp-image" />
+    <div class="tax-tips-container">
+        <h2>Press releases</h2>
+        <div class="tax-tips-carousel">
+            <div *ngFor="let tip of pressReleases1" class="tax-tip-card">
+                <img [src]="tip.image" alt="{{ tip.title }}" />
+                <div class="card-content">
+                    <h3>{{ tip.title }}</h3>
+                    <p>{{ tip.author }}</p>
+                </div>
+            </div>
         </div>
-        <div class="text-container">
-            <h2 class="s-corp-title">We give our members the freedom to focus on what they do best: being their own boss
-            </h2>
 
+        <div class="tax-tips-carousel">
+            <div *ngFor="let tip of pressReleases2" class="tax-tip-card">
+                <img [src]="tip.image" alt="{{ tip.title }}" />
+                <div class="card-content">
+                    <h3>{{ tip.title }}</h3>
+                    <p>{{ tip.author }}</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 
     <div class="testimonial-section">
         <div class="header">
-            <h2>Our values</h2>
-
+            <h2>Press mentions</h2>
             <div class="arrow-container">
                 <button class="arrow left-arrow" (click)="scrollTestimonialLeft()"
                     aria-label="carousel-previous-button">
@@ -77,77 +68,20 @@
         </div>
 
         <div class="testimonial-slider" #testimonialSlider>
-            <div class="testimonial-item" *ngFor="let testimonial of testimonials"
-                [style.background-color]="testimonial.backgroundColor">
+            <div class="testimonial-item" *ngFor="let testimonial of testimonials">
                 <div class="testimonial-info">
-                    <img [src]="testimonial.image" [alt]="testimonial.name" />
+                    <h2 class="heading">{{ testimonial.name }}</h2>
                     <p class="description">{{ testimonial.description }}</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <section class="leadership-section">
-        <h1>Our leadership</h1>
-        <p>spyder is completely remote, giving us all the freedom to work and play as we see fit.</p>
-        <div class="leadership-grid">
-            <div class="leader">
-                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c73d0d9a-e606-4653-9edb-6983e6635302_hooman-radfar.webp"
-                    alt="Hooman Radfar">
-                <h3>Hooman Radfar</h3>
-                <p>Founder & CEO</p>
-            </div>
-            <div class="leader">
-                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39afeee6-7676-4b19-8ac3-4035ea7269e8_ugur-kaner.webp"
-                    alt="Ugur Kaner">
-                <h3>Ugur Kaner</h3>
-                <p>Founder & Board Director</p>
-            </div>
-            <div class="leader">
-                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8565e3aa-3e9c-4c5f-aa49-68221a9f66ce_bugra-akcay.webp"
-                    alt="Bugra Akcay">
-                <h3>Bugra Akcay</h3>
-                <p>Founder & Board Director</p>
-            </div>
-            <div class="leader">
-                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39afeee6-7676-4b19-8ac3-4035ea7269e8_ugur-kaner.webp"
-                    alt="Disha Patel">
-                <h3>Disha Patel</h3>
-                <p>VP of Product</p>
-            </div>
-            <div class="leader">
-                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8565e3aa-3e9c-4c5f-aa49-68221a9f66ce_bugra-akcay.webp"
-                    alt="Chintan Shah">
-                <h3>Chintan Shah</h3>
-                <p>VP of Engineering</p>
-            </div>
-            <div class="leader">
-                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/39afeee6-7676-4b19-8ac3-4035ea7269e8_ugur-kaner.webp"
-                    alt="Jeff Marshall">
-                <h3>Jeff Marshall</h3>
-                <p>VP of Operations</p>
-            </div>
-            <div class="leader">
-                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c73d0d9a-e606-4653-9edb-6983e6635302_hooman-radfar.webp"
-                    alt="Carol Ho">
-                <h3>Carol Ho</h3>
-                <p>General Counsel</p>
-            </div>
-            <div class="leader">
-                <img src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8565e3aa-3e9c-4c5f-aa49-68221a9f66ce_bugra-akcay.webp"
-                    alt="Jeff Barlam">
-                <h3>Jeff Barlam</h3>
-                <p>VP of Finance</p>
-            </div>
-        </div>
-    </section>
-
     <section class="feedback-section">
         <div class="feedback-header">
-            <h2 class="feedback-title">In the news</h2>
+            <h2 class="feedback-title">Collective reports</h2>
 
             <div class="arrow-container">
-                <button class="view-articles" routerLink="/press">View all articles</button>
                 <button class="arrow left-arrow" (click)="scrollFeaturesLeft()" aria-label="carousel-previous-button">
                     <svg viewBox="0 0 24 24" width="1.5rem" height="1.5rem" class="arrow-icon">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -167,7 +101,6 @@
                 </button>
             </div>
         </div>
-
         <div class="feedback-slider" #featuresSlider>
             <div class="feedback-card" *ngFor="let features of pressFeatures">
                 <div class="feedback-image">
@@ -176,9 +109,7 @@
                 <div class="feedback-content">
                     <h1 class="features-heading">{{ features.contentHeading }}</h1>
                     <h2 class="features-description">{{ features.description }}</h2>
-                    <a routerLink="/press">
-                        <p class="features-profession">{{ features.profession }}</p>
-                    </a>
+                    <!-- <p class="features-profession">{{ features.profession }}</p> -->
                 </div>
             </div>
         </div>

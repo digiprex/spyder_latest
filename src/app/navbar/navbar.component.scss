@@ -11,18 +11,20 @@ main {
         font-weight: 400 !important;
     }
 
+    button,
     a,
     p {
-        font-family: "Poppins", serif;
+        font-family: "Montserrat", serif !important;
     }
 
     .heading {
         width: 100%;
         position: fixed;
-        padding: 5px;
+        padding: 10px;
         top: 0;
         background-color: #fff;
-        border-bottom: 1px solid lightgray;
+        border: 0 solid #efece4;
+        box-shadow: 0 0 20px rgb(0 0 0 / 5%);
         z-index: 9999999;
         justify-content: space-between;
 
@@ -33,6 +35,10 @@ main {
             img {
                 width: 15rem;
                 object-fit: contain;
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 
@@ -61,10 +67,13 @@ main {
                 font-size: 16px;
                 text-align: center;
                 cursor: pointer;
+                padding: 10px;
+                border-radius: 30px;
             }
 
             .navbar-nav>li>a:hover {
                 font-weight: 500;
+                background-color: #faf9f6;
             }
 
             .active {
