@@ -207,35 +207,35 @@ export class HomeComponent {
   testimonials = [
     {
       name: 'Olivia Nunn',
-      description: 'Spider helps me optimize my workload without sacrificing quality',
+      description: 'Spyder helps me optimize my workload without sacrificing quality',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg',
-      quote: 'Spider helps me optimize my workload without sacrificing quality',
+      quote: 'Spyder helps me optimize my workload without sacrificing quality',
     },
     {
       name: 'John Doe',
-      description: 'Thanks to Spider, I can focus 100% on my work',
+      description: 'Thanks to Spyder, I can focus 100% on my work',
       backgroundColor: '#e6d8ff',
       profession: 'Graphic Designer',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/b7075e7b-8eed-4dac-8773-e9d3351d70ac_alice-yang-collective-member.jpg',
-      quote: 'The support I receive from Spider has been incredible',
+      quote: 'The support I receive from Spyder has been incredible',
     },
     {
       name: 'Jane Smith',
-      description: 'Without Spider, I do not think I would be able to do the work that I love',
+      description: 'Without Spyder, I do not think I would be able to do the work that I love',
       backgroundColor: '#d8f0e6',
       profession: 'Content Creator',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/276c90a5-e21f-4793-9285-e032803cc4eb_vincent-nguyen-collective-member.jpg',
-      quote: 'I’m able to focus on my work while Spider takes care of my taxes',
+      quote: 'I’m able to focus on my work while Spyder takes care of my taxes',
     },
     {
       name: 'Alice Yang',
-      description: 'I love working with Spider because I feel like I am being handheld',
+      description: 'I love working with Spyder because I feel like I am being handheld',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg',
-      quote: 'Spider helps me optimize my workload without sacrificing quality',
+      quote: 'Spyder helps me optimize my workload without sacrificing quality',
     }
   ];
 
