@@ -188,8 +188,8 @@ main {
                     text-align: start;
 
                     h3 {
-                        font-size: 30px;
-                        line-height: 1.25;
+                        font-size: 20px;
+                        line-height: 30px;
                         margin: 10px 0;
                         font-family: "Montserrat", serif !important;
                     }
@@ -349,8 +349,8 @@ main {
             margin-bottom: 1.5rem;
 
             .feedback-title {
-                font-size: 48px;
-                font-weight: 400;
+                font-size: 40px;
+                font-weight: 500 !important;
                 line-height: 56.02px;
                 margin: 0;
             }
@@ -444,7 +444,6 @@ main {
                     display: grid;
                     gap: 30px;
 
-
                     .quote-icon {
                         margin-bottom: 1rem;
                     }
@@ -467,7 +466,7 @@ main {
                     .features-description {
                         color: #333;
                         margin-bottom: 0.5rem;
-                        font-size: 25px;
+                        font-size: 20px;
                         font-weight: 200;
                         text-align: start;
                         text-transform: capitalize;
@@ -590,7 +589,7 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        
+
 
         h2 {
             font-size: 25px !important;
@@ -656,15 +655,12 @@ main {
                     .card-content {
                         width: 100%;
                         padding: 1.5rem;
-                        text-align: center;
+                        text-align: start;
 
-                        h3 {
-                            font-size: 22px;
-                        }
+                        h3 {}
 
                         p {
-                            font-size: 12px;
-                            justify-content: center;
+                            font-size: 14px !important;
                         }
                     }
                 }
@@ -738,11 +734,19 @@ main {
 
                     .feedback-image {
                         width: 100%;
+
+                        img {
+                            height: 45vh;
+                        }
                     }
 
                     .feedback-content {
                         width: 100%;
                         padding: 10px;
+
+                        .features-description {
+                            font-size: 20px !important;
+                        }
                     }
                 }
             }

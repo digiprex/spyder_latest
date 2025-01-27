@@ -77,8 +77,7 @@
         </div>
 
         <div class="testimonial-slider" #testimonialSlider>
-            <div class="testimonial-item" *ngFor="let testimonial of testimonials"
-                [style.background-color]="testimonial.backgroundColor">
+            <div class="testimonial-item" *ngFor="let testimonial of testimonials">
                 <div class="testimonial-info">
                     <img [src]="testimonial.image" [alt]="testimonial.name" />
                     <p class="description">{{ testimonial.description }}</p>
@@ -87,7 +86,7 @@
         </div>
     </div>
 
-    <section class="leadership-section">
+    <!-- <section class="leadership-section">
         <h1>Our leadership</h1>
         <p>spyder is completely remote, giving us all the freedom to work and play as we see fit.</p>
         <div class="leadership-grid">
@@ -156,7 +155,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="feedback-section">
         <div class="feedback-header">

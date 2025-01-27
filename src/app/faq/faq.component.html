@@ -1,27 +1,5 @@
 <app-navbar></app-navbar>
 <main>
-    <section class="left">
-        <div class="title">
-            <h3>Contact Us</h3>
-        </div>
-
-        <form [formGroup]="formDetails">
-            <div>
-                <input name="fname" type="text" required placeholder="Your Name" formControlName="firstName">
-            </div>
-            <div>
-                <input name="email" type="email" placeholder="Your Email" required formControlName="email">
-            </div>
-            <div>
-                <textarea id="message" formControlName="message" placeholder="Your Message"
-                    class="form-control"></textarea>
-            </div>
-
-            <button *ngIf="!success" (click)="submitForm()" [disabled]="!formDetails.valid">Send</button>
-            <button *ngIf="success" class="success" disabled>We will connect to you shortly!</button>
-        </form>
-    </section>
-
     <section class="faq-container">
         <h1>Frequently Asked Questions</h1>
         <div class="faq-section">
@@ -116,6 +94,28 @@
                 </p>
             </div>
         </div>
+    </section>
+
+    <section class="left">
+        <div class="title">
+            <h3>Contact Us</h3>
+        </div>
+
+        <form [formGroup]="formDetails">
+            <div>
+                <input name="fname" type="text" required placeholder="Your Name" formControlName="firstName">
+            </div>
+            <div>
+                <input name="email" type="email" placeholder="Your Email" required formControlName="email">
+            </div>
+            <div>
+                <textarea id="message" formControlName="message" placeholder="Your Message"
+                    class="form-control"></textarea>
+            </div>
+
+            <button *ngIf="!success" (click)="submitForm()" [disabled]="!formDetails.valid">Send</button>
+            <button *ngIf="success" class="success" disabled>We will connect to you shortly!</button>
+        </form>
     </section>
 
 </main>
