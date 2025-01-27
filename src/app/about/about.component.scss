@@ -23,6 +23,10 @@ main {
         font-family: "Montserrat", serif !important;
     }
 
+    button {
+        font-weight: 600 !important;
+    }
+
     .banner {
         display: flex;
         justify-content: center;
@@ -142,10 +146,10 @@ main {
         padding: 2rem 5rem;
         max-width: 100%;
         margin: auto;
-        border-bottom: 1px solid lightgray;
+        border-bottom: 1px solid #ccccccb0;
 
         img {
-            width: 10%;
+            width: 100px;
             filter: grayscale(100%);
             transition: transform 0.3s ease, filter 0.3s ease;
 
@@ -219,7 +223,7 @@ main {
         padding: 3rem 5rem;
         background-color: #faf9f6;
         display: grid;
-        gap: 40px;
+        gap: 10px;
 
         h2 {
             font-size: 48px;
@@ -379,17 +383,20 @@ main {
                     margin-bottom: 15px;
                 }
 
-                h3 {
-                    font-size: 22px;
-                    margin: 10px 0 5px;
-                    font-family: "Montserrat", serif !important;
-                    font-weight: 500 !important;
-                }
+                div {
 
-                p {
-                    font-size: 16px;
-                    font-weight: 500;
-                    color: #777;
+                    h3 {
+                        font-size: 22px;
+                        margin: 10px 0 5px;
+                        font-family: "Montserrat", serif !important;
+                        font-weight: 500 !important;
+                    }
+
+                    p {
+                        font-size: 16px !important;
+                        font-weight: 500;
+                        color: #777;
+                    }
                 }
             }
         }
@@ -511,13 +518,14 @@ main {
                     display: grid;
                     gap: 30px;
 
-
                     .quote-icon {
                         margin-bottom: 1rem;
                     }
 
                     .features-heading {
                         text-align: start;
+                        font-size: 32px !important;
+                        line-height: 32px !important;
                     }
 
                     .feedback-description {
@@ -530,7 +538,7 @@ main {
                     .features-description {
                         color: #333;
                         margin-bottom: 0.5rem;
-                        font-size: 25px;
+                        font-size: 20px !important;
                         font-weight: 200;
                         text-align: start;
                         font-family: "Montserrat", serif !important;
@@ -543,7 +551,7 @@ main {
                     }
 
                     .feedback-profession {
-                        font-size: 14px;
+                        font-size: 14px !important;
                         color: #777;
                     }
                 }
@@ -652,7 +660,7 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 90px;
+
 
         h2 {
             font-size: 25px !important;
@@ -660,7 +668,7 @@ main {
         }
 
         p {
-            font-weight: 300 !important;
+            font-weight: 400 !important;
             font-size: 18px !important;
             color: #383531 !important;
         }
@@ -674,7 +682,7 @@ main {
 
                 .content {
                     width: 100% !important;
-                    padding: 8rem 2rem;
+                    padding: 5rem 2rem;
 
                     svg {}
 
@@ -697,10 +705,12 @@ main {
         }
 
         .logo-container {
-            padding: 20px 10px;
+            padding: 2rem;
+            justify-content: space-between;
+            gap: 45px;
 
             img {
-                width: 25%;
+                width: 70px;
                 filter: grayscale(100%);
                 transition: transform 0.3s ease, filter 0.3s ease;
 
@@ -714,6 +724,7 @@ main {
 
         .s-corp-section {
             flex-direction: column;
+            gap: 0px;
 
             .image-container {
                 width: 100%;
@@ -728,20 +739,26 @@ main {
             .text-container {
                 padding: 10px;
                 width: 100%;
+
+                .s-corp-title {
+                    margin-bottom: 4rem;
+                }
             }
         }
 
         .testimonial-section {
-            padding: 0px !important;
+            padding: 2rem !important;
 
             .header {
-                margin-top: 4rem;
 
-                h2 {}
+                h2 {
+                    margin-top: 0px;
+                    font-size: 32px !important;
+                }
             }
 
             .testimonial-slider {
-                padding: 20px !important;
+                padding: 0px !important;
 
                 &::-webkit-scrollbar {
                     display: none;
@@ -760,7 +777,7 @@ main {
 
                     .testimonial-info {
                         width: 100%;
-                        padding: 20px !important;
+                        padding: 0px !important;
                         background: transparent;
 
                         .name {}
@@ -772,11 +789,11 @@ main {
         }
 
         .leadership-section {
-            text-align: center;
-            padding: 10px;
+            text-align: start;
+            padding: 2rem;
 
             h1 {
-                font-size: 40px;
+                font-size: 32px !important;
             }
 
             p {}
@@ -786,6 +803,23 @@ main {
                 .leader {
                     flex: 0 0 100%;
                     max-width: 100%;
+                    gap: 10px;
+                    display: flex;
+                    padding: 10px;
+                    align-items: center;
+
+                    img {
+                        margin-bottom: 0px;
+                        width: 72px;
+                        height: 72px;
+                    }
+
+                    div {
+
+                        h3 {
+                            font-size: 20px;
+                        }
+                    }
                 }
             }
         }
@@ -798,7 +832,9 @@ main {
             .feedback-header {
                 margin-top: 4rem;
 
-                .feedback-title {}
+                .feedback-title {
+                    font-size: 32px !important;
+                }
 
                 .arrow-container {
                     .view-articles {
@@ -825,11 +861,16 @@ main {
 
                     .feedback-image {
                         width: 100%;
+
+                        img {
+                            height: 35vh;
+                        }
                     }
 
                     .feedback-content {
                         width: 100%;
                         padding: 10px;
+                        gap: 0px;
                     }
                 }
             }

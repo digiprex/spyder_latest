@@ -23,6 +23,10 @@ main {
         font-family: "Montserrat", serif !important;
     }
 
+    button {
+        font-weight: 600 !important;
+    }
+
     .blog-section {
         text-align: center;
         padding: 40px;
@@ -31,7 +35,7 @@ main {
         h1 {
             line-height: 56.02px;
             letter-spacing: 0;
-            padding-bottom: 2.5rem;
+            padding-bottom: 1rem;
             font-size: 48px;
             color: #0C0C0F;
         }
@@ -205,7 +209,7 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 90px;
+
 
         h2 {
             font-size: 25px !important;
@@ -220,6 +224,11 @@ main {
 
         .blog-section {
             padding: 10px;
+
+            h1{
+                font-size: 32px !important;
+                line-height: 35px !important;
+            }
 
             .carousel {
                 position: relative;
@@ -272,6 +281,11 @@ main {
 
         .tax-tips-container {
             padding: 10px;
+
+            h2 {
+                font-size: 32px !important;
+                line-height: 35px !important;
+            }
 
             .tax-tips-carousel {}
         }
