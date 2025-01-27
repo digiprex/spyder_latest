@@ -52,9 +52,6 @@ export class TestimonialComponent {
     }
   }
 
-  // @ViewChild('feedbackSlider', { static: false }) feedbackSlider!: ElementRef<any>;
-  // @ViewChild('testimonialSlider', { static: false }) testimonialSlider!: ElementRef<any>;
-
   @ViewChild('testimonialSlider', { static: false }) testimonialSlider!: ElementRef<any>;
   @ViewChild('feedbackSlider', { static: false }) feedbackSlider!: ElementRef<any>;
   @ViewChild('featuresSlider', { static: false }) featuresSlider!: ElementRef<any>;
@@ -117,7 +114,7 @@ export class TestimonialComponent {
     },
     {
       name: 'Product',
-      description: 'Spider provided a structure for business management where I lacked that knowledge. It is nice to know that you have someone who’s got your back.”',
+      description: 'spyder provided a structure for business management where I lacked that knowledge. It is nice to know that you have someone who’s got your back.”',
       backgroundColor: '#fff',
       profession: 'Matthew Kluttz'
     },
@@ -135,7 +132,7 @@ export class TestimonialComponent {
     },
     {
       name: 'Product',
-      description: 'Spider provided a structure for business management where I lacked that knowledge. It is nice to know that you have someone who’s got your back.”',
+      description: 'spyder provided a structure for business management where I lacked that knowledge. It is nice to know that you have someone who’s got your back.”',
       backgroundColor: '#fff',
       profession: 'Matthew Kluttz'
     }
@@ -143,31 +140,31 @@ export class TestimonialComponent {
 
   testimonialFeedback = [
     {
-      description: 'Spider helps me optimize my workload without sacrificing quality',
+      description: 'spyder helps me optimize my workload without sacrificing quality',
       name: 'Olivia Nunn',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg'
+      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c7678666-d64a-42ee-8ab4-8767559ff13b_Screenshot%202025-01-04%20233441.png'
     },
     {
-      description: 'Thanks to Spider, I can focus 100% on my work',
+      description: 'Thanks to spyder, I can focus 100% on my work',
       name: 'John Doe',
       backgroundColor: '#e6d8ff',
       profession: 'Graphic Designer',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/b7075e7b-8eed-4dac-8773-e9d3351d70ac_alice-yang-collective-member.jpg'
+      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3fe93461-7878-44f2-b63f-6257d83a8b1f_Screenshot%202025-01-04%20233457.png'
     },
     {
-      description: 'Without Spider, I do not think I would be able to do the work that I love',
+      description: 'Without spyder, I do not think I would be able to do the work that I love',
       name: 'Jane Smith',
       backgroundColor: '#d8f0e6',
       profession: 'Content Creator',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/276c90a5-e21f-4793-9285-e032803cc4eb_vincent-nguyen-collective-member.jpg'
+      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/97a22076-f87f-4289-a3e8-80261520d71a_Screenshot%202025-01-04%20233511.png'
     }
   ];
 
   pressFeatures = [
     {
-      description: 'Spider Debuts AI-Powered Accounting Tool for Solopreneurs',
+      description: 'spyder Debuts AI-Powered Accounting Tool for Solopreneurs',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/86095aae-fba0-4f78-befb-8cf8e2741106_accounting-b2b-payments.jpg'
@@ -185,7 +182,7 @@ export class TestimonialComponent {
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
     },
     {
-      description: 'Thanks to Spider, I can focus 100% on my work',
+      description: 'Thanks to spyder, I can focus 100% on my work',
       backgroundColor: '#e6d8ff',
       profession: 'Graphic Designer',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8bdf09a9-3790-44b6-8ccd-57c7fbb4d75a_press.jpg'
@@ -199,8 +196,10 @@ export class TestimonialComponent {
   ];
 
   images: string[] = [
-    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/fbd44177-a1dd-44b9-a638-5875d2130ac8_WhatsAppVideo2025-01-02at6.gif',
-    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/57ec2090-557b-478f-bd18-d4aaca5ee5cf_WhatsAppVideo2025-01-02at6.gif'
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3bad28ca-4fd3-44a7-a8e6-7d11cd13b4d9_bethany-joy-clark-collective-desktop.webp',
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8e2ab7e4-6a7a-4345-9704-18c1eb3704d4_jason-polevoi-collective-desktop.webp',
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/703e1bdc-80d6-4155-aa0c-9a0db4753fcd_yana-gilbuena-babu-collective-desktop.webp',
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c6846059-dee5-4376-bca9-205705651f04_howie-chan-collective-desktop.webp'
   ];
 
   currentImage: string = this.images[0];

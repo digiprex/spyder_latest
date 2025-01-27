@@ -9,7 +9,7 @@ import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-public success = false;
+  public success = false;
   members: any;
   slider: any;
   bgColor: any;
@@ -29,24 +29,24 @@ public success = false;
     })
   }
 
-  
+
   testimonialFeedback = [
     {
-      description: 'Spider helps me optimize my workload without sacrificing quality',
+      description: 'spyder helps me optimize my workload without sacrificing quality',
       name: 'Olivia Nunn',
       backgroundColor: '#ffe6e6',
-      profession: 'PR Agency',
+      profession: 'Read More',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg'
     },
     {
-      description: 'Thanks to Spider, I can focus 100% on my work',
+      description: 'Thanks to spyder, I can focus 100% on my work',
       name: 'John Doe',
       backgroundColor: '#e6d8ff',
       profession: 'Graphic Designer',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/b7075e7b-8eed-4dac-8773-e9d3351d70ac_alice-yang-collective-member.jpg'
     },
     {
-      description: 'Without Spider, I do not think I would be able to do the work that I love',
+      description: 'Without spyder, I do not think I would be able to do the work that I love',
       name: 'Jane Smith',
       backgroundColor: '#d8f0e6',
       profession: 'Content Creator',
@@ -55,7 +55,7 @@ public success = false;
   ];
 
   @ViewChild('feedbackSlider', { static: false }) feedbackSlider!: ElementRef<any>;
-  
+
   scrollTestimonialLeft(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
@@ -206,7 +206,7 @@ public success = false;
       backgroundColor: '#faf9f6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8ffbaa89-12b4-44a4-a6e7-783333f22279_Screenshot%202024-12-23%20005518.png',
-      quote: 'Spider helps me optimize my workload without sacrificing quality',
+      quote: 'spyder helps me optimize my workload without sacrificing quality',
     },
     {
       name: 'John Doe',
@@ -214,7 +214,7 @@ public success = false;
       backgroundColor: '#d9ede8',
       profession: 'Graphic Designer',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/01567921-7ae8-40e1-8379-e82262f056e2_Screenshot%202024-12-23%20005527.png',
-      quote: 'The support I receive from Spider has been incredible',
+      quote: 'The support I receive from spyder has been incredible',
     },
     {
       name: 'Jane Smith',
@@ -222,7 +222,7 @@ public success = false;
       backgroundColor: '#fff0e5',
       profession: 'Content Creator',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/1730b7b9-1ee0-4435-87d6-a1dff33a10b9_Screenshot%202024-12-23%20005546.png',
-      quote: 'I’m able to focus on my work while Spider takes care of my taxes',
+      quote: 'I’m able to focus on my work while spyder takes care of my taxes',
     },
     {
       name: 'Alice Yang',
@@ -230,7 +230,7 @@ public success = false;
       backgroundColor: '#e7dce7',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c322cc67-f9e7-41c7-b16c-b7b4e384ec03_Screenshot%202024-12-23%20005558.png',
-      quote: 'Spider helps me optimize my workload without sacrificing quality',
+      quote: 'spyder helps me optimize my workload without sacrificing quality',
     }
   ];
 
@@ -240,41 +240,51 @@ public success = false;
     'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/fbd44177-a1dd-44b9-a638-5875d2130ac8_WhatsAppVideo2025-01-02at6.gif'
   ];
 
-  
+
   pressFeatures = [
     {
-      description: 'Spider Debuts AI-Powered Accounting Tool for Solopreneurs',
+      contentHeading: 'TechCrunch',
+      description: 'spyder Debuts AI-Powered Accounting Tool for Solopreneurs',
       backgroundColor: '#ffe6e6',
-      profession: 'PR Agency',
+      profession: 'Read more',
+      pressUrl: '/press',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/86095aae-fba0-4f78-befb-8cf8e2741106_accounting-b2b-payments.jpg'
     },
     {
+      contentHeading: 'PUNMTS',
       description: 'Is The $1 Billion, One-Person Business Around The Corner? This Freelance Platform, Which Just Raised $50 Million, Is Betting On A Bold Future For Solopreneurs',
       backgroundColor: '#e6d8ff',
-      profession: 'Graphic Designer',
+      profession: 'Read more',
+      pressUrl: '/press',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8bdf09a9-3790-44b6-8ccd-57c7fbb4d75a_press.jpg'
     },
     {
+      contentHeading: 'Forbes',
       description: 'This Ashton-Kutcher Backed Startup Is Helping The Self-Employed Get Organized',
       backgroundColor: '#d8f0e6',
-      profession: 'Content Creator',
+      profession: 'Read more',
+      pressUrl: '/press',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
     },
     {
-      description: 'Thanks to Spider, I can focus 100% on my work',
+      contentHeading: 'TechCrunch',
+      description: 'Thanks to spyder, I can focus 100% on my work',
       backgroundColor: '#e6d8ff',
-      profession: 'Graphic Designer',
+      profession: 'Read more',
+      pressUrl: '/press',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8bdf09a9-3790-44b6-8ccd-57c7fbb4d75a_press.jpg'
     },
     {
+      contentHeading: 'PUNMTS',
       description: 'Is The $1 Billion, One-Person Business Around The Corner? This Freelance Platform, Which Just Raised $50 Million, Is Betting On A Bold Future For Solopreneurs',
       backgroundColor: '#d8f0e6',
-      profession: 'Content Creator',
+      profession: 'Read more',
+      pressUrl: '/press',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
     }
   ];
 
-  
+
   scrollFeaturesLeft(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;

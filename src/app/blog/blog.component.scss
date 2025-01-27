@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/assets/fonts/Recoleta Font Family.otf') format('opentype');
+}
+
 main {
     background-color: #fff;
     margin-top: 60px;
@@ -8,12 +13,18 @@ main {
     h4,
     h5,
     h6 {
-        font-family: "Libre Baskerville", serif;
+        font-family: "Petrona", serif;
         font-weight: 400 !important;
     }
 
+    button,
+    a,
     p {
-        font-family: "Poppins", serif;
+        font-family: "Montserrat", serif !important;
+    }
+
+    button {
+        font-weight: 600 !important;
     }
 
     .blog-section {
@@ -24,7 +35,7 @@ main {
         h1 {
             line-height: 56.02px;
             letter-spacing: 0;
-            padding-bottom: 2.5rem;
+            padding-bottom: 1rem;
             font-size: 48px;
             color: #0C0C0F;
         }
@@ -72,7 +83,8 @@ main {
 
                     .content {
                         width: 30%;
-                        background-color: #fff;
+                        background-color: #faf8fb;
+                        border-radius: 10px;
                         padding: 20px;
                         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
                         margin-top: -50px;
@@ -96,7 +108,7 @@ main {
 
             .carousel-button {
                 position: absolute;
-                top: 5%;
+                top: 10%;
                 transform: translateY(-50%);
                 background-color: rgba(255, 255, 255, 0.8);
                 border: none;
@@ -106,16 +118,16 @@ main {
                 z-index: 3;
                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
                 border-radius: 50%;
-                color: #fa5a60;
+                color: #ff8132;
                 font-weight: 700;
                 transition: transform 0.5s ease-in-out;
 
-                &.left {
-                    right: 80px;
+                &.slick-prev {
+                    right: 110px;
                 }
 
-                &.right {
-                    right: 20px;
+                &.slick-next {
+                    right: 50px;
                 }
 
                 &:hover {
@@ -145,7 +157,7 @@ main {
                 flex: 0 0 auto;
                 width: 280px;
                 margin: 10px;
-                border: 1px solid #ddd;
+                border: 1px solid #e5e0d2;
                 border-radius: 8px;
                 overflow: hidden;
                 cursor: pointer;
@@ -168,12 +180,21 @@ main {
                     h3 {
                         font-size: 18px;
                         margin: 10px 0;
-                        font-family: "Poppins", serif;
+                        font-family: "Montserrat", serif !important;
                     }
 
                     p {
                         font-size: 14px;
                         color: #666;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+
+                        .authorImage {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                        }
                     }
                 }
             }
@@ -188,10 +209,26 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 90px;
+
+
+        h2 {
+            font-size: 25px !important;
+            line-height: 35px !important;
+        }
+
+        p {
+            font-weight: 300 !important;
+            font-size: 16px !important;
+            color: #383531 !important;
+        }
 
         .blog-section {
             padding: 10px;
+
+            h1{
+                font-size: 32px !important;
+                line-height: 35px !important;
+            }
 
             .carousel {
                 position: relative;
@@ -244,6 +281,11 @@ main {
 
         .tax-tips-container {
             padding: 10px;
+
+            h2 {
+                font-size: 32px !important;
+                line-height: 35px !important;
+            }
 
             .tax-tips-carousel {}
         }

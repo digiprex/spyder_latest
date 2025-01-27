@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { AppService } from '../app.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
@@ -13,6 +13,7 @@ export class HomeComponent {
   members: any;
   slider: any;
   bgColor: any;
+  activeImageIndex: number = 0;
 
   constructor(private appService: AppService) { }
 
@@ -29,6 +30,23 @@ export class HomeComponent {
     })
   }
 
+  setActiveImage(index: number) {
+    this.activeImageIndex = index;
+  }
+
+  peaceOfMind = [
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/a51da540-7753-48bd-83ce-d9b038825b4c_videoframe2.png',
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg',
+    'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/80046a47-6746-4e0c-9c4b-6d7914c46609_collective-member-jason-polevoi-desktop.jpg'
+  ];
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(): void {
+    const scrollPosition = window.scrollY;
+    const sectionHeight = window.innerHeight;
+    this.activeImageIndex = Math.floor(scrollPosition / sectionHeight) % this.peaceOfMind.length;
+  }
+
   benefits = [
     {
       title: 'Accounting',
@@ -40,7 +58,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/2d28f92c-aee6-4054-8cac-65a60401c119_house_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your accounts are perfectly balanced!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Bookkeeping',
@@ -52,7 +70,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c2b956c9-bf2b-4c19-b480-c412e13fa43f_developer_guide_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your bookkeeping is in perfect order!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Taxes',
@@ -64,7 +82,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/52d30ef4-372c-4508-810c-9e92ca51e3f1_heap_snapshot_large_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your taxes have been successfully filed!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Formation',
@@ -76,7 +94,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/a86cc18e-263e-4dac-bf8c-047a9a8fe14e_real_estate_agent_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your LLC formation is complete!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Payroll',
@@ -88,7 +106,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/256d0691-c291-42ab-b144-271aecd76c29_savings_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your payroll system is up and running!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Invoicing*',
@@ -100,7 +118,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c0f0b4a4-cd8a-4fc3-8f39-0e0971d76cfa_contract_edit_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your invoicing is seamless and efficient!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Compliance*',
@@ -112,7 +130,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8e223b59-93de-4059-80cb-7a3a577df4db_verified_user_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your compliance requirements are all set!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     },
     {
       title: 'Support*',
@@ -136,7 +154,7 @@ export class HomeComponent {
       img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/43b33f6b-a2d1-40e9-ba7a-9f8298d5a576_diversity_3_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Welcome to our solopreneur community!',
       btnText: 'Learn More',
-      urlBtn: '/faq'
+      urlBtn: '/pricing'
     }
   ];
 
@@ -189,35 +207,35 @@ export class HomeComponent {
   testimonials = [
     {
       name: 'Olivia Nunn',
-      description: 'Spider helps me optimize my workload without sacrificing quality',
+      description: 'Spyder helps me optimize my workload without sacrificing quality',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg',
-      quote: 'Spider helps me optimize my workload without sacrificing quality',
+      quote: 'Spyder helps me optimize my workload without sacrificing quality',
     },
     {
       name: 'John Doe',
-      description: 'Thanks to Spider, I can focus 100% on my work',
+      description: 'Thanks to Spyder, I can focus 100% on my work',
       backgroundColor: '#e6d8ff',
       profession: 'Graphic Designer',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/b7075e7b-8eed-4dac-8773-e9d3351d70ac_alice-yang-collective-member.jpg',
-      quote: 'The support I receive from Spider has been incredible',
+      quote: 'The support I receive from Spyder has been incredible',
     },
     {
       name: 'Jane Smith',
-      description: 'Without Spider, I do not think I would be able to do the work that I love',
+      description: 'Without Spyder, I do not think I would be able to do the work that I love',
       backgroundColor: '#d8f0e6',
       profession: 'Content Creator',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/276c90a5-e21f-4793-9285-e032803cc4eb_vincent-nguyen-collective-member.jpg',
-      quote: 'I’m able to focus on my work while Spider takes care of my taxes',
+      quote: 'I’m able to focus on my work while Spyder takes care of my taxes',
     },
     {
       name: 'Alice Yang',
-      description: 'I love working with Spider because I feel like I am being handheld',
+      description: 'I love working with Spyder because I feel like I am being handheld',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg',
-      quote: 'Spider helps me optimize my workload without sacrificing quality',
+      quote: 'Spyder helps me optimize my workload without sacrificing quality',
     }
   ];
 
