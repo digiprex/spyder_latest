@@ -30,4 +30,109 @@
     </section>
 
 </main>
-<app-footer></app-footer>
+<main class="footer-section">
+
+    <section class="logo">
+        <div class="logo-img">
+            <img
+                src="https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/f5d2eb00-dc52-43ef-a0e7-bf31205572f9_Spyder%20logo.png" />
+
+        </div>
+    </section>
+
+    <section class="footer">
+        <section class="contact">
+            <div>
+                <p>We offer expert bookkeeping, tax, CFO services, and R&D tax credits for startups, retail,
+                    manufacturing,
+                    and professional services. Let us handle your financial needs so you can focus on your business.
+                </p>
+            </div>
+        </section>
+        <section class="quicklinks">
+            <div>
+                <a [routerLink]="link.link" *ngFor="let link of links">
+                    {{link.text}}
+                </a>
+            </div>
+        </section>
+
+        <section class="contact">
+            <a href="{{social.map}}">
+                <span class="material-symbols-outlined">
+                    location_on
+                </span>
+                <p>{{social.address}}</p>
+            </a>
+
+            <a href="{{social.hrefPhone}}">
+                <span class="material-symbols-outlined">
+                    call
+                </span>
+                <p>{{social.phone}}</p>
+            </a>
+
+            <a href="{{social.hrefEmail}}">
+                <span class="material-symbols-outlined">
+                    mail
+                </span>
+                <p>{{social.email}}</p>
+            </a>
+        </section>
+    </section>
+
+    <section class="bottom-container">
+        <div class="footer-container">
+            <p class="footer-description">
+                Bundl Financial Technologies Inc is not a law or financial firm. We do not provide legal or
+                financial services or advice. We provide self-help tools for your convenience.
+            </p>
+            <p class="footer-disclaimer">
+                * Based on the average 2022 tax savings of active Spyder users with an S Corp tax election for the
+                2022 tax year<br>
+                ** Based on data sourced from Shopify blog, QBO Essentials, QBO Live, Gusto, Taxfyle, Intuit "Tax Pro"
+                Research, Legal Zoom and JustAnswer.com as of August 2023.<br>
+                † Individual Tax return packages are prepared by our partner TaxFyle and billed as an annual, one-time
+                add-on fee.
+            </p>
+            <p class="footer-copyright">
+                © 2025 Spyder Hub, Inc. All rights reserved
+            </p>
+        </div>
+        <!-- <div class="social-links">
+            <a href="#" class="social-link">
+                <svg width="10.8" height="18" viewBox="0 0 9 15" xmlns="http://www.w3.org/2000/svg"
+                    class="fill-[#756C63] transition-colors duration-200 group-hover:fill-white">
+                    <path
+                        d="M5.265 8.209v5.911H2.55V8.209H.294V5.812H2.55V4.94C2.55 1.702 3.902 0 6.764 0 7.64 0 7.86.141 8.34.256v2.37c-.538-.093-.69-.146-1.248-.146-.663 0-1.018.188-1.342.56-.324.37-.486 1.012-.486 1.931v.846h3.076l-.825 2.397h-2.25v-.005Z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#" class="social-link">
+                <svg width="19.2" height="18" viewBox="0 0 1200 1227" xmlns="http://www.w3.org/2000/svg"
+                    class="fill-[#756C63] transition-colors duration-200 group-hover:fill-white">
+                    <path
+                        d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#" class="social-link">
+                <svg width="18" height="18" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg"
+                    class="fill-[#756C63] transition-colors duration-200 group-hover:fill-white">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.191 1.713a1.713 1.713 0 1 1-3.426 0 1.713 1.713 0 0 1 3.426 0Zm7.743 2.726c-.108-.013-.224-.02-.34-.027a3.443 3.443 0 0 0-2.91 1.333c-.088.115-.128.183-.128.183V4.67H5.734v9.41h2.951V9.66c0-.073 0-.146-.002-.22-.004-.573-.01-1.165.274-1.683.272-.49.761-.734 1.312-.734 1.631 0 1.665 1.475 1.665 1.61v5.487h2.95V7.981c0-2.1-1.067-3.338-2.95-3.542Zm-7.98.204H1.002v9.41h2.95v-9.41Z">
+                    </path>
+                </svg>
+            </a>
+            <a href="#" class="social-link">
+                <svg width="19.2" height="18" viewBox="0 0 16 15" xmlns="http://www.w3.org/2000/svg"
+                    class="fill-[#756C63] transition-colors duration-200 group-hover:fill-white">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12.7 14.294H3.3a2.366 2.366 0 0 1-2.359-2.36V2.537a2.366 2.366 0 0 1 2.36-2.36h9.398a2.366 2.366 0 0 1 2.36 2.36v9.399a2.358 2.358 0 0 1-2.36 2.36Zm-4.697-3.432A3.6 3.6 0 0 1 5.44 9.8a3.6 3.6 0 0 1-1.06-2.563 3.6 3.6 0 0 1 1.06-2.562 3.6 3.6 0 0 1 2.563-1.061 3.6 3.6 0 0 1 2.563 1.06 3.6 3.6 0 0 1 1.06 2.563 3.6 3.6 0 0 1-1.06 2.563 3.61 3.61 0 0 1-2.563 1.06Zm0-6.476A2.854 2.854 0 0 0 5.15 7.238a2.854 2.854 0 0 0 2.853 2.853 2.854 2.854 0 0 0 2.852-2.853 2.862 2.862 0 0 0-2.852-2.852ZM13.029 2.8a.696.696 0 1 1-1.392 0 .696.696 0 0 1 1.392 0Z">
+                    </path>
+                </svg>
+            </a>
+        </div> -->
+    </section>
+
+</main>
