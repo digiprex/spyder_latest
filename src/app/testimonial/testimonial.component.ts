@@ -144,20 +144,20 @@ export class TestimonialComponent {
       name: 'Olivia Nunn',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c7678666-d64a-42ee-8ab4-8767559ff13b_Screenshot%202025-01-04%20233441.png'
-    },
-    {
-      description: 'Thanks to spyder, I can focus 100% on my work',
-      name: 'John Doe',
-      backgroundColor: '#e6d8ff',
-      profession: 'Graphic Designer',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3fe93461-7878-44f2-b63f-6257d83a8b1f_Screenshot%202025-01-04%20233457.png'
     },
     {
+      description: 'Thanks to spyder, I can focus 100% on my work',
+      name: 'Elohim Pena',
+      backgroundColor: '#e6d8ff',
+      profession: 'Creative Director & Actor',
+      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c7678666-d64a-42ee-8ab4-8767559ff13b_Screenshot%202025-01-04%20233441.png'
+    },
+    {
       description: 'Without spyder, I do not think I would be able to do the work that I love',
-      name: 'Jane Smith',
+      name: 'Jordan Robinson',
       backgroundColor: '#d8f0e6',
-      profession: 'Content Creator',
+      profession: 'Sports Journalist',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/97a22076-f87f-4289-a3e8-80261520d71a_Screenshot%202025-01-04%20233511.png'
     }
   ];
