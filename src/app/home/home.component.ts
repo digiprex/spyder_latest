@@ -137,9 +137,9 @@ export class HomeComponent {
       description: 'Access our team of licensed accounting and tax professionals whenever needed.',
       bgColor: '#fcbb9380',
       imgUrl: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3f5fa3a4-e80b-4102-b827-1af20f6e5f2d_olivia-nunn-collective-member.jpg',
-      name: 'Support Team',
+      name: 'Amelia',
       business: 'Customer Support',
-      img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/16b904fd-03da-43d7-89b8-9f4d44d95885_support_agent_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
+      img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c2b956c9-bf2b-4c19-b480-c412e13fa43f_developer_guide_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'We are here to help anytime!',
       btnText: 'Learn More',
       urlBtn: '/faq'
