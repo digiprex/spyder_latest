@@ -1115,7 +1115,9 @@ main {
                 .img-hover-div {
                     width: 100%;
 
-                    .card {}
+                    .card {
+                        display: none;
+                    }
                 }
             }
         }

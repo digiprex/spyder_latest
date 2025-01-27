@@ -7,7 +7,6 @@ import { Observable } from 'rxjs';
 })
 export class AppService {
   public formCode: any;
-
   constructor(private http: HttpClient) { }
 
   contactUsSubmission(data: any): Observable<any> {
