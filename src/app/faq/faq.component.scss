@@ -8,6 +8,10 @@ main {
     background-color: #fff;
     margin-top: 60px;
 
+    button {
+        font-weight: 600 !important;
+    }
+
     h1,
     h2,
     h3,
@@ -162,7 +166,7 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 90px;
+        
 
         h2 {
             font-size: 25px !important;

@@ -9,6 +9,10 @@ main {
     background-color: #fff;
     margin-top: 60px;
 
+    button {
+        font-weight: 600 !important;
+    }
+
     h1,
     h2,
     h3,
@@ -23,6 +27,7 @@ main {
     a,
     p {
         font-family: "Montserrat", serif !important;
+        font-weight: 400 !important;
     }
 
     .banner {
@@ -172,7 +177,7 @@ main {
         padding: 2rem 5rem;
         max-width: 100%;
         margin: auto;
-        border-bottom: 1px solid #7a7a7a1a;
+        border-bottom: 1px solid #ccccccb0;
 
         img {
             width: 100px;
@@ -224,14 +229,15 @@ main {
                     align-items: center;
 
                     svg {
-                        width: 30px;
-                        height: 30px;
+                        width: 40px;
+                        height: 40px;
                     }
                 }
 
                 div {
                     h3 {
-                        font-size: 26px;
+                        font-size: 24px;
+                        font-weight: 500 !important;
                         margin-bottom: 2rem;
                         text-transform: none;
                         color: #383531;
@@ -299,7 +305,7 @@ main {
                         height: 60px;
                         border-radius: 12px;
                         display: flex;
-                        justify-content: center;
+                        justify-content: start;
                         align-items: center;
 
                         img {
@@ -312,6 +318,7 @@ main {
 
                         h3 {
                             font-size: 24px;
+                            font-weight: 500 !important;
                             margin-bottom: 10px;
                             color: #333;
                         }
@@ -441,7 +448,7 @@ main {
         background-color: #d9ede8;
         display: flex;
         width: 100%;
-        gap: 2rem;
+        // gap: 2rem;
         justify-content: center;
         align-items: center;
 
@@ -508,7 +515,7 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 5rem;
+            margin-bottom: 3rem;
 
             .membership-heading-content {
                 text-align: start;
@@ -617,6 +624,7 @@ main {
                     border: 1px solid #008866;
                     color: #008866;
                     padding: 15px 30px;
+                    font-weight: 600;
                     font-size: 16px;
                     border-radius: 30px;
                     cursor: pointer;
@@ -670,7 +678,7 @@ main {
                     background: #fff;
                     color: #008866;
                     border: 1px solid #008866;
-                    border-radius: 10px;
+                    border-radius: 5px;
                     padding: 0.5rem 1rem;
                     font-size: 14px;
                     cursor: pointer;
@@ -787,6 +795,7 @@ main {
                     button {
                         width: fit-content;
                         font-size: 16px;
+                        font-weight: 600;
                         padding: 15px 30px;
                         border-radius: 30px;
                         border: 1px solid #008866;
@@ -960,15 +969,15 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 90px;
+
 
         h2 {
-            font-size: 25px !important;
-            line-height: 35px !important;
+            font-size: 30px !important;
+            line-height: 40px !important;
         }
 
         p {
-            font-weight: 300 !important;
+            font-weight: 400 !important;
             font-size: 16px !important;
             color: #383531 !important;
         }
@@ -980,8 +989,8 @@ main {
                 width: 100%;
 
                 .content {
-                    padding: 2rem;
-                    gap: 40px;
+                    padding: 5rem 2rem;
+                    gap: 20px;
 
                     svg {
                         position: absolute;
@@ -1013,10 +1022,12 @@ main {
         }
 
         .logo-container {
-            padding: 20px 10px;
+            padding: 2rem;
+            justify-content: space-between;
+            gap: 45px;
 
             img {
-                width: 25%;
+                width: 70px;
                 filter: grayscale(100%);
                 transition: transform 0.3s ease, filter 0.3s ease;
 
@@ -1046,6 +1057,8 @@ main {
                     display: flex;
                     flex: 0;
                     align-items: center;
+                    flex-direction: row;
+                    gap: 20px;
 
                     .icon {
                         width: 150px;
@@ -1055,6 +1068,7 @@ main {
                     div {
                         h3 {
                             font-size: 22px;
+                            margin-bottom: 1rem;
                         }
 
                         p {}
@@ -1064,7 +1078,7 @@ main {
         }
 
         .platform-business {
-            padding: 10px;
+            padding: 2rem;
             gap: 10px;
             background-color: #fff;
 
@@ -1081,10 +1095,7 @@ main {
                     .platform-benefit {
                         flex: 0 0 100%;
                         max-width: 100%;
-                        display: flex;
-                        padding: 5px;
-                        gap: 20px;
-                        align-items: center;
+                        padding: 0;
 
                         .icon {
                             width: 120px;
@@ -1092,10 +1103,8 @@ main {
 
                         div {
                             h3 {
-                                font-size: 20px;
-                                margin-bottom: 10px;
+                                margin: 0px;
                                 color: #333;
-                                font-family: "Montserrat", serif !important;
                             }
 
                             p {}
@@ -1130,7 +1139,7 @@ main {
         }
 
         .membership {
-            padding: 10px;
+            padding: 2rem;
 
             .membership-content {
                 flex-direction: column;
@@ -1148,11 +1157,12 @@ main {
                 .membership-button {
                     gap: 10px;
                     width: 100%;
-                    justify-content: center;
+                    justify-content: space-between;
 
                     button {
                         padding: 15px 10px;
                         width: auto;
+                        font-size: 14px;
                     }
                 }
             }
@@ -1194,6 +1204,10 @@ main {
                         width: 60%;
                     }
                 }
+
+                .annual-plan {
+                    background-color: #fff;
+                }
             }
 
             .add-ons {
@@ -1227,7 +1241,7 @@ main {
 
             .left-content {
                 flex: 1;
-                padding: 10px;
+                padding: 2rem;
 
                 h1 {
                     font-size: 30px !important;
@@ -1236,7 +1250,8 @@ main {
 
                 .step {
                     height: auto;
-                    gap: 20px;    width: 100%;
+                    gap: 20px;
+                    width: 100%;
 
                     .step-number {
                         font-size: 120px !important;
@@ -1244,7 +1259,7 @@ main {
 
                     .inner-content-section {
                         button {
-                            width: 70%;
+                            width: max-content;
                         }
                     }
                 }
@@ -1293,11 +1308,20 @@ main {
 
                     .img-div {
                         width: 100%;
+
+                        img {
+                            height: 40vh;
+                        }
                     }
 
                     .testimonial-info {
                         width: 100%;
-                        padding: 10px;
+                        padding: 2rem;
+
+                        .description {
+                            font-size: 24px !important;
+                            line-height: 30px !important;
+                        }
 
                         .name {}
 

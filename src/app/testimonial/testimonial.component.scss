@@ -8,6 +8,10 @@ main {
     background-color: #fff;
     margin-top: 60px;
 
+    button {
+        font-weight: 600 !important;
+    }
+
     h1,
     h2,
     h3,
@@ -288,7 +292,7 @@ main {
             font-weight: 400;
             line-height: 56.02px;
             margin: 0px;
-            margin-bottom: 5rem;
+            margin-bottom: 2rem;
 
             .trustpilot-logo {
                 color: #00b67a;
@@ -306,7 +310,7 @@ main {
         .review-card {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 10px;
             background-color: #ffffff;
             border-radius: 8px;
             padding: 1.5rem;
@@ -458,7 +462,7 @@ main {
                 border-radius: 5px;
                 text-align: center;
                 width: 60%;
-                gap: 30px;
+                gap: 10px;
 
                 .feedback-image {
                     width: 55%;
@@ -494,7 +498,7 @@ main {
                         text-align: start;
                         font-family: "Montserrat", serif !important;
                         line-height: 40px;
-                        margin-bottom: 5rem;
+                        margin-bottom: 2rem;
                     }
 
                     .features-profession {
@@ -556,7 +560,7 @@ main {
 
 @media only screen and (max-device-width: 480px) {
     main {
-        margin-top: 90px;
+
 
         h2 {
             font-size: 25px !important;
@@ -564,7 +568,7 @@ main {
         }
 
         p {
-            font-weight: 300 !important;
+            font-weight: 400 !important;
             font-size: 16px !important;
             color: #383531 !important;
         }
@@ -607,7 +611,9 @@ main {
             .header {
                 margin-top: 5rem;
 
-                h2 {}
+                h2 {
+                    font-size: 32px !important;
+                }
             }
 
             .testimonial-slider {
@@ -642,6 +648,11 @@ main {
         .reviews-section {
             padding: 10px;
 
+            .section-title {
+                font-size: 32px !important;
+                line-height: 42px !important;
+            }
+
             .reviews-container {
                 grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
             }
@@ -649,12 +660,14 @@ main {
 
         .feedback-section {
             width: 100%;
-            padding: 10px;
+            padding: 2rem;
             background-color: #f9f9f9;
 
             .feedback-header {
 
-                .feedback-title {}
+                .feedback-title {
+                    font-size: 32px !important;
+                }
 
                 .arrow-container {
                     .view-articles {
@@ -681,11 +694,19 @@ main {
 
                     .feedback-image {
                         width: 100%;
+
+                        img {
+                            height: 35vh;
+                        }
                     }
 
                     .feedback-content {
                         width: 100%;
                         padding: 10px;
+
+                        .features-description {
+                            font-size: 20px !important;
+                        }
                     }
                 }
             }
