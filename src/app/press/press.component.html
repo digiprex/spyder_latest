@@ -22,17 +22,7 @@
     <div class="tax-tips-container">
         <h2>Press releases</h2>
         <div class="tax-tips-carousel">
-            <div *ngFor="let tip of pressReleases1" class="tax-tip-card">
-                <img [src]="tip.image" alt="{{ tip.title }}" />
-                <div class="card-content">
-                    <h3>{{ tip.title }}</h3>
-                    <p>{{ tip.author }}</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tax-tips-carousel">
-            <div *ngFor="let tip of pressReleases2" class="tax-tip-card">
+            <div *ngFor="let tip of pressReleases" class="tax-tip-card">
                 <img [src]="tip.image" alt="{{ tip.title }}" />
                 <div class="card-content">
                     <h3>{{ tip.title }}</h3>
@@ -77,9 +67,9 @@
         </div>
     </div>
 
-    <section class="feedback-section">
+    <!-- <section class="feedback-section">
         <div class="feedback-header">
-            <h2 class="feedback-title">Collective reports</h2>
+            <h2 class="feedback-title">Spyder reports</h2>
 
             <div class="arrow-container">
                 <button class="arrow left-arrow" (click)="scrollFeaturesLeft()" aria-label="carousel-previous-button">
@@ -109,11 +99,10 @@
                 <div class="feedback-content">
                     <h1 class="features-heading">{{ features.contentHeading }}</h1>
                     <h2 class="features-description">{{ features.description }}</h2>
-                    <!-- <p class="features-profession">{{ features.profession }}</p> -->
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="lets-talk-section">
         <div class="content">
@@ -130,11 +119,7 @@
                 <div class="contact-info">
                     <div class="contact-item">
                         <h2>Questions</h2>
-                        <a href="mailto:contact@spyder.com">contact@spyder.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <h2>Media Inquires</h2>
-                        <a href="mailto:press@spyder.com">press@spyder.com</a>
+                        <a href="mailto:info@usespyder.com">info@usespyder.com</a>
                     </div>
                 </div>
             </div>

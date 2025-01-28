@@ -32,7 +32,7 @@ export class AboutComponent {
 
   testimonialFeedback = [
     {
-      description: 'spyder helps me optimize my workload without sacrificing quality',
+      description: 'Spyder helps me optimize my workload without sacrificing quality',
       name: 'Olivia Nunn',
       backgroundColor: '#ffe6e6',
       profession: 'Read More',
@@ -59,28 +59,31 @@ export class AboutComponent {
   scrollTestimonialLeft(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft -= 200; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 355 : 400; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
 
   scrollTestimonialRight(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft += 200; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 355 : 400; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
+
 
   scrollFeedbackLeft(): void {
     if (this.feedbackSlider) {
       const sliderElement = this.feedbackSlider.nativeElement;
-      sliderElement.scrollLeft -= 500;
+      sliderElement.scrollLeft -= 860;
     }
   }
 
   scrollFeedbackRight(): void {
     if (this.feedbackSlider) {
       const sliderElement = this.feedbackSlider.nativeElement;
-      sliderElement.scrollLeft += 500;
+      sliderElement.scrollLeft += 860;
     }
   }
 
@@ -202,43 +205,43 @@ export class AboutComponent {
   testimonials = [
     {
       name: 'Olivia Nunn',
-      description: 'We are committed to our work. We take pride in what we do because this is our company. For our members, no job is too big or too small.',
+      description: 'We turn challenges into triumphs with passion and dedication. No task is too big, no detail too small!',
       backgroundColor: '#faf9f6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/ca085502-09d4-4aad-964f-fa1e56193840_01.png',
-      quote: 'spyder helps me optimize my workload without sacrificing quality',
+      quote: 'Spyder helps me optimize my workload without sacrificing quality',
     },
     {
       name: 'John Doe',
-      description: 'We are committed to our work. We take pride in what we do because this is our company. For our members, no job is too big or too small.',
+      description: 'At the heart of creativity and innovation, we’re always pushing boundaries with every project we take on.',
       backgroundColor: '#d9ede8',
       profession: 'Graphic Designer',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/3dcf2ddf-739f-403d-9e78-02c6f2fc47bd_02.png',
-      quote: 'The support I receive from spyder has been incredible.',
+      quote: 'The support I receive from Spyder has been incredible.',
     },
     {
       name: 'Jane Smith',
-      description: 'We are committed to our work. We take pride in what we do because this is our company. For our members, no job is too big or too small.',
+      description: 'Fueled by creativity, we create magic. We thrive in bringing ideas to life without worrying about the logistics.',
       backgroundColor: '#fff0e5',
       profession: 'Content Creator',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e68ea2cf-446f-4540-8645-720e3d7f9e5e_03.png',
-      quote: 'I’m able to focus on my work while spyder takes care of my taxes.',
+      quote: 'I’m able to focus on my work while Spyder takes care of my taxes.',
     },
     {
       name: 'Alice Yang',
-      description: 'We are committed to our work. We take pride in what we do because this is our company. For our members, no job is too big or too small.',
+      description: 'Every project is an opportunity to make a difference. We deliver excellence with precision and dedication.',
       backgroundColor: '#e7dce7',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/275612bf-246e-4530-a615-b4e2b7a005c9_04.png',
-      quote: 'spyder helps me optimize my workload without sacrificing quality',
+      quote: 'Spyder helps me optimize my workload without sacrificing quality',
     },
     {
       name: 'William',
-      description: 'We are committed to our work. We take pride in what we do because this is our company. For our members, no job is too big or too small.',
+      description: 'Driven by passion and innovation, we tackle every challenge with determination and achieve remarkable results.',
       backgroundColor: '#e7dce7',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/02f04a1d-cd1a-42bc-995a-c4cf606eab78_05.png',
-      quote: 'spyder helps me optimize my workload without sacrificing quality',
+      quote: 'Spyder helps me optimize my workload without sacrificing quality',
     }
   ];
 
@@ -252,7 +255,7 @@ export class AboutComponent {
   pressFeatures = [
     {
       contentHeading: 'TechCrunch',
-      description: 'spyder Debuts AI-Powered Accounting Tool for Solopreneurs',
+      description: 'SpyderDebuts AI-Powered Accounting Tool for Solopreneurs',
       backgroundColor: '#ffe6e6',
       profession: 'Read more',
       pressUrl: '/press',
@@ -265,14 +268,6 @@ export class AboutComponent {
       profession: 'Read more',
       pressUrl: '/press',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8bdf09a9-3790-44b6-8ccd-57c7fbb4d75a_press.jpg'
-    },
-    {
-      contentHeading: 'Forbes',
-      description: 'This Ashton-Kutcher Backed Startup Is Helping The Self-Employed Get Organized',
-      backgroundColor: '#d8f0e6',
-      profession: 'Read more',
-      pressUrl: '/press',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
     },
     {
       contentHeading: 'TechCrunch',
@@ -288,7 +283,7 @@ export class AboutComponent {
       backgroundColor: '#d8f0e6',
       profession: 'Read more',
       pressUrl: '/press',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
+      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e370df6d-262b-4658-a736-6dd451feaf66_dennis-belogorsky-collective-member.webp'
     }
   ];
 
@@ -296,16 +291,19 @@ export class AboutComponent {
   scrollFeaturesLeft(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
-      sliderElement.scrollLeft -= 600;
+      const scrollAmount = window.innerWidth < 768 ? 360 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
 
   scrollFeaturesRight(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
-      sliderElement.scrollLeft += 600;
+      const scrollAmount = window.innerWidth < 768 ? 360 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
+
 
   currentImage: string = this.images[0];
   private imageInterval: any;

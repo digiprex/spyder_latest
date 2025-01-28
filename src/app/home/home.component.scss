@@ -300,13 +300,7 @@ main {
                         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                     }
 
-                    .icon {
-                        width: 60px;
-                        height: 60px;
-                        border-radius: 12px;
-                        display: flex;
-                        justify-content: start;
-                        align-items: center;
+                    .left-icon {
 
                         img {
                             width: 30px;
@@ -721,12 +715,6 @@ main {
         .left-content {
             flex: 1;
             padding: 5rem;
-            height: 100vh;
-            overflow-x: scroll;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
 
             h1 {
                 font-size: 40px;
@@ -735,72 +723,81 @@ main {
                 margin: 0px;
             }
 
-            .step {
-                display: flex;
-                gap: 50px;
-                align-items: center;
-                cursor: pointer;
-                padding: 15px;
-                transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-                height: 45vh;
-                width: 500px;
-                margin: auto;
+            .inner-scroll-section {
+                height: 75vh;
+                overflow-x: scroll;
 
-                &:hover {
-                    border-color: #008866;
-                    transform: translateX(10px);
+                &::-webkit-scrollbar {
+                    display: none;
                 }
 
-                .step-number {
-                    font-size: 120px;
-                    color: rgb(0, 136, 102);
-                    text-shadow: rgb(0, 136, 102) -1px -1px 0px,
-                        rgb(0, 136, 102) 1px -1px 0px,
-                        rgb(0, 136, 102) -1px 1px 0px,
-                        rgb(0, 136, 102) 1px 1px 0px;
-                    transition: color 0.3s ease, text-shadow 0.3s ease;
-                }
-
-                &:hover .step-number {
-                    color: white;
-                    text-shadow: rgb(0, 136, 102) -2px -2px 0px,
-                        rgb(0, 136, 102) 2px -2px 0px,
-                        rgb(0, 136, 102) -2px 2px 0px,
-                        rgb(0, 136, 102) 2px 2px 0px;
-                }
-
-                .inner-content-section {
+                .step {
                     display: flex;
-                    flex-direction: column;
-                    gap: 0px;
+                    gap: 50px;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 15px;
+                    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+                    height: 70vh;
+                    width: 500px;
+                    margin: auto;
 
-                    h3 {
-                        font-family: "Montserrat", serif !important;
-                        font-size: 22px;
-                        color: #383531;
-                        font-weight: bold;
+                    &:hover {
+                        border-color: #008866;
+                        transform: translateX(10px);
                     }
 
-                    p {
-                        font-size: 16px;
-                        color: #555;
+                    .step-number {
+                        font-size: 120px;
+                        color: rgb(0, 136, 102);
+                        text-shadow: rgb(0, 136, 102) -1px -1px 0px,
+                            rgb(0, 136, 102) 1px -1px 0px,
+                            rgb(0, 136, 102) -1px 1px 0px,
+                            rgb(0, 136, 102) 1px 1px 0px;
+                        transition: color 0.3s ease, text-shadow 0.3s ease;
                     }
 
-                    button {
-                        width: fit-content;
-                        font-size: 16px;
-                        font-weight: 600;
-                        padding: 15px 30px;
-                        border-radius: 30px;
-                        border: 1px solid #008866;
-                        background-color: transparent;
-                        color: #008866;
-                        cursor: pointer;
-                        transition: background-color 0.3s ease;
+                    &:hover .step-number {
+                        color: white;
+                        text-shadow: rgb(0, 136, 102) -2px -2px 0px,
+                            rgb(0, 136, 102) 2px -2px 0px,
+                            rgb(0, 136, 102) -2px 2px 0px,
+                            rgb(0, 136, 102) 2px 2px 0px;
+                    }
 
-                        &:hover {
-                            background-color: #008866;
-                            color: #fff;
+                    .inner-content-section {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0px;
+
+                        h3 {
+                            font-family: "Montserrat", serif !important;
+                            font-size: 20px;
+                            color: #383531;
+                            font-weight: 600 !important;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            color: #555;
+                        }
+
+                        button {
+                            width: fit-content;
+                            font-size: 16px;
+                            font-weight: 600;
+                            padding: 15px 30px;
+                            border-radius: 30px;
+                            border: 1px solid #008866;
+                            background-color: transparent;
+                            color: #008866;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+
+                            &:hover {
+                                background-color: #008866;
+                                color: #fff;
+                            }
                         }
                     }
                 }
@@ -1090,12 +1087,16 @@ main {
                         flex: 0 0 100%;
                         max-width: 100%;
                         padding: 0;
+                        gap: 10px;
 
-                        .icon {
-                            width: 120px;
+                        .left-icon {
+                            img {
+                                width: 30px;
+                                height: 30px;
+                            }
                         }
 
-                        div {
+                        .icon-content {
                             h3 {
                                 margin: 0px;
                                 color: #333;
@@ -1245,9 +1246,9 @@ main {
                 }
 
                 .step {
-                    height: auto;
-                    gap: 20px;
-                    width: 100%;
+                    height: 30vh !important;
+                    gap: 20px !important;
+                    width: 100% !important;
 
                     .step-number {
                         font-size: 120px !important;

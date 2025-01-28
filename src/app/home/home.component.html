@@ -13,7 +13,7 @@
 
                 <p>Members save an average of <span>$10,000*</span> <br> a year on their business taxes</p>
 
-                <button class="start-button"  routerLink="/form">Get Started</button>
+                <button class="start-button" routerLink="/form">Get Started</button>
             </div>
         </div>
 
@@ -128,10 +128,10 @@
                 <div *ngFor="let benefit of benefits" class="platform-benefit"
                     (mouseenter)="updateHoverContent(benefit)">
                     <!-- <div class="icon" [style.background-color]="benefit.bgColor"> -->
-                    <div class="icon">
+                    <div class="left-icon">
                         <img [src]="benefit.img" [alt]="benefit.name" class="profile-image" />
                     </div>
-                    <div>
+                    <div class="icon-content">
                         <h3>{{ benefit.title }}</h3>
                         <p>{{ benefit.description }}</p>
                         <!-- <button [routerLink]="benefit.urlBtn">{{benefit.btnText}}</button> -->
@@ -184,7 +184,7 @@
         <div class="membership-content">
             <div class="membership-heading-content">
                 <h2>Pricing</h2>
-                <p>Spyder is tax deductible and pays for itself within months.**</p>
+                <p>Spyderis tax deductible and pays for itself within months.**</p>
             </div>
             <div class="membership-button">
                 <button routerLink="/pricing">What's included</button>
@@ -228,33 +228,37 @@
         <div class="left-content">
             <h1>Peace of mind starts here</h1>
 
-            <div class="step" (mouseenter)="setActiveImage(0)">
-                <h2 class="step-number">1</h2>
-                <div class="inner-content-section">
-                    <h3>Find out if we're a match</h3>
-                    <p>Verify information about yourself and your business to see if we're a good match for your current
-                        needs.</p>
-                    <button routerLink="/faq">Find out</button>
+            <div id="section-scroll" class="inner-scroll-section">
+                <div class="step">
+                    <h2 class="step-number">1</h2>
+                    <div class="inner-content-section">
+                        <h3>Find out if we're a match</h3>
+                        <p>Verify information about yourself and your business to see if we're a good match for your
+                            current
+                            needs.</p>
+                        <button routerLink="/faq">Find out</button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="step" (mouseenter)="setActiveImage(1)">
-                <h2 class="step-number">2</h2>
-                <div class="inner-content-section">
-                    <h3>Set your business up for success</h3>
-                    <p>A team of experts will be waiting to welcome you and help set up your S Corp, payroll, and
-                        bookkeeping.</p>
+                <div class="step">
+                    <h2 class="step-number">2</h2>
+                    <div class="inner-content-section">
+                        <h3>Set your business up for success</h3>
+                        <p>A team of experts will be waiting to welcome you and help set up your S Corp, payroll, and
+                            bookkeeping.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="step" (mouseenter)="setActiveImage(2)">
-                <h2 class="step-number">3</h2>
-                <div class="inner-content-section">
-                    <h3>Focus on your passion and not your paperwork</h3>
-                    <p>Invest your time and energy in growing your business, while we handle your taxes and bookkeeping.
-                    </p>
-                    <button routerLink="/form" style="color: #fff; background-color: rgb(0, 136, 102);">Get
-                        Started</button>
+                <div class="step">
+                    <h2 class="step-number">3</h2>
+                    <div class="inner-content-section">
+                        <h3>Focus on your passion and not your paperwork</h3>
+                        <p>Invest your time and energy in growing your business, while we handle your taxes and
+                            bookkeeping.
+                        </p>
+                        <button routerLink="/form" style="color: #fff; background-color: rgb(0, 136, 102);">Get
+                            Started</button>
+                    </div>
                 </div>
             </div>
         </div>

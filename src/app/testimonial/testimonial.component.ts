@@ -59,88 +59,94 @@ export class TestimonialComponent {
   scrollTestimonialLeft(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft -= 500; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 360 : 400; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
 
   scrollTestimonialRight(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft += 500; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 360 : 400; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
 
   scrollFeedbackLeft(): void {
     if (this.feedbackSlider) {
       const sliderElement = this.feedbackSlider.nativeElement;
-      sliderElement.scrollLeft -= 800;
+      const scrollAmount = window.innerWidth < 768 ? 350 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
 
   scrollFeedbackRight(): void {
     if (this.feedbackSlider) {
       const sliderElement = this.feedbackSlider.nativeElement;
-      sliderElement.scrollLeft += 800;
+      const scrollAmount = window.innerWidth < 768 ? 350 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
-
 
   scrollFeaturesLeft(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
-      sliderElement.scrollLeft -= 600;
+      const scrollAmount = window.innerWidth < 768 ? 350 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
 
   scrollFeaturesRight(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
-      sliderElement.scrollLeft += 600;
+      const scrollAmount = window.innerWidth < 768 ? 350 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
 
+
   testimonials = [
     {
-      name: 'Team',
+      name: 'Customer Support',
       description: '“I really enjoy working with Bobby, Jezra and Salma - all have been fantastic to work with, helpful, responsive, and I know I am in good hands with this team.”',
       backgroundColor: '#fff',
-      profession: 'Matthew Kluttz'
+      profession: 'Alex Johnson'
     },
     {
-      name: 'Bookkeeping',
+      name: 'Accounting Services',
       description: '“I appreciate the access to support when I have questions, and the security that my bookkeeping is being taken care of in the background.”',
       backgroundColor: '#fff',
-      profession: 'Matthew Kluttz'
+      profession: 'Sophia Martinez'
     },
     {
-      name: 'Product',
-      description: 'spyder provided a structure for business management where I lacked that knowledge. It is nice to know that you have someone who’s got your back.”',
+      name: 'Business Management',
+      description: '“Spyder provided a structure for business management where I lacked that knowledge. It is nice to know that you have someone who’s got your back.”',
       backgroundColor: '#fff',
-      profession: 'Matthew Kluttz'
+      profession: 'John Doe'
     },
     {
-      name: 'Team',
+      name: 'Customer Support',
       description: '“I really enjoy working with Bobby, Jezra and Salma - all have been fantastic to work with, helpful, responsive, and I know I am in good hands with this team.”',
       backgroundColor: '#fff',
-      profession: 'Matthew Kluttz'
+      profession: 'Michael Clark'
     },
     {
-      name: 'Bookkeeping',
+      name: 'Accounting Services',
       description: '“I appreciate the access to support when I have questions, and the security that my bookkeeping is being taken care of in the background.”',
       backgroundColor: '#fff',
-      profession: 'Matthew Kluttz'
+      profession: 'Emily Davis'
     },
     {
-      name: 'Product',
-      description: 'spyder provided a structure for business management where I lacked that knowledge. It is nice to know that you have someone who’s got your back.”',
+      name: 'Business Management',
+      description: '“Spyder provided a structure for business management where I lacked that knowledge. It is nice to know that you have someone who’s got your back.”',
       backgroundColor: '#fff',
-      profession: 'Matthew Kluttz'
+      profession: 'James Smith'
     }
   ];
 
   testimonialFeedback = [
     {
-      description: 'spyder helps me optimize my workload without sacrificing quality',
+      description: 'Spyder helps me optimize my workload without sacrificing quality',
       name: 'Olivia Nunn',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
@@ -164,7 +170,7 @@ export class TestimonialComponent {
 
   pressFeatures = [
     {
-      description: 'spyder Debuts AI-Powered Accounting Tool for Solopreneurs',
+      description: 'SpyderDebuts AI-Powered Accounting Tool for Solopreneurs',
       backgroundColor: '#ffe6e6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/86095aae-fba0-4f78-befb-8cf8e2741106_accounting-b2b-payments.jpg'
@@ -176,12 +182,6 @@ export class TestimonialComponent {
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8bdf09a9-3790-44b6-8ccd-57c7fbb4d75a_press.jpg'
     },
     {
-      description: 'This Ashton-Kutcher Backed Startup Is Helping The Self-Employed Get Organized',
-      backgroundColor: '#d8f0e6',
-      profession: 'Content Creator',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
-    },
-    {
       description: 'Thanks to spyder, I can focus 100% on my work',
       backgroundColor: '#e6d8ff',
       profession: 'Graphic Designer',
@@ -191,7 +191,7 @@ export class TestimonialComponent {
       description: 'Is The $1 Billion, One-Person Business Around The Corner? This Freelance Platform, Which Just Raised $50 Million, Is Betting On A Bold Future For Solopreneurs',
       backgroundColor: '#d8f0e6',
       profession: 'Content Creator',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
+      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e370df6d-262b-4658-a736-6dd451feaf66_dennis-belogorsky-collective-member.webp'
     }
   ];
 

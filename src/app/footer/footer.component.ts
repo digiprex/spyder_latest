@@ -33,10 +33,10 @@ export class FooterComponent {
     }
   ];
   public social = {
-    "email": "hello@usespyder.com",
+    "email": "info@usespyder.com",
     "phone": "+1 (970) 639-7833",
     "address": "Bundl Financial Technologies Inc, 2055 Limestone Rd Ste 200-c Wilmington, De 19808",
-    "hrefEmail": "mailto:hello@usespyder.com",
+    "hrefEmail": "mailto:info@usespyder.com",
     "hrefPhone": "tel: +1 (970) 639-7833",
     "map": "https://maps.app.goo.gl/XRJyQmZvrqzTfYcD7"
   };
