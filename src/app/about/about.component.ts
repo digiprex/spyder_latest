@@ -59,28 +59,31 @@ export class AboutComponent {
   scrollTestimonialLeft(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft -= 200; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 355 : 400; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
-
+  
   scrollTestimonialRight(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft += 200; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 355 : 400; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
+  
 
   scrollFeedbackLeft(): void {
     if (this.feedbackSlider) {
       const sliderElement = this.feedbackSlider.nativeElement;
-      sliderElement.scrollLeft -= 500;
+      sliderElement.scrollLeft -= 860;
     }
   }
 
   scrollFeedbackRight(): void {
     if (this.feedbackSlider) {
       const sliderElement = this.feedbackSlider.nativeElement;
-      sliderElement.scrollLeft += 500;
+      sliderElement.scrollLeft += 860;
     }
   }
 
@@ -288,7 +291,7 @@ export class AboutComponent {
       backgroundColor: '#d8f0e6',
       profession: 'Read more',
       pressUrl: '/press',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
+      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e370df6d-262b-4658-a736-6dd451feaf66_dennis-belogorsky-collective-member.webp'
     }
   ];
 
@@ -296,16 +299,19 @@ export class AboutComponent {
   scrollFeaturesLeft(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
-      sliderElement.scrollLeft -= 600;
+      const scrollAmount = window.innerWidth < 768 ? 360 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
-
+  
   scrollFeaturesRight(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
-      sliderElement.scrollLeft += 600;
+      const scrollAmount = window.innerWidth < 768 ? 360 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
+  
 
   currentImage: string = this.images[0];
   private imageInterval: any;

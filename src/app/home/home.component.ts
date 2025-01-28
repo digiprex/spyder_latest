@@ -103,7 +103,7 @@ export class HomeComponent {
       imgUrl: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/6ee24a19-8f3f-44b6-8886-58f30ae71669_yana-gilbuena-babu-collective-member.jpg',
       name: 'Yana Gilbuena',
       business: 'HR Services',
-      img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/256d0691-c291-42ab-b144-271aecd76c29_savings_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
+      img: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c2b956c9-bf2b-4c19-b480-c412e13fa43f_developer_guide_24dp_000_FILL0_wght400_GRAD0_opsz24.png',
       message: 'Your payroll system is up and running!',
       btnText: 'Learn More',
       urlBtn: '/pricing'
@@ -193,16 +193,32 @@ export class HomeComponent {
   scrollLeft(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft -= 200; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 340 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
 
   scrollRight(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft += 200; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 340 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
+
+  // scrollLeft(): void {
+  //   if (this.testimonialSlider) {
+  //     const sliderElement = this.testimonialSlider.nativeElement;
+  //     sliderElement.scrollLeft -= 855;
+  //   }
+  // }
+
+  // scrollRight(): void {
+  //   if (this.testimonialSlider) {
+  //     const sliderElement = this.testimonialSlider.nativeElement;
+  //     sliderElement.scrollLeft += 855;
+  //   }
+  // }
 
   testimonials = [
     {
@@ -254,6 +270,22 @@ export class HomeComponent {
       currentIndex = (currentIndex + 1) % this.images.length;
       this.currentImage = this.images[currentIndex];
     }, 5000);
+
+    const div = document.getElementById("section-scroll"); // Replace with your actual selector
+    div?.addEventListener('scroll', () => {
+      const scrollTop = div.scrollTop; // Pixels scrolled from the top
+      const scrollHeight = div.scrollHeight; // Total scrollable content height
+      const clientHeight = div.clientHeight; // Visible height of the element
+      const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+      if (scrollPercentage < 33) {
+        this.activeImageIndex = 0; // First section
+      } else if (scrollPercentage >= 33 && scrollPercentage < 66) {
+        this.activeImageIndex = 1; // Second section
+      } else {
+        this.activeImageIndex = 2; // Third section
+      }
+      console.log(`Scroll Percentage: ${scrollPercentage.toFixed(2)}%`);
+    });
   }
 
   ngOnDestroy(): void {

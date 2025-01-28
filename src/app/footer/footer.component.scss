@@ -1,6 +1,6 @@
 main {
     display: grid;
-    gap: 50px;
+    gap: 25px;
     padding: 5rem;
     background-color: #faf9f6;
 
@@ -34,9 +34,12 @@ main {
             display: flex;
             justify-content: start;
 
-            img {
-                width: 30%;
-                object-fit: contain;
+            a {
+                img {
+                    width: 25%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                }
             }
         }
 
@@ -189,9 +192,13 @@ main {
                 width: 100%;
                 justify-content: center;
 
-                img {
-                    width: 60%;
-                    object-fit: contain;
+                a {
+                    img {
+                        display: flex;
+                        margin: auto !important;
+                        width: 60%;
+                        object-fit: contain;
+                    }
                 }
             }
 

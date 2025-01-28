@@ -59,45 +59,51 @@ export class TestimonialComponent {
   scrollTestimonialLeft(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft -= 500; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 360 : 400; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
 
   scrollTestimonialRight(): void {
     if (this.testimonialSlider) {
       const sliderElement = this.testimonialSlider.nativeElement;
-      sliderElement.scrollLeft += 500; // Adjust scroll amount
+      const scrollAmount = window.innerWidth < 768 ? 360 : 400; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
 
   scrollFeedbackLeft(): void {
     if (this.feedbackSlider) {
       const sliderElement = this.feedbackSlider.nativeElement;
-      sliderElement.scrollLeft -= 800;
+      const scrollAmount = window.innerWidth < 768 ? 350 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
 
   scrollFeedbackRight(): void {
     if (this.feedbackSlider) {
       const sliderElement = this.feedbackSlider.nativeElement;
-      sliderElement.scrollLeft += 800;
+      const scrollAmount = window.innerWidth < 768 ? 350 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
-
 
   scrollFeaturesLeft(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
-      sliderElement.scrollLeft -= 600;
+      const scrollAmount = window.innerWidth < 768 ? 350 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft -= scrollAmount;
     }
   }
-
+  
   scrollFeaturesRight(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
-      sliderElement.scrollLeft += 600;
+      const scrollAmount = window.innerWidth < 768 ? 350 : 860; // Adjust scroll for mobile
+      sliderElement.scrollLeft += scrollAmount;
     }
   }
+  
 
   testimonials = [
     {
@@ -191,7 +197,7 @@ export class TestimonialComponent {
       description: 'Is The $1 Billion, One-Person Business Around The Corner? This Freelance Platform, Which Just Raised $50 Million, Is Betting On A Bold Future For Solopreneurs',
       backgroundColor: '#d8f0e6',
       profession: 'Content Creator',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/757aa5f6-b81a-4d6b-8141-f2f0776fd995_960x0.jpg'
+      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e370df6d-262b-4658-a736-6dd451feaf66_dennis-belogorsky-collective-member.webp'
     }
   ];
 
