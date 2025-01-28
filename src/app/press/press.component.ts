@@ -33,7 +33,7 @@ export class PressComponent {
 
   testimonialFeedback = [
     {
-      description: 'spyder helps me optimize my workload without sacrificing quality',
+      description: 'Spyder helps me optimize my workload without sacrificing quality',
       name: 'Olivia Nunn',
       backgroundColor: '#ffe6e6',
       profession: 'Read More',
@@ -100,9 +100,9 @@ export class PressComponent {
     }
   }
 
-  pressReleases1 = [
+  pressReleases = [
     {
-      title: 'Solopreneurs Readying for Impact of AI, Collective Reports',
+      title: 'Solopreneurs Readying for Impact of AI, Spyder Reports',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/62021d07-c747-46b1-bbd7-124adf9b6d86_solopreneurs-readying-for-impact-of-AI-desktop.webp',
       author: 'Nov 28, 2023'
     },
@@ -112,12 +112,12 @@ export class PressComponent {
       author: 'October 12, 2023',
     },
     {
-      title: 'Collective Extends All-in-One Financial Solution for Solopreneurs to All 50 States',
+      title: 'Spyder Extends All-in-One Financial Solution for Solopreneurs to All 50 States',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e8b7f5e2-63ac-4a23-a61a-b657375325a0_collective-extends-desktop.webp',
       author: 'May 19, 2024',
     },
     {
-      title: 'Collective Unveils Collective Accounting, the First AI-powered Accounting Suite for Businesses-of-One',
+      title: 'Spyder Unveils Spyder Accounting, the First AI-powered Accounting Suite for Businesses-of-One',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8a7fdd7a-8ae3-441d-b55e-7a2f8e7cc29b_collective-unveils-collective-accounting-desktop.webp',
       author: 'May 19, 2024',
     },
@@ -132,57 +132,11 @@ export class PressComponent {
       author: 'October 12, 2023',
     },
     {
-      title: 'Collective Raises $50M to Become First AI-Powered Finance Platform for Freelancers',
+      title: 'Spyder Raises $50M to Become First AI-Powered Finance Platform for Freelancers',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/64e16af8-74d7-40f9-b2ab-2819ab261359_collective-raises-50M-desktop.webp',
       author: 'August 1, 2023',
     }
   ];
-
-  pressReleases2 = [
-    {
-      title: 'Collective Unveils Collective Accounting, the First AI-powered Accounting Suite for Businesses-of-One',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8a7fdd7a-8ae3-441d-b55e-7a2f8e7cc29b_collective-unveils-collective-accounting-desktop.webp',
-      author: 'May 19, 2024',
-      route: '/service/understandingSorp'
-    },
-    {
-      title: 'Even as Expenses Soar, Solopreneurs Expect Strong Close to 2023, Looking to AI for Positive Impacts',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/fd49fded-abf6-416a-9052-9eda66c5a552_looking-to-AI-for-positive-impacts-desktop.webp',
-      author: 'Nov 28, 2023',
-      route: '/service/charitableContributions'
-    },
-    {
-      title: 'Gen Z, Young Millennials Nearly Twice As Likely To Plan for Layoffs, Self-Employment',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/a17b1b10-1ba0-4c02-9fcb-306ffd00a4e5_gen-Z-young-millennials-desktop.webp',
-      author: 'October 12, 2023',
-      route: '/service/fileTaxes'
-    },
-    {
-      title: 'Collective Raises $50M to Become First AI-Powered Finance Platform for Freelancers',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/64e16af8-74d7-40f9-b2ab-2819ab261359_collective-raises-50M-desktop.webp',
-      author: 'August 1, 2023',
-      route: '/service/writeOffMeals'
-    },
-    {
-      title: 'Solopreneurs Readying for Impact of AI, Collective Reports',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/62021d07-c747-46b1-bbd7-124adf9b6d86_solopreneurs-readying-for-impact-of-AI-desktop.webp',
-      author: 'Nov 28, 2023',
-      route: '/service/understandingSorp'
-    },
-    {
-      title: 'Self-Employed Workers Expect Strong 2023',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/f7aff7b4-b077-43f0-8eca-e5ed3f003782_strong-2023-desktop.webp',
-      author: 'October 12, 2023',
-      route: '/service/charitableContributions'
-    },
-    {
-      title: 'Collective Extends All-in-One Financial Solution for Solopreneurs to All 50 States',
-      image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/e8b7f5e2-63ac-4a23-a61a-b657375325a0_collective-extends-desktop.webp',
-      author: 'May 19, 2024',
-      route: '/service/fileTaxes'
-    }
-  ];
-
 
   @ViewChild('testimonialSlider', { static: false }) testimonialSlider!: ElementRef<any>;
   @ViewChild('featuresSlider', { static: false }) featuresSlider!: ElementRef<any>;
@@ -204,7 +158,7 @@ export class PressComponent {
   testimonials = [
     {
       name: 'Forbes',
-      description: 'Forbes values quality work, ensuring clients receive exceptional service and unwavering support, making excellence a core part of our mission.',
+      description: 'Spyder values quality work, ensuring clients receive exceptional service and unwavering support, making excellence a core part of our mission.',
       backgroundColor: '#faf9f6',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8ffbaa89-12b4-44a4-a6e7-783333f22279_Screenshot%202024-12-23%20005518.png',
@@ -212,7 +166,7 @@ export class PressComponent {
     },
     {
       name: 'Business Insider',
-      description: 'Business Insider focuses on delivering top-notch services, emphasizing client satisfaction, precision, and continuous improvement in all our projects.',
+      description: 'Spyder focuses on delivering top-notch services, emphasizing client satisfaction, precision, and continuous improvement in all our projects.',
       backgroundColor: '#d9ede8',
       profession: 'Graphic Designer',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/01567921-7ae8-40e1-8379-e82262f056e2_Screenshot%202024-12-23%20005527.png',
@@ -220,7 +174,7 @@ export class PressComponent {
     },
     {
       name: 'TechCrunch',
-      description: 'TechCrunch is committed to insightful content creation, delivering value through well-researched stories with integrity and audience engagement.',
+      description: 'Spyder is committed to insightful content creation, delivering value through well-researched stories with integrity and audience engagement.',
       backgroundColor: '#fff0e5',
       profession: 'Content Creator',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/1730b7b9-1ee0-4435-87d6-a1dff33a10b9_Screenshot%202024-12-23%20005546.png',
@@ -228,7 +182,7 @@ export class PressComponent {
     },
     {
       name: 'Business Insider',
-      description: 'Business Insider builds professional relationships by providing outstanding public relations services with attention to detail and excellence.',
+      description: 'Spyder builds professional relationships by providing outstanding public relations services with attention to detail and excellence.',
       backgroundColor: '#e7dce7',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c322cc67-f9e7-41c7-b16c-b7b4e384ec03_Screenshot%202024-12-23%20005558.png',
@@ -236,7 +190,7 @@ export class PressComponent {
     },
     {
       name: 'Crunchbase',
-      description: 'Crunchbase provides business insights with accuracy, helping organizations make informed decisions with reliable data and in-depth market analysis.',
+      description: 'Spyder provides business insights with accuracy, helping organizations make informed decisions with reliable data and in-depth market analysis.',
       backgroundColor: '#e7dce7',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c322cc67-f9e7-41c7-b16c-b7b4e384ec03_Screenshot%202024-12-23%20005558.png',
@@ -244,7 +198,7 @@ export class PressComponent {
     },
     {
       name: 'USA TODAY',
-      description: 'USA TODAY is committed to providing reliable journalism, focusing on accuracy, integrity, and impactful storytelling across all media platforms.',
+      description: 'Spyder is committed to providing reliable journalism, focusing on accuracy, integrity, and impactful storytelling across all media platforms.',
       backgroundColor: '#e7dce7',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c322cc67-f9e7-41c7-b16c-b7b4e384ec03_Screenshot%202024-12-23%20005558.png',
@@ -252,11 +206,11 @@ export class PressComponent {
     },
     {
       name: 'Fast Company',
-      description: 'Fast Company emphasizes creativity and innovation, delivering industry-leading ideas with a focus on forward-thinking strategies and storytelling.',
+      description: 'Spyder emphasizes creativity and innovation, delivering industry-leading ideas with a focus on forward-thinking strategies and storytelling.',
       backgroundColor: '#e7dce7',
       profession: 'PR Agency',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/c322cc67-f9e7-41c7-b16c-b7b4e384ec03_Screenshot%202024-12-23%20005558.png',
-      quote: 'Spyder has revolutionized our workflow, allowing us to focus on creative excellence while they manage our financial tasks seamlessly.',
+      quote: 'Spyderhas revolutionized our workflow, allowing us to focus on creative excellence while they manage our financial tasks seamlessly.',
     }
   ];
 
@@ -270,42 +224,42 @@ export class PressComponent {
   pressFeatures = [
     {
       contentHeading: 'February 28, 2023',
-      description: '2022-2023 Collective B1 Economic Report',
+      description: '2022-2023 Spyder B1 Economic Report',
       backgroundColor: '#ffe6e6',
       profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/79e4e5b7-9f4c-4a9a-aa45-c26af3eb8a20_2022-B1-economic-report-desktop.webp'
     },
     {
       contentHeading: 'November 8, 2023',
-      description: '2023 Collective B1 Economic Report',
+      description: '2023 Spyder B1 Economic Report',
       backgroundColor: '#e6d8ff',
       profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/cd9c2f72-94d6-4279-89d9-56b6b9a80902_2023-B1-economic-report-desktop.webp'
     },
     {
       contentHeading: 'February 28, 2023',
-      description: '2022-2023 Collective B1 Economic Report',
+      description: '2022-2023 Spyder B1 Economic Report',
       backgroundColor: '#ffe6e6',
       profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/86095aae-fba0-4f78-befb-8cf8e2741106_accounting-b2b-payments.jpg'
     },
     {
       contentHeading: 'November 8, 2023',
-      description: '2023 Collective B1 Economic Report',
+      description: '2023 Spyder B1 Economic Report',
       backgroundColor: '#e6d8ff',
       profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/8bdf09a9-3790-44b6-8ccd-57c7fbb4d75a_press.jpg'
     },
     {
       contentHeading: 'February 28, 2023',
-      description: '2022-2023 Collective B1 Economic Report',
+      description: '2022-2023 Spyder B1 Economic Report',
       backgroundColor: '#ffe6e6',
       profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/cd9c2f72-94d6-4279-89d9-56b6b9a80902_2023-B1-economic-report-desktop.webp'
     },
     {
       contentHeading: 'November 8, 2023',
-      description: '2023 Collective B1 Economic Report',
+      description: '2023 Spyder B1 Economic Report',
       backgroundColor: '#e6d8ff',
       profession: 'Read more',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/79e4e5b7-9f4c-4a9a-aa45-c26af3eb8a20_2022-B1-economic-report-desktop.webp'
