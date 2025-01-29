@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AppService } from '../app.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
@@ -14,7 +15,7 @@ export class AboutComponent {
   slider: any;
   bgColor: any;
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService, private titleService: Title, private metaService: Meta) { }
 
   userDetails1 = new FormGroup({
     email: new FormControl("")
@@ -251,7 +252,6 @@ export class AboutComponent {
     'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/fbd44177-a1dd-44b9-a638-5875d2130ac8_WhatsAppVideo2025-01-02at6.gif'
   ];
 
-
   pressFeatures = [
     {
       contentHeading: 'TechCrunch',
@@ -287,7 +287,6 @@ export class AboutComponent {
     }
   ];
 
-
   scrollFeaturesLeft(): void {
     if (this.featuresSlider) {
       const sliderElement = this.featuresSlider.nativeElement;
@@ -304,16 +303,21 @@ export class AboutComponent {
     }
   }
 
-
   currentImage: string = this.images[0];
   private imageInterval: any;
 
   ngOnInit(): void {
+    this.setTitleAndMetaTags();
     let currentIndex = 0;
     this.imageInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % this.images.length;
       this.currentImage = this.images[currentIndex];
     }, 3000);
+  }
+
+  setTitleAndMetaTags(): void {
+    this.titleService.setTitle('Best Professional Bookkeeping & Tax Assistance Services | Spyder');
+    this.metaService.updateTag({ name: 'description', content: 'Learn about our all-in-one financial solution with tax savings through S Corp structuring, professional bookkeeping, tax assistance, payroll, invoicing & more.' });
   }
 
   ngOnDestroy(): void {

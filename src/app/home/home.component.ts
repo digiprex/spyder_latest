@@ -18,11 +18,6 @@ export class HomeComponent {
 
   constructor(private appService: AppService, private titleService: Title, private metaService: Meta) { }
 
-  setTitleAndMetaTags(): void {
-    this.titleService.setTitle('Spyder website for influencers');
-    this.metaService.updateTag({ name: 'description', content: 'The all-in-one financial solution for self-employed entrepreneurs' });
-  }
-
   userDetails1 = new FormGroup({
     email: new FormControl("")
   });
@@ -279,6 +274,11 @@ export class HomeComponent {
       }
       console.log(`Scroll Percentage: ${scrollPercentage.toFixed(2)}%`);
     });
+  }
+
+  setTitleAndMetaTags(): void {
+    this.titleService.setTitle('Spyder website for influencers');
+    this.metaService.updateTag({ name: 'description', content: 'Maximize savings with an all-in-one financial solution for self-employed entrepreneurs—S Corp structuring, bookkeeping, tax assistance, payroll, invoicing, & more.' });
   }
 
   ngOnDestroy(): void {

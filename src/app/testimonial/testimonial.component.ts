@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AppService } from '../app.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-testimonial',
@@ -14,7 +15,7 @@ export class TestimonialComponent {
   slider: any;
   bgColor: any;
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService,private titleService: Title, private metaService: Meta) { }
 
   ngAfterViewInit(): void {
     const steps = document.querySelectorAll('.step');
@@ -103,7 +104,6 @@ export class TestimonialComponent {
       sliderElement.scrollLeft += scrollAmount;
     }
   }
-
 
   testimonials = [
     {
@@ -205,7 +205,14 @@ export class TestimonialComponent {
   currentImage: string = this.images[0];
   private imageInterval: any;
 
+  
+  setTitleAndMetaTags(): void {
+    this.titleService.setTitle('One-Stop Financial Solutions For Professionals/Individuals | Spyder');
+    this.metaService.updateTag({ name: 'description', content: 'Discover how Spyder empowers businesses with formation, taxes, bookkeeping, invoicing, payroll, and compliance. Read real testimonials from happy clients today!' });
+  }
+
   ngOnInit(): void {
+    this.setTitleAndMetaTags();
     let currentIndex = 0;
     this.imageInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % this.images.length;

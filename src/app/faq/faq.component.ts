@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AppService } from '../app.service';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-faq',
@@ -15,7 +16,16 @@ export class FaqComponent {
   });
   public success: boolean = false;
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService, private titleService: Title, private metaService: Meta) { }
+
+  ngOnInit(): void {
+    this.setTitleAndMetaTags();
+  }
+
+  setTitleAndMetaTags(): void {
+    this.titleService.setTitle('Your Guide to Business Financial Solutions | Spyder FAQ');
+    this.metaService.updateTag({ name: 'description', content: 'Find all the answers you need about Spyder’s comprehensive financial services for businesses. Our FAQ page simplifies your financial journey.' });
+  }
 
   submitForm() {
     let body = {
