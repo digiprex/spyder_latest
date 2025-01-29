@@ -30,7 +30,6 @@ export class PressComponent {
     })
   }
 
-
   testimonialFeedback = [
     {
       description: 'Spyder helps me optimize my workload without sacrificing quality',

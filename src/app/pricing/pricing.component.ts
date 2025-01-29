@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-pricing',
@@ -75,14 +76,18 @@ export class PricingComponent {
     }
   ];
 
+
+  constructor(private titleService: Title, private metaService: Meta) { }
+
   images: string[] = [
     'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/b76403f1-2502-47f1-9bf3-2e1ff7f60594_pricing-imahes2.jpg',
   ];
 
-  currentImage: string = ''; 
+  currentImage: string = '';
   private imageInterval: any;
 
   ngOnInit(): void {
+    this.setTitleAndMetaTags();
     let currentIndex = 0;
 
     this.currentImage = this.images[0];
@@ -91,5 +96,10 @@ export class PricingComponent {
       currentIndex = (currentIndex + 1) % this.images.length;
       this.currentImage = this.images[currentIndex];
     }, 3000);
+  }
+
+  setTitleAndMetaTags(): void {
+    this.titleService.setTitle('Smart financial solutions at best rates reviews | Spyder Pricing');
+    this.metaService.updateTag({ name: 'description', content: 'Check out Spyder’s pricing for expert financial solutions, covering business formation, taxes, bookkeeping, accounting, invoicing, payroll, compliance, and support.' });
   }
 }

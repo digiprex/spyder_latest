@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-blog',
@@ -7,6 +8,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent {
+
+  constructor(private titleService: Title, private metaService: Meta) { }
+
+  ngOnInit(): void {
+    this.setTitleAndMetaTags();
+  }
+
+  setTitleAndMetaTags(): void {
+    this.titleService.setTitle('Personal Finance Blog | Your Guide to Financial Success');
+    this.metaService.updateTag({ name: 'description', content: 'Explore expert tips, strategies, and advice on managing your money, budgeting, investing, and achieving financial success. Your ultimate guide to personal finance.' });
+  }
+  
   carouselItems = [
     {
       imageUrl: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/232bbc55-8eb0-46a7-8dd7-ca32d81f8b6d_llc-vs-pllc.jpg',
@@ -46,7 +59,7 @@ export class BlogComponent {
       title: 'Making Charitable Contributions Work for Your...',
       author: 'T.J. Porter',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/232bbc55-8eb0-46a7-8dd7-ca32d81f8b6d_llc-vs-pllc.jpg', // Replace with your image path
-      route: '/service/charitableContributions' 
+      route: '/service/charitableContributions'
     },
     {
       title: 'How to File Taxes for an S Corp',
@@ -70,7 +83,7 @@ export class BlogComponent {
       title: 'Making Charitable Contributions Work for Your...',
       author: 'T.J. Porter',
       image: 'https://s3.ap-south-1.amazonaws.com/cdn.ghc.health/232bbc55-8eb0-46a7-8dd7-ca32d81f8b6d_llc-vs-pllc.jpg', // Replace with your image path
-      route: '/service/charitableContributions' 
+      route: '/service/charitableContributions'
     },
     {
       title: 'How to File Taxes for an S Corp',
