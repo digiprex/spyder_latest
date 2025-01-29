@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { AppService } from '../app.service';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,12 @@ export class HomeComponent {
   bgColor: any;
   activeImageIndex: number = 0;
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService, private titleService: Title, private metaService: Meta) { }
+
+  setTitleAndMetaTags(): void {
+    this.titleService.setTitle('Spyder website for influencers');
+    this.metaService.updateTag({ name: 'description', content: 'The all-in-one financial solution for self-employed entrepreneurs' });
+  }
 
   userDetails1 = new FormGroup({
     email: new FormControl("")
@@ -251,6 +257,7 @@ export class HomeComponent {
   private imageInterval: any;
 
   ngOnInit(): void {
+    this.setTitleAndMetaTags();
     let currentIndex = 0;
     this.imageInterval = setInterval(() => {
       currentIndex = (currentIndex + 1) % this.images.length;
